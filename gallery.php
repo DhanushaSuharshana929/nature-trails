@@ -1,140 +1,122 @@
 <!DOCTYPE html>
 <?php
-include_once(dirname(__FILE__) . './class/include.php');
+include './class/include.php';
 ?>
 <html lang="en">
+
     <head>
-        <meta charset="utf-8">
-        <title>Gallery - Nature Trails - Unawatuna</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Gallery -  Nature Trails - Unawatuna</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content=" ">
-        <meta name="keywords" content=" ">
-        <meta name="author" content="">
 
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="images/icons/favicon.png">
 
-        <link rel="stylesheet" href="css/main.css" type="text/css">
+        <!-- REVOLUTION STYLE SHEETS -->
+        <link rel="stylesheet" href="css/style.css"><!-- Style -->
+
     </head>
+    <body class="page">
+        <div id="preloading">
+            <div class="loading-icon">
+                <div class="sk-folding-cube">
+                    <div class="sk-cube1 sk-cube"></div>
+                    <div class="sk-cube2 sk-cube"></div>
+                    <div class="sk-cube4 sk-cube"></div>
+                    <div class="sk-cube3 sk-cube"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Wrapper content -->
+        <div id="wrapper-container" class="content-pusher">
+            <div class="overlay-close-menu"></div>
 
-    <body>
-        <div id="preloader"></div>
-        <div id="wrapper">
-
-
-            <!-- header begin -->
+            <!-- Header --> 
             <?php include './header.php'; ?>
-            <!-- header close --> 
+            <!-- Header -->
 
-            <!-- subheader -->
-            <section id="subheader"  >
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h1>Gallery</h1>
-                            <h3>For Your Pleasure</h3>
+
+            <!-- Main Content -->
+            <div id="main-content">
+                <div class="page-title">
+                    <div class="page-title-wrapper" data-stellar-background-ratio="0.5">
+                        <div class="content container">
+                            <h1 class="heading_primary">Gallery</h1>
+                            <ul class="breadcrumbs ul-top-title" >
+                                <li class="item"><a href="​index.php">Home</a></li>
+                                <li class="item"><span class="separator"></span></li>
+                                <li class="item active">Gallery</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- subheader close -->
 
-            <!-- content begin -->
-            <div class="container"> 
-                <div  class="no-bottom">   
-                    <div class="row" id="content">
-                        <!-- gallery item -->
-                        <?php
-                        $ALBUM_PHOTO = new AlbumPhoto(NULL);
-                        foreach ($ALBUM_PHOTO->getAlbumPhotosById(1) as $album_photo){
-                        ?>
-                        <div class="col-md-3" style="margin-bottom: 35px">
-                            <div class="item furniture gallery">  
-                                <a href="upload/photo-album/gallery/<?php echo $album_photo['image_name'] ?>" class="big ">
-                                    <span class="overlay"><?php echo $album_photo['caption'] ?>  </span>
-                                    <img src="upload/photo-album/gallery/thumb/<?php echo $album_photo['image_name'] ?>" alt="<?php echo $album_photo['caption'] ?>" title="<?php echo $album_photo['caption'] ?>" />
-                                </a> 
-                            </div> 
-                        </div> 
-                        <?php } ?>
-                    </div> 
+                <div class="site-content">
+                    <div class="page-content">
+                        <div class="container">
+                            <div class="sc-gallery">
+
+                                <div class="wrapper-gallery row" itemscope itemtype="http://schema.org/ItemList">
+                                    <?php
+                                    $ALBUM_PHOTO = new AlbumPhoto(NULL);
+                                    foreach ($ALBUM_PHOTO->getAlbumPhotosById(1) as $album_photo) {
+                                        ?>
+                                        <div class="col-sm-3 filter-room filter-restaurant filter-swimming">
+                                            <a href="upload/photo-album/gallery/<?php echo $album_photo['image_name'] ?>" class="gallery-popup">
+                                                <img src="upload/photo-album/gallery/thumb/<?php echo $album_photo['image_name'] ?>" alt=""></a>
+                                        </div> 
+                                    <?php } ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-
-            <!-- footer begin -->
+            <!-- Footer -->
             <?php include './footer.php'; ?>
-            <!-- footer close -->
+            <!--Footer-->
+        </div><!-- wrapper-container -->
 
+        <div id="back-to-top">
+            <i class="ion-ios-arrow-up" aria-hidden="true"></i>
         </div>
 
-        <!-- Javascript Files
-    ================================================== -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/jpreloader.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.isotope.min.js"></script>
-        <script src="js/jquery.prettyPhoto.js"></script>
-        <script src="js/easing.js"></script>
-        <script src="js/jquery.ui.totop.js"></script>
-        <script src="js/ender.js"></script>
-        <script src="js/jquery.scrollto.js"></script>
-        <script src="js/owl.carousel.js"></script>
-        <script src="js/video.resize.js"></script>
-        <script src="js/bootstrap-datepicker.js"></script>
-        <script src="js/jquery.stellar.js"></script>
-        <script src="js/jquery.plugin.js"></script>
-        <script src="js/wow.min.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/exotheme.js"></script>
-        <script src="js/validation.js"></script>
-        <script src="js/validation_reservation.js"></script>
-        <script src="js/simple-lightbox.min.js" type="text/javascript"></script>
 
-        <script>
-            $(function () {
-                var $gallery = $('.gallery a').simpleLightbox();
+        <!-- Scripts -->
+        <script src="js/libs/jquery.min.js"></script><!-- jQuery -->
+        <script src="js/libs/stellar.min.js"></script><!-- parallax -->
 
-                $gallery.on('show.simplelightbox', function () {
-                    console.log('Requested for showing');
-                })
-                        .on('shown.simplelightbox', function () {
-                            console.log('Shown');
-                        })
-                        .on('close.simplelightbox', function () {
-                            console.log('Requested for closing');
-                        })
-                        .on('closed.simplelightbox', function () {
-                            console.log('Closed');
-                        })
-                        .on('change.simplelightbox', function () {
-                            console.log('Requested for change');
-                        })
-                        .on('next.simplelightbox', function () {
-                            console.log('Requested for next');
-                        })
-                        .on('prev.simplelightbox', function () {
-                            console.log('Requested for prev');
-                        })
-                        .on('nextImageLoaded.simplelightbox', function () {
-                            console.log('Next image loaded');
-                        })
-                        .on('prevImageLoaded.simplelightbox', function () {
-                            console.log('Prev image loaded');
-                        })
-                        .on('changed.simplelightbox', function () {
-                            console.log('Image changed');
-                        })
-                        .on('nextDone.simplelightbox', function () {
-                            console.log('Image changed to next');
-                        })
-                        .on('prevDone.simplelightbox', function () {
-                            console.log('Image changed to prev');
-                        })
-                        .on('error.simplelightbox', function (e) {
-                            console.log('No image found, go to the next/prev');
-                            console.log(e);
-                        });
+        <script src="js/libs/jquery-ui.min.js"></script><!-- ui -->
+        <script src="js/libs/daterangepicker.min.js"></script><!-- date -->
+        <script src="js/libs/daterangepicker.min-date.min.js"></script><!-- date2 -->
+        <script src="js/libs/bootstrap.min.js"></script><!-- Bootstrap -->
+        <script src="js/libs/smoothscroll.min.js"></script><!-- smoothscroll -->
+        <script src="js/libs/owl.carousel.min.js"></script><!-- Owl Carousel -->
+        <script src="js/libs/jquery.magnific-popup.min.js"></script><!-- Magnific Popup -->
+        <script src="js/libs/theia-sticky-sidebar.min.js"></script><!-- Sticky sidebar -->
+        <script src="js/libs/counter-box.min.js"></script><!-- counter -->
+        <script src="js/libs/isotope.pkgd.min.js"></script><!-- Sticky sidebar -->
+        <script src="js/libs/jquery.thim-content-slider.min.js"></script><!-- Slider -->
+        <script src="js/theme-customs.js"></script><!-- Theme Custom -->
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+            }
+
+            $('.translation-links a').click(function () {
+
+                var lang = $(this).data('lang');
+                var $frame = $('.goog-te-menu-frame:first');
+                if (!$frame.size()) {
+                    alert("Error: Could not find Google translate frame.");
+                    return false;
+                }
+                $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+                return false;
             });
-        </script>
+        </script> 
     </body>
-
 </html>

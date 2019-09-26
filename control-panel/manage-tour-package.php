@@ -43,7 +43,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                 </ul>
                             </div>
                             <div class="body">
-                                 
+
                                 <div>
                                     <div class="row clearfix">
                                         <?php
@@ -58,10 +58,11 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                     <div class="img-caption">
                                                         <p class="maxlinetitle"><?php echo $tour_package['title']; ?></p>
                                                         <div class="d">
-                                                            <a href="#"  class="delete-tour-package" data-id="<?php echo $tour_package['id']; ?>"> <button class="glyphicon glyphicon-trash delete-btn"></button></a>
-                                                            <a href="edit-tour-package.php?id=<?php echo $tour_package['id']; ?>"> <button class="glyphicon glyphicon-pencil edit-btn"></button></a>
-                                                            <a href="arrange-tour-package.php?id=<?php echo $tour_package['id']; ?>">  <button class="glyphicon glyphicon-random arrange-btn"></button></a>
-                                                            <a href="view-tour-date.php?id=<?php echo $tour_package['id']; ?>">  <button class="glyphicon glyphicon-time arrange-btn"></button></a>
+
+                                                            <a href="edit-tour-package.php?id=<?php echo $tour_package['id']; ?>"> <button class="glyphicon glyphicon-pencil edit-btn"></button></a> | 
+                                                            <a href="arrange-tour-package.php?id=<?php echo $tour_package['id']; ?>">  <button class="glyphicon glyphicon-random arrange-btn"></button></a> | 
+                                                            <a href="view-tour-date.php?id=<?php echo $tour_package['id']; ?>">  <button class="glyphicon glyphicon-time arrange-btn"></button></a> | 
+                                                            <a href="#"  class="delete-tour-package" data-id="<?php echo $tour_package['id']; ?>"> <button class="glyphicon glyphicon-trash delete-btn"></button></a> 
                                                         </div>
                                                     </div>
                                                 </div>

@@ -1,429 +1,601 @@
 <!DOCTYPE html>
 <?php
-include_once(dirname(__FILE__) . './class/include.php');
-$PAGES = new Page(1);
+include './class/include.php';
+$PAGE = new Page(1);
 ?>
 <html lang="en">
-
     <head>
-        <meta charset="utf-8">
-        <title>Nature Trails - Unawatuna</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Nature Trails Boutique Hotel - Unawatuna</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Responsive Minimal Hotel Bootstrap Theme">
-        <meta name="keywords" content="responsive,minimal,hotel,bootstrap,theme">
-        <meta name="author" content="">
 
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="images/icons/favicon.png">
 
-
-        <!-- CSS Files
-        ================================================== -->
-        <link rel="stylesheet" href="css/main.css" type="text/css">
-        <link rel="stylesheet" type="text/css" href="revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
-        <link rel="stylesheet" type="text/css" href="revolution/fonts/font-awesome/css/font-awesome.css">
+        <!-- REVOLUTION STYLE SHEETS -->
+        <link rel="stylesheet" type="text/css" href="css/libs/revolution/settings.css">
+        <link rel="stylesheet" href="css/style.css"><!-- Style -->
     </head>
+    <body class="demo-3 home">
 
-    <body id="homepage">
-        <div id="preloader"></div>
-
-        <div id="wrapper"> 
-
-            <!-- header begin -->
-            <?php include './header.php'; ?>
-            <!-- header close -->
-
-
-            <!-- content begin -->
-            <div id="content" class="no-bottom no-top">
-
-                <!--Slider -->
-                <?php include './slider.php'; ?>
-                <!--Slider end -->
-
-                <div id="quick-book">
-                    <div id="booking-form" class="lt-form">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <input class="form-control" name="r_checkin" id="r_checkin" type="text" placeholder="Check In Date">
-                                </div>
-
-                                <div class="col-md-3">
-                                    <input class="form-control" name="r_checkout" id="r_checkout" type="text" placeholder="Check Out Date">
-                                </div>
-
-                                <div class="col-md-3">
-                                    <select id="r_room" class="form-control" name="r_room">
-                                        <option value="">Number of Guest(s)</option>
-                                        <option value="">1</option>
-                                        <option value="">2</option>
-                                        <option value="">3</option>
-                                        <option value="">4</option>
-                                        <option value="">5</option>
-                                        <option value="">6</option>
-                                        <option value="">7</option>
-                                        <option value="">8</option>
-                                        <option value="">9</option>
-                                        <option value="">10+</option>
-                                    </select>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <input type="submit" id="send_book" value="Check Availability" class="btn-custom btn-fullwidth">
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <section id="section-about" class="no-top no-bottom">
-
-                    <!-- START REVOLUTION SLIDER 5.4.1 fullwidth mode -->
-                    <div id="rev_slider_1084_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.1">
-                        <ul>
-                            <li data-transition="fade" data-slotamount="7" data-masterspeed="2500" data-delay="5000">
-
-                                <div class="tp-caption sfr custom-font-1 rs-parallaxlevel-12" data-frames='[{"delay":0,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                                     data-x="50" data-y="270" data-speed="800" data-start="1200" data-easing="easeInOutCubic">
-                                    <img src="img-rev-slider/pic-a5.jpg" alt="">
-                                </div>
-
-                                <div class="tp-caption sfr custom-font-1 rs-parallaxlevel-10" data-frames='[{"delay":200,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                                     data-x="400" data-y="430" data-speed="800" data-start="1200" data-easing="easeInOutCubic">
-                                    <img src="img-rev-slider/pic-a6.jpg" alt="">
-                                </div>
-
-                                <div class="tp-caption sfr custom-font-1 rs-parallaxlevel-5" data-frames='[{"delay":400,"speed":600,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                                     data-x="120" data-y="150" data-speed="800" data-easing="easeInOutCubic">
-                                    <img src="img-rev-slider/pic-a1.jpg" alt="">
-                                </div>
-
-                                <div class="tp-caption sfr custom-font-1 rs-parallaxlevel-4" data-frames='[{"delay":600,"speed":600,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                                     data-x="330" data-y="100" data-speed="800" data-start="1000" data-easing="easeInOutCubic">
-                                    <img src="img-rev-slider/pic-a2.jpg" alt="">
-                                </div>
-
-                                <div class="tp-caption sfr custom-font-1 rs-parallaxlevel-4" data-frames='[{"delay":800,"speed":600,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                                     data-x="70" data-y="360" data-speed="800" data-start="1200" data-easing="easeInOutCubic">
-                                    <img src="img-rev-slider/pic-a3.jpg" alt="">
-                                </div>
-
-                                <div class="tp-caption sfr custom-font-1 rs-parallaxlevel-5" data-frames='[{"delay":1000,"speed":600,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                                     data-x="330" data-y="360" data-speed="800" data-start="1200" data-easing="easeInOutCubic">
-                                    <img src="img-rev-slider/pic-a4.jpg" alt="">
-                                </div>
-
-                                <div class="tp-caption cst-1 sfr  rs-parallaxlevel-0" style="z-index: 5;
-                                     min-width: 500px;
-                                     max-width: 500px;
-                                     white-space: normal;" data-frames='[{"delay":1000,"speed":600,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                                     data-x="700" data-y="150" data-speed="800" data-start="1200" data-width="['500']" data-height="['auto']" data-easing="easeInOutCubic">
-
-                                    <div class="title-area wow fadeIn">
-
-                                        <h2>Welcome</h2>
-                                        <div class="small-border"><span></span></div>
-                                        <p class="sub-heading mt20">Five Stars Hotel</p>
-                                    </div>
-
-                                    <p class="mt30 text-justify">
-                                        <?php echo $PAGES->description ?>
-                                    </p>
-                                    
-                                </div>
-                            </li>
-
-                        </ul>
-
-                        <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
-                    </div>
-                    <!-- END REVOLUTION SLIDER -->
-
-                </section>
-
-                <!-- section begin -->
-                <section id="section-rooms" class="no-top no-bottom sm-pt70">
-                    <div class="container">
-                        <div class="row">
-                            <div class="title-area text-center wow fadeIn">
-                                <h2>Favorite Rooms</h2>
-                                <div class="small-border"><span></span></div>
-                                <p class="sub-heading">Explore Our Rooms</p>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="room-tab carousel-three">
-                                <?php
-                                $ROOMS = new Room(NULL);
-                                foreach ($ROOMS->all() as $room) {
-                                    ?>
-                                    <div class="col-md-4 room-item wow fadeInUp" data-wow-delay=".6s">
-                                        <div class="inner">
-                                            <a href="view-room.php?id=<?php echo $room['id'] ?>">
-                                                <img src="upload/room/<?php echo $room['image_name'] ?>" class="img-responsive" alt="<?php echo $room['title'] ?>">
-                                                <h3><?php echo $room['title'] ?></h3></a>
-                                            <div class="price_from">Start From <span>$399</span>/night</div>
-                                            <p class="text-justify text-padd"  >
-                                                <?php echo substr($room['description'], 0, 180) ?>...
-                                            </p> 
-                                            <a href="view-room.php?id=<?php echo $room['id'] ?>" class="btn-detail">View Details</a>
-                                        </div>
-                                    </div>
-                                <?php } ?>
-                            </div>
-
-                            <div class="owl-custom-nav">
-                                <a class="btn-prev"></a>
-                                <a class="btn-next"></a>
-                            </div>
-
-                            <div class="divider"></div>
-
-                            <div id="room-preview">
-                                <div class="load-here">
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </section>
-                <!-- section close -->
-
-
-                <!-- section begin -->
-                <section id="section-facilities-2">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="title-area text-center wow fadeIn" data-wow-delay="0s">
-
-                                    <h2>Facilities &amp; Services</h2>
-                                    <div class="small-border"><span></span></div>
-                                    <p class="sub-heading">For Your Pleasure</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-8 col-md-offset-4">
-
-                            <div class="row">
-
-
-                                <div class="col-md-6">
-                                    <div class="f_box left">
-                                        <div class="desc">
-                                            <h3>Room Service</h3>
-                                            Whatever you needs, Our warm and friendly staff is always ready to help you. Just call us (24 hours).
-                                        </div>
-                                        <div class="icon">
-                                            <i class="fa fa-bell-o"></i>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
-
-                                    <div class="f_box left">
-                                        <div class="desc">
-                                            <h3>Free Wifi</h3>
-                                            Every place on this hotel is covered by high speed internet. Share your experiences!
-                                        </div>
-                                        <div class="icon">
-                                            <i class="fa fa-signal"></i>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
-
-                                    <div class="f_box left">
-                                        <div class="desc">
-                                            <h3>40" Smart TV</h3>
-                                            For your pleasure we equiped 40" Smart TV for all rooms. You can watch latest movie.
-                                        </div>
-                                        <div class="icon">
-                                            <i class="fa fa-desktop"></i>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
-
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="f_box right">
-                                        <div class="icon">
-                                            <i class="fa fa-inbox"></i>
-                                        </div>
-                                        <div class="desc">
-                                            <h3>Safe Deposit</h3>
-                                            We make sure your valuable items is in place to accommodate you in the best possible way.
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="f_box right">
-                                        <div class="icon">
-                                            <i class="fa fa-cutlery"></i>
-                                        </div>
-                                        <div class="desc">
-                                            <h3>Dinner Included</h3>
-                                            Treat yourself to a delicious dinner during at the hotel and enjoy our special conditions for kids!
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="f_box right">
-                                        <div class="icon">
-                                            <i class="fa fa-coffee"></i>
-                                        </div>
-                                        <div class="desc">
-                                            <h3>Breakfast Buffet</h3>
-                                            We serve over 150 energising breakfast items every morning, Served at Bamskies Kitchen.
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </section>
-                <!-- section close --> 
-
-
-                <!-- section begin -->
-                <section id="section-testimonial">
-                    <div class="container">
-                        <div class="row">
-                            <div class="title-area text-center wow fadeIn">
-                                <h2>Testimonial</h2>
-                                <div class="small-border"><span></span></div>
-                                <p class="sub-heading">What They Say</p>
-                            </div>
-                            <ul class="client-quotes wow fadeInUp" data-wow-delay=".2s">
-                                <?php
-                                $COMMENT = new Comments(NULL);
-                                foreach ($COMMENT->activeComments() as $commnet) {
-                                    ?>
-                                    <li>
-                                        <img src="upload/comments/<?php echo $commnet['image_name'] ?> " class="img-circle" alt="">
-                                        <span><i class="fa fa-quote-right fa-2x"></i></span>
-                                        <div class="text text-justify">
-                                            <?php echo $commnet['comment'] ?> 
-                                        </div>
-                                        <span class="name"><?php echo $commnet['name'] ?> </span>
-                                        <span class="company"><?php echo $commnet['title'] ?> </span>
-                                    </li>
-                                <?php } ?>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-                <!-- section close -->
-                <div class="call-to-action text-light xs-text-center">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-9 xs-mb-30">
-                                <h2>It's time to enjoy the atmosphere you desire</h2>
-                            </div>
-
-                            <div class="col-md-3 ">
-                                <a href="contact-style-1.html" class="btn-border-light pull-right">Contact Us</a>
-                            </div>
-                        </div>
-                    </div>
+        <div id="preloading" class="color2">
+            <div class="loading-icon">
+                <div class="sk-folding-cube">
+                    <div class="sk-cube1 sk-cube"></div>
+                    <div class="sk-cube2 sk-cube"></div>
+                    <div class="sk-cube4 sk-cube"></div>
+                    <div class="sk-cube3 sk-cube"></div>
                 </div>
             </div>
-            <!-- content close -->
+        </div>
 
-            <!-- footer begin -->
+        <!-- Wrapper content -->
+        <div id="wrapper-container" class="content-pusher">
+            <div class="overlay-close-menu"></div>
+
+            <!-- Header -->
+            <?php include './header.php'; ?>
+            <!--End Header -->
+
+            <!-- Main Content -->
+            <div id="main-content" class="main-content">
+                <div id="home-main-content" class="home-main-content home-1">
+
+
+                    <!--REVOLUTION SLIDER -->
+                    <?php include './slider.php'; ?>
+                    <!-- END REVOLUTION SLIDER -->
+
+                    <div class="empty-space"></div>
+                    <div class="container">
+                        <div class="sc-heading">
+                            <p class="first-title">Nature Trails Unawatuna</p>
+                            <h3 class="second-title">Aubowan</h3>
+                        </div>
+                        <div class="sc-info about-info row">
+                            <div class="col-sm-12 col-xs-12 col-md-6">
+                                <?php echo $PAGE->description ?>
+                                <a href="#" class="btn-icon">Read More</a>
+                            </div>
+                            <div class="col-sm-6 col-md-6 hidden-mobile" style="margin-top: -150px;"> 
+                                <div class="sc-video style-02">
+                                    <div class="background-video">
+                                        <div class="cover-image"></div>
+                                        <div class="content container">
+                                            <i class="video-play ion-ios-play"></i>
+                                            <h4 class="title-video"> Nature Trails Unawatuna</h4>
+                                        </div>
+                                        <video loop="" class="full-screen-video" data-autoplay="">
+                                            <source src="images/home/hotel.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sc-content-overlay  hidden-mobile " style="margin-top: 10px;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="sc-hb-rooms-search style-01">
+                                        <div class="hotel-booking-search style-01 layout-columns">
+                                            <img src="images/bg/about.jpg" alt="" class="img-responsive img-thumbnail" style="border-radius: 4px;margin-top: 70px;"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 hidden-sm">
+                                    <div class="sc-testimonials style-02"> 
+                                        <div class="testimonial-slider2 owl-carousel owl-theme">
+                                            <div class="item">
+                                                <div class="row">
+                                                    <div class="col-md-4 img-padd-4" >
+                                                        <img src="images/enchanting.jpg" class="img-responsive img-thumbnail" alt=" "/>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="content">
+                                                            <h3>Enchanting Beauty</h3>
+                                                            <p  class="div-color" style=" margin-right: 30px;">
+                                                                The property is built to the highest standard combining the Sri lanka heritage with contemporary architectural designing to strick a balance between luxury and nature. 
+                                                            </p>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="row">
+                                                    <div class="col-md-4 img-padd-4">
+                                                        <img src="images/luxuring.jpg" class="img-responsive img-thumbnail" alt=" "/>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="content">
+                                                            <h3>Luxurious Comfort</h3>
+                                                            <p  class="div-color" style=" margin-right: 30px;">
+                                                                Nature trails consists of 10 well appointed bedroom furnished to 5 star standards. Each room has a large balcony that open to the swimming pool and a beautifully. Landscaped garden with the picturesque Rumassala mountain at the backdrop.
+                                                            </p>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="row">
+                                                    <div class="col-md-4 img-padd-4">
+                                                        <img src="images/staning.jpg" class="img-responsive img-thumbnail" alt=" "/>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="content">
+                                                            <h3>Stunning Nature</h3>
+                                                            <p  class="div-color" style=" margin-right: 30px;">
+                                                                As our name nature trails impliers, gests, staying in our hotel can enback on a nature walk to climb the picturesque ramassala
+                                                                mountain and to read the jungle beach of unawatuna, one of the most beautiful natural beaches of southern sri lanka
+                                                            </p>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="row">
+                                                    <div class="col-md-4 img-padd-4">
+                                                        <img src="images/shedule.jpg" class="img-responsive" alt=" "/>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="content">
+                                                            <h3>Succulent Food</h3>
+                                                            <p  class="div-color" style=" margin-right: 30px;">
+                                                                Nature trails fish market restaurant is well-known among local and foreign guests as a much sought after fine dining restaurant. We offer an exclusive sea food menu with Oder 25 signature dishes of different varieties of seafood.  
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+
+                    <div class="empty-space"></div>
+                    <div class="sc-travel style-02">
+                        <div class="sc-content-overlay"> 
+                            <div class="container">
+                                <div class="empty-space"></div>
+                                <div class="sc-heading style-04 text-center white-color">
+                                    <h3 class="title">Accommodation</h3> 
+                                </div> 
+                                <div class="slides">
+                                    <div class="travel-slider owl-theme owl-carousel">
+                                        <?php
+                                        $ROOM = new Room(NULL);
+                                        foreach ($ROOM->all() as $room) {
+                                            ?>
+                                            <div class="item">
+                                                <div class="image">
+                                                    <a href="view-room.php?id=<?php echo $room['id'] ?>"><img src="upload/room/<?php echo $room['image_name'] ?>" alt="<?php echo $room['title'] ?>"></a>
+                                                    <div class="meta-img">
+                                                        <span class="price">20% off</span>
+                                                    </div>
+                                                </div>
+                                                <div class="inner">
+                                                    <div class="content">
+                                                        <div class="title"><a href="view-room.php?id=<?php echo $room['id'] ?>"><?php echo $room['title'] ?></a></div>
+                                                        <ul class="meta">
+                                                            <li>Start From <span class="price-color" >  $12 </span> / Night  </li>
+                                                        </ul>
+                                                        <div class=" r-top">
+                                                            <p>  
+                                                                <?php echo substr($room['short_description'], 0, 50) ?>...
+                                                            </p> 
+                                                        </div>
+                                                    </div>
+                                                    <div class="review clearfix">                                                    
+                                                        <a href="view-room.php?id=<?php echo $room['id'] ?>">
+                                                            <div class="time"><i class="ion-arrow-right-a"></i> View More</div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        <?php } ?>
+                                    </div>
+                                </div>
+                                <div class="view-all text-center">
+                                    <a href="view-room.php" class="btn-radius">View All Rooms</a>
+                                </div>
+                            </div>
+                            <div class="empty-space"></div>
+                        </div>
+                    </div>
+                    <section id="section-facilities-2" class="section-facilities-2">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="sc-heading style-01 text-center">
+                                        <h2>Key Facilities &amp; Services</h2>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 ">
+
+                                </div>
+                                <div class="col-md-8 col-xs-12"> 
+                                    <div class="row"> 
+                                        <div class="col-md-6">
+                                            <div class="f_box left">
+                                                <div class="desc">
+                                                    <h3>Tea / Coffee </h3>
+                                                    <p class="text-justy" style="text-align: justify">
+                                                        Each Room has a tea / coffee making facility with complementary tea / coffee
+                                                    </p>
+                                                </div>
+                                                <div class="icon">
+                                                    <i class="fa fa-coffee"></i>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+
+                                            <div class="f_box left">
+                                                <div class="desc">
+                                                    <h3>Dinner</h3>
+                                                    <p class="text-justy" style="text-align: justify">
+                                                        We offer an excluive seafood menu and anala carte menu with local and international cousine. Resturant is open daily from 7.30 A.M to 10 P.M
+                                                    </p>
+                                                </div>
+                                                <div class="icon">
+                                                    <i class="fa fa-cutlery"></i>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+
+
+                                            <div class="f_box left">
+                                                <div class="desc">
+                                                    <h3>Satellite  TV</h3>
+                                                    <p class="text-justy" style="text-align: justify">
+                                                        Each room is provided with a high definition flat screen television loaded with over 100 local and international Satellite channels.
+                                                    </p>
+                                                </div>
+                                                <div class="icon">
+                                                    <i class="fa fa-desktop"></i>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="f_box right">
+                                                <div class="icon">
+                                                    <i class="fa fa-signal"></i>
+                                                </div>
+                                                <div class="desc">
+                                                    <h3>Free Wifi</h3>
+
+                                                    <p class="text-justy" style="text-align: justify">
+                                                        Entire hotel is cover with high speed internet offered free of charge in house geasts.
+                                                    </p>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="f_box right">
+                                                <div class="icon">
+                                                    <i class="fa fa-bath"></i>
+                                                </div>
+                                                <div class="desc">
+                                                    <h3>Swimming Pool</h3>
+                                                    <p class="text-justy" style="text-align: justify">
+                                                        Hotel swimming pool is the nestled in the centre of a beautifully landscaped graden. Pool is open for use from 8.00 A.M to 8.00 P.M
+                                                    </p>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="f_box right">
+                                                <div class="icon">
+                                                    <i class="fa fa-shield"></i>
+                                                </div>
+                                                <div class="desc">
+                                                    <h3>24 / 7 Security</h3>
+                                                    <p class="text-justy" style="text-align: justify">
+                                                        Hotel greate a 24 / 7 security service that included a CCTV and intrude detection system.
+                                                    </p>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section> 
+
+                    <div class="group-destination">
+                        <div class="sc-content-overlay">
+                            <div class="container">
+                                <div class="empty-space"></div>
+                                <div class="sc-heading style-01 text-center">
+                                    <h3 class="title">Top Excursion</h3>
+                                </div>
+                                <div class="sc-posts style-01 auto-height">
+                                    <div class="item row">
+                                        <?php
+                                        $ATTRACTION = new Attraction(NULL);
+                                        foreach ($ATTRACTION->all() as $key => $attraction) {
+                                            $key++;
+                                            if ($key < 7) {
+                                                ?>
+
+                                                <div class="post col-sm-6 col-md-4">
+                                                    <div class="inner">
+                                                        <a href="view-excursion.php?id=<?php echo $attraction['id'] ?>">
+                                                            <div class="thumbnail">
+                                                                <img src="upload/attraction/<?php echo $attraction['image_name'] ?>" alt="<?php echo $attraction['title'] ?>"> 
+                                                            </div>
+                                                        </a>
+
+                                                        <div class="content">
+                                                            <h3 class="title" style="margin-bottom: 40px;"> <a href="view-excursion.php?id=<?php echo $attraction['id'] ?>"><?php echo $attraction['title'] ?></a></h3>
+                                                            <div class="short-text"> </div>
+                                                            <div class="summary  "> 
+                                                                <a href="view-excursion.php?id=<?php echo $attraction['id'] ?>" style="color: white"> 
+                                                                    <?php echo substr($attraction['short_description'], 0, 90) ?>... 
+                                                                </a>
+                                                                <a href="view-excursion.php?id=<?php echo $attraction['id'] ?>" class="read-more" style="margin-top: -8px">More Info</a>
+                                                            </div>
+                                                        </div>
+
+                                                    </div> 
+
+                                                </div>
+                                                <?php
+                                            }
+                                        }
+                                        ?>   
+
+                                    </div>
+                                    <div class="view-all text-center">
+                                        <a href="excursion.php" class="btn-radius">View All Excursion</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+                    <div class="empty-space"></div>
+
+                    <div class="container">  
+                        <div class="sc-heading style-01 text-center">
+                            <h3 class="title color-black" style="color: black">Gest Reviews</h3>
+                        </div> 
+                        <div class="sc-quote style-04 text-center"> 
+                            <div class="row">
+                                <div class="col-sm-12  test-boarder">
+                                    <div class="sc-testimonial style-04">
+                                        <div class="slider owl-carousel owl-theme">
+                                            <?php
+                                            $COMMENT = new Comments(NULL);
+                                            foreach ($COMMENT->activeComments() as $comment) {
+                                                ?>
+                                                <div class="item">
+                                                    <div class="description color-black" style="color: black"> 
+                                                        <?php echo $comment['comment'] ?>
+                                                    </div>
+
+                                                    <div class="author clearfix">
+                                                        <img src="upload/comments/<?php echo $comment['image_name'] ?>" alt="">
+                                                        <div class="info">
+                                                            <div class="name"><?php echo $comment['name'] ?></div>
+                                                            <div class="regency"><?php echo $comment['country'] ?></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <?php } ?>
+                                        </div>
+                                    </div>
+                                    <div class="view-all text-center" style="margin-bottom: 20px">
+                                        <a href="feedback.php" class="btn-radius">Gest Reviews</a>
+                                    </div>
+                                </div>                                
+                            </div> 
+                        </div>
+                    </div>            
+                    <div class="empty-space"></div>
+                </div>
+            </div>
+
+
+            <!-- Footer -->
             <?php include './footer.php'; ?>
-            <!-- footer close -->
+        </div><!-- wrapper-container -->
+
+        <div id="back-to-top">
+            <i class="ion-ios-arrow-up" aria-hidden="true"></i>
         </div>
 
 
-        <!-- Javascript Files
-        ================================================== -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/jpreloader.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.isotope.min.js"></script>
-        <script src="js/jquery.prettyPhoto.js"></script>
-        <script src="js/easing.js"></script>
-        <script src="js/jquery.ui.totop.js"></script>
-        <script src="js/ender.js"></script>
-        <script src="js/jquery.scrollto.js"></script>
-        <script src="js/owl.carousel.js"></script>
-        <script src="js/video.resize.js"></script>
-        <script src="js/bootstrap-datepicker.js"></script>
-        <script src="js/jquery.stellar.js"></script>
-        <script src="js/jquery.plugin.js"></script>
-        <script src="js/wow.min.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/validation.js"></script>
-        <script src="js/validation_reservation.js"></script>
+        <!-- Scripts -->
+        <script src="js/libs/jquery-1.12.4.min.js"></script><!-- jQuery -->
+        <script src="js/libs/bootstrap.min.js"></script><!-- Bootstrap -->
+        <script src="js/libs/smoothscroll.min.js"></script><!-- smoothscroll -->
+        <script src="js/libs/owl.carousel.min.js"></script><!-- Owl Carousel -->
+        <script src="js/libs/jquery.magnific-popup.min.js"></script><!-- Magnific Popup -->
+        <script src="js/libs/theia-sticky-sidebar.min.js"></script><!-- Sticky sidebar -->
+        <script src="js/libs/stellar.min.js"></script><!-- counter -->
+        <script src="js/libs/counter-box.min.js"></script><!-- counter -->
+        <script src="js/libs/jquery.thim-content-slider.min.js"></script><!-- Slider -->
+        <script src="js/libs/moment.min.js"></script><!-- moment -->
+        <script src="js/libs/jquery-ui.min.js"></script><!-- ui -->
+        <script src="js/libs/daterangepicker.min.js"></script><!-- date -->
+        <script src="js/libs/daterangepicker.min-date.min.js"></script><!-- date2 -->
+        <script src="js/theme-customs.js"></script><!-- Theme Custom -->
 
-        <!-- SLIDER REVOLUTION 5.0 -->
-        <script src="revolution/js/jquery.themepunch.tools.min.js"></script>
-        <script src="revolution/js/jquery.themepunch.revolution.min.js"></script>
+        <!-- REVOLUTION JS FILES -->
+        <script  src="js/libs/revolution/jquery.themepunch.tools.min.js"></script>
+        <script src="js/libs/revolution/jquery.themepunch.revolution.min.js"></script>
 
         <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
-        <script src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
-        <script src="revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-        <script src="revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-        <script src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-        <script src="revolution/js/extensions/revolution.extension.migration.min.js"></script>
-        <script src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-        <script src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-        <script src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-        <script src="revolution/js/extensions/revolution.extension.video.min.js"></script>
+        <script src="js/libs/revolution/extensions/revolution.extension.actions.min.js"></script>
+        <script src="js/libs/revolution/extensions/revolution.extension.carousel.min.js"></script>
+        <script src="js/libs/revolution/extensions/revolution.extension.kenburn.min.js"></script>
+        <script src="js/libs/revolution/extensions/revolution.extension.layeranimation.min.js"></script>
+        <script src="js/libs/revolution/extensions/revolution.extension.migration.min.js"></script>
+        <script src="js/libs/revolution/extensions/revolution.extension.navigation.min.js"></script>
+        <script src="js/libs/revolution/extensions/revolution.extension.parallax.min.js"></script>
+        <script src="js/libs/revolution/extensions/revolution.extension.slideanims.min.js"></script>
+        <script src="js/libs/revolution/extensions/revolution.extension.video.min.js"></script>
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
 
-        <script>
-            var tpj = jQuery;
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+            }
 
-            var revapi1084;
-            tpj(document).ready(function () {
-                if (tpj("#rev_slider_1084_1").revolution == undefined) {
-                    revslider_showDoubleJqueryError("#rev_slider_1084_1");
-                } else {
-                    revapi1084 = tpj("#rev_slider_1084_1").show().revolution({
-                        sliderType: "hero",
-                        jsFileLocation: "revolution/js/",
-                        sliderLayout: "fullwidth",
-                        dottedOverlay: "none",
-                        delay: 3000,
-                        navigation: {
-                        },
-                        responsiveLevels: [1240, 1024, 778, 480],
-                        visibilityLevels: [1240, 1024, 778, 480],
-                        gridwidth: [1400, 1240, 778, 480],
-                        gridheight: [700, 700, 0, 0],
-                        lazyType: "none",
-                        parallax: {
-                            type: "3D",
-                            origo: "slidercenter",
-                            speed: 500,
-                            levels: [5, 10, 15, 20, 25, 30, 5, 0, 45, 50, 47, 48, 49, 50, 51, 55],
-                            ddd_shadow: "off",
-                            ddd_bgfreeze: "off",
-                            ddd_overflow: "hidden",
-                            ddd_layer_overflow: "visible",
-                            ddd_z_correction: 65,
-                        },
-                        spinner: 'spinner4',
-                        autoHeight: 'on',
-                        disableProgressBar: "on",
-                        hideThumbsOnMobile: "off",
-                        hideSliderAtLimit: 0,
-                        hideCaptionAtLimit: 0,
-                        hideAllCaptionAtLilmit: 0,
-                        debugMode: false,
-                        fallbacks: {
-                            simplifyAll: "off",
-                            disableFocusListener: false,
-                        }
-                    });
+            $('.translation-links a').click(function () {
+                
+                var lang = $(this).data('lang');
+                var $frame = $('.goog-te-menu-frame:first');
+                if (!$frame.size()) {
+                    alert("Error: Could not find Google translate frame.");
+                    return false;
                 }
-            }); /*ready*/
-        </script>
+                $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+                return false;
+            });
 
-        <script src="js/exotheme.js"></script>
+            function setREVStartSize(e) {
+                try {
+                    e.c = jQuery(e.c);
+                    var i = jQuery(window).width(), t = 9999, r = 0, n = 0, l = 0, f = 0, s = 0, h = 0;
+                    if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function (e, f) {
+                        f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e)
+                    }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) {
+                        var u = (e.c.width(), jQuery(window).height());
+                        if (void 0 != e.fullScreenOffsetContainer) {
+                            var c = e.fullScreenOffsetContainer.split(",");
+                            if (c)
+                                jQuery.each(c, function (e, i) {
+                                    u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u
+                                }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0))
+                        }
+                        f = u
+                    } else
+                        void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight);
+                    e.c.closest(".rev_slider_wrapper").css({height: f})
+                } catch (d) {
+                    console.log("Failure at Presize of Slider:" + d)
+                }
+            }
+            ;
+
+            var revapi2,
+                    tpj;
+            (function () {
+                if (!/loaded|interactive|complete/.test(document.readyState))
+                    document.addEventListener("DOMContentLoaded", onLoad);
+                else
+                    onLoad();
+
+                function onLoad() {
+                    if (tpj === undefined) {
+                        tpj = jQuery;
+                        if ("off" == "on")
+                            tpj.noConflict();
+                    }
+                    if (tpj("#rev_slider_2_1").revolution == undefined) {
+                        revslider_showDoubleJqueryError("#rev_slider_2_1");
+                    } else {
+                        revapi2 = tpj("#rev_slider_2_1").show().revolution({
+                            sliderType: "standard",
+                            sliderLayout: "fullscreen",
+                            dottedOverlay: "none",
+                            delay: 9000,
+                            navigation: {
+                                keyboardNavigation: "off",
+                                keyboard_direction: "horizontal",
+                                mouseScrollNavigation: "off",
+                                mouseScrollReverse: "default",
+                                onHoverStop: "off",
+                                arrows: {
+                                    style: "zeus",
+                                    enable: true,
+                                    hide_onmobile: false,
+                                    hide_onleave: false,
+                                    tmp: '<div class="tp-title-wrap">  	<div class="tp-arr-imgholder"></div> </div>',
+                                    left: {
+                                        h_align: "left",
+                                        v_align: "center",
+                                        h_offset: 30,
+                                        v_offset: 0
+                                    },
+                                    right: {
+                                        h_align: "right",
+                                        v_align: "center",
+                                        h_offset: 20,
+                                        v_offset: 0
+                                    }
+                                }
+                                ,
+                                bullets: {
+                                    enable: true,
+                                    hide_onmobile: false,
+                                    style: "hermes",
+                                    hide_onleave: false,
+                                    direction: "horizontal",
+                                    h_align: "center",
+                                    v_align: "bottom",
+                                    h_offset: 0,
+                                    v_offset: 60,
+                                    space: 25,
+                                    tmp: ''
+                                }
+                            },
+                            viewPort: {
+                                enable: true,
+                                outof: "wait",
+                                visible_area: "80%",
+                                presize: false
+                            },
+                            responsiveLevels: [1240, 1024, 778, 480],
+                            visibilityLevels: [1240, 1024, 778, 480],
+                            gridwidth: [1240, 1024, 778, 480],
+                            gridheight: [690, 690, 500, 400],
+                            lazyType: "none",
+                            shadow: 0,
+                            spinner: "off",
+                            stopLoop: "off",
+                            stopAfterLoops: -1,
+                            stopAtSlide: -1,
+                            shuffle: "off",
+                            sliderLayout: 'fullwidth',
+                            autoHeight: 'on',
+                            fullScreenAutoWidth: "on",
+                            fullScreenAlignForce: "off",
+                            fullScreenOffsetContainer: "",
+                            fullScreenOffset: "",
+                            disableProgressBar: "on",
+                            hideThumbsOnMobile: "off",
+                            hideSliderAtLimit: 0,
+                            hideCaptionAtLimit: 0,
+                            hideAllCaptionAtLilmit: 0,
+                            debugMode: false,
+                            fallbacks: {
+                                simplifyAll: "off",
+                                nextSlideOnWindowFocus: "off",
+                                disableFocusListener: false,
+                            }
+                        });
+                    }
+                    ;
+                    /* END OF revapi call */
+
+                }
+                ;
+                /* END OF ON LOAD FUNCTION */
+            }());
+            /* End OF WRAPPING FUNCTION */
+
+        
+
+        </script>
 
     </body>
 </html>

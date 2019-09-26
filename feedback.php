@@ -1,133 +1,148 @@
 <!DOCTYPE html>
+<?php
+include './class/include.php';
+?>
 <html lang="en">
+
     <head>
-        <meta charset="utf-8">
-        <title>Feed Back - Nature Trails - Unawatuna</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Nature Trails Boutique Hotel - Unawatuna</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content=" ">
-        <meta name="keywords" content=" ">
-        <meta name="author" content="">
 
-        <link rel="stylesheet" href="css/main.css" type="text/css">
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="images/icons/favicon.png">
+
+        <!-- REVOLUTION STYLE SHEETS -->
+        <link rel="stylesheet" href="css/style.css"><!-- Style -->
+
     </head>
-
-    <body>
-        <div id="preloader"></div>
-        <div id="wrapper">
-
-            <!-- header begin -->
-            <?php include './header.php'; ?>
-            <!-- header close -->
-
-
-
-            <!-- subheader -->
-            <section id="subheader"  >
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h1>Feed Back</h1>
-                            <h3>For Your Pleasure</h3>
-                        </div>
-                    </div>
+    <body class="single single-post">
+        <div id="preloading">
+            <div class="loading-icon">
+                <div class="sk-folding-cube">
+                    <div class="sk-cube1 sk-cube"></div>
+                    <div class="sk-cube2 sk-cube"></div>
+                    <div class="sk-cube4 sk-cube"></div>
+                    <div class="sk-cube3 sk-cube"></div>
                 </div>
-            </section> 
-            <!-- subheader close -->
-
-            <!-- content begin -->
-            <div id="content">
-                <div class="container">
-                    <div class="row"> 
-
-                        <!-- room item -->
-                        <div class="carousel-item mb30">
-                            <div class="custom-box">
-                                <div class="inner">
-                                    <div class="row">
-                                        <div class="col-md-2">
-                                            <img src="images/testi-avatar/avatar-testimonial-1.png" class="img-responsive" alt="">
-                                        </div>
-                                        <div class="col-md-10">
-
-
-                                            <p class="text-justify" style="margin:  0px">
-                                                At approximately 700 square feet in size, each Deluxe Bedroom provides ample room to create
-                                                a comfortable setting for privacy and relaxation. Equipped with the standard Exotica room amenities.
-                                                A calming colour palate featuring shades of aquamarine and turquoise combined with the strong architectural
-                                                character of the heritage rooms and suites creates a relaxed ambiance. Deluxe Bedroom can accommodate 2 to 4 people.
-                                            </p>
-                                            <h3>Deluxe Double</h3>
-                                            <div class="price_from mb20"><span>$229</span>/night</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item mb30">
-                            <div class="custom-box">
-                                <div class="inner">
-                                    <div class="row"> 
-                                        <div class="col-md-10">  
-                                            <p class="text-justify" style="margin:  0px">
-                                                At approximately 700 square feet in size, each Deluxe Bedroom provides ample room to create
-                                                a comfortable setting for privacy and relaxation. Equipped with the standard Exotica room amenities.
-                                                A calming colour palate featuring shades of aquamarine and turquoise combined with the strong architectural
-                                                character of the heritage rooms and suites creates a relaxed ambiance. Deluxe Bedroom can accommodate 2 to 4 people.
-                                            </p>
-                                            <div class="pull-right">
-                                                <h3  >Deluxe Double</h3>
-                                                <div class="price_from mb20  "><span>$229</span>/night</div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-md-2 ">
-                                            <img src="images/testi-avatar/avatar-testimonial-1.png" class="img-responsive" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-
-                <div class="spacer-single"></div> 
             </div>
+        </div>
+        <!-- Wrapper content -->
+        <div id="wrapper-container" class="content-pusher">
+            <div class="overlay-close-menu"></div>
+
+            <!-- Header -->
+            <?php include './header.php'; ?>
+            <!-- Header -->
+
+            <!-- Main Content -->
+            <div id="main-content">
+                <div class="page-title">
+                    <div class="page-title-wrapper" data-stellar-background-ratio="0.5">
+                        <div class="content container">
+                            <h1 class="heading_primary">Gest Reviews</h1>
+                            <ul class="breadcrumbs ul-top-title" >
+                                <li class="item"><a href="index.php">Home</a></li>
+                                <li class="item"><span class="separator"></span></li> 
+                                <li class="item"><span class="separator"></span></li>
+                                <li class="item active">Gest Reviews</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="site-content container">
+                    <div class="row">
+                        <main class="site-main col-sm-12 col-md-12 flex-first">
+                            <div class="comments-list" id="comments-list">
+                                <h3 class="total-comments">Gest Reviews</h3>
+                                <ul>
+                                    <?php
+                                    $COMMENT = new Comments(NULL);
+                                    foreach ($COMMENT->activeComments() as $key => $comment) {
+                                        ?>
+                                        <li class="comment clearfix">
+                                            <?php if ($key % 2 == 0) {
+                                                ?>
+                                                <div class="comment-img">
+                                                    <img src="upload/comments/<?php echo $comment['image_name'] ?>" alt="">
+                                                </div>
+                                                <div class="comment-content">
+                                                    <h6><?php echo $comment['name'] ?></h6>
+                                                    <span><?php echo $comment['country'] ?></span> 
 
 
-            <!-- footer begin -->
+                                                    <?php echo $comment['comment'] ?>
+
+                                                </div>
+                                            <?php } else { ?>
+                                                <ul class="children">
+                                                    <li class="comment clearfix">
+                                                        <div class="comment-img">
+                                                            <img src="upload/comments/<?php echo $comment['image_name'] ?>" alt="">
+                                                        </div>
+
+                                                        <div class="comment-content">
+                                                            <h6><?php echo $comment['name'] ?></h6>
+                                                            <span><?php echo $comment['country'] ?></span> 
+                                                            <?php echo $comment['comment'] ?> 
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            <?php } ?>
+                                        </li>
+                                    <?php } ?>
+                                </ul>
+                            </div>
+                        </main> 
+                    </div>
+                </div>
+            </div>
+            <!-- Footer -->
             <?php include './footer.php'; ?>
-            <!-- footer close -->
+        </div><!-- wrapper-container -->
 
-
+        <div id="back-to-top">
+            <i class="ion-ios-arrow-up" aria-hidden="true"></i>
         </div>
 
-        <!-- Javascript Files
-    ================================================== -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/jpreloader.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.isotope.min.js"></script>
-        <script src="js/jquery.prettyPhoto.js"></script>
-        <script src="js/easing.js"></script>
-        <script src="js/jquery.ui.totop.js"></script>
-        <script src="js/ender.js"></script>
-        <script src="js/jquery.scrollto.js"></script>
-        <script src="js/owl.carousel.js"></script>
-        <script src="js/video.resize.js"></script>
-        <script src="js/bootstrap-datepicker.js"></script>
-        <script src="js/jquery.stellar.js"></script>
-        <script src="js/jquery.plugin.js"></script>
-        <script src="js/wow.min.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/exotheme.js"></script>
-        <script src="js/validation.js"></script>
-        <script src="js/validation_reservation.js"></script>
 
+        <!-- Scripts -->
+        <script src="js/libs/jquery.min.js"></script><!-- jQuery -->
+        <script src="js/libs/stellar.min.js"></script><!-- parallax -->
+
+        <script src="js/libs/jquery-ui.min.js"></script><!-- ui -->
+        <script src="js/libs/daterangepicker.min.js"></script><!-- date -->
+        <script src="js/libs/daterangepicker.min-date.min.js"></script><!-- date2 -->
+        <script src="js/libs/bootstrap.min.js"></script><!-- Bootstrap -->
+        <script src="js/libs/smoothscroll.min.js"></script><!-- smoothscroll -->
+        <script src="js/libs/owl.carousel.min.js"></script><!-- Owl Carousel -->
+        <script src="js/libs/jquery.magnific-popup.min.js"></script><!-- Magnific Popup -->
+        <script src="js/libs/theia-sticky-sidebar.min.js"></script><!-- Sticky sidebar -->
+        <script src="js/libs/counter-box.min.js"></script><!-- counter -->
+        <script src="js/libs/gallery.min.js"></script><!-- gallery -->
+        <script src="js/libs/jquery.thim-content-slider.min.js"></script><!-- Slider -->
+        <script src="js/theme-customs.js"></script><!-- Theme Custom -->
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+            }
+
+            $('.translation-links a').click(function () {
+
+                var lang = $(this).data('lang');
+                var $frame = $('.goog-te-menu-frame:first');
+                if (!$frame.size()) {
+                    alert("Error: Could not find Google translate frame.");
+                    return false;
+                }
+                $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+                return false;
+            });
+        </script> 
 
     </body>
 </html>
+
