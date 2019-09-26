@@ -1,0 +1,15 @@
+@import url("bootstrap.css");
+@import url("animate.css");
+@import url("../font-awesome/css/font-awesome.css");
+@import url("plugin.css");
+/* @import url("jpreloader.css"); */
+@import url("style.css");
+@import url("owl.carousel.css");
+@import url("owl.theme.css");
+@import url("owl.transitions.css");
+@import url("datepicker.css"); 
+@import url("simplelightbox.min.css");
+@import url("../revolution/css/settings.css"); /* css file for Revolution Slider plugin */
+@import url("rev-settings.css"); /* custom css file for Revolution Slider plugin, you can modify slider typography from this file */
+
+
