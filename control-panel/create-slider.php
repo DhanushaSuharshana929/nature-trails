@@ -59,11 +59,11 @@ include_once(dirname(__FILE__) . '/auth.php');
                                         </div>
                                     </div>
 
-                                    <div class="col-md-12  hidden">
+                                    <div class="col-md-12   ">
                                         <div class="form-group form-float">
                                             <div class="form-line">
-                                                <input type="text" id="url" class="form-control" name="url"   required="true" value="5">
-                                                <label class="form-label">URL</label>
+                                                <input type="text" id="url" class="form-control" name="url"   required="true"  >
+                                                <label class="form-label">Short Description</label>
                                             </div>
                                         </div>
                                     </div>

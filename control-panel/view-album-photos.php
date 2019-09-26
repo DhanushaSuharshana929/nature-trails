@@ -90,8 +90,8 @@ $PHOTO_ALBUM = new PhotoAlbum($id)
                                                 <div class="img-caption">
                                                     <p class="maxlinetitle"><?php echo $album_photo['caption']; ?></p>
                                                     <div class="d">
-                                                        <a href="#" class="delete-album-photo" data-id="<?php echo $album_photo['id']; ?>"> <button class="glyphicon glyphicon-trash delete-btn"></button></a>
-                                                        <a href="edit-album-photo.php?id=<?php echo $album_photo['id']; ?>"> <button class="glyphicon glyphicon-pencil edit-btn"></button></a>
+                                                        <a href="#" class="delete-album-photo" data-id="<?php echo $album_photo['id']; ?>"> <button class="glyphicon glyphicon-trash delete-btn"></button></a> | 
+                                                        <a href="edit-album-photo.php?id=<?php echo $album_photo['id']; ?>"> <button class="glyphicon glyphicon-pencil edit-btn"></button></a> | 
                                                         <a href="arrange-album-photos.php?id=<?php echo $id; ?>">  <button class="glyphicon glyphicon-random arrange-btn"></button></a>
                                                     </div>
                                                 </div>

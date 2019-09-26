@@ -282,6 +282,27 @@
                     </a>
 
                 </li>
+                <li class="qqq">
+                    <a href="javascript:void(0);" class="menu-toggle">
+                        <i class="material-icons">chevron_right</i>
+                        <span>Pages</span>
+                    </a>
+                    <ul class="ml-menu">
+                        <li>
+                            <a href="create-pages.php">
+                                <i class="material-icons">add</i>
+                                <span>Add new</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="manage-pages.php">
+                                <i class="material-icons">list</i>
+                                <span>Manage</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
                 <li class="qqq hidden">
                     <a href="create-banner.php" class="">
                         <i class="material-icons">chevron_right</i>
@@ -315,34 +336,9 @@
                         </li>
                     </ul>
                 </li>
-                <li class="qqq">
-                    <a href="javascript:void(0);" class="menu-toggle">
-                        <i class="material-icons">chevron_right</i>
-                        <span>Comment</span>
-                    </a>
-                    <ul class="ml-menu">
-                        <li>
-                            <a href="create-comment.php">
-                                <i class="material-icons">add</i>
-                                <span>Add New</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="manage-comments.php">
-                                <i class="material-icons">list</i>
-                                <span>Manage</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="arrange-comments.php">
-                               <i class="material-icons">compare_arrows</i>
-                                <span>Arrange</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="qqq">
-                    <a href="javascript:void(0);" class="menu-toggle">
+
+<!--                <li class="qqq  ">
+                    <a href="javascript:void(0);" class="menu-toggle hidden">
                         <i class="material-icons">chevron_right</i>
                         <span>Tour Package</span>
                     </a>
@@ -361,12 +357,12 @@
                         </li>
                         <li>
                             <a href="arrange-tour-package.php">
-                               <i class="material-icons">compare_arrows</i>
+                                <i class="material-icons">compare_arrows</i>
                                 <span>Arrange</span>
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li>-->
                 <li class="qqq hidden">
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">chevron_right</i>
@@ -393,29 +389,9 @@
                         </li>
                     </ul>
                 </li>
-                <li class="qqq">
-                    <a href="javascript:void(0);" class="menu-toggle">
-                        <i class="material-icons">chevron_right</i>
-                        <span>Pages</span>
-                    </a>
-                    <ul class="ml-menu">
-                        <li>
-                            <a href="create-pages.php">
-                                <i class="material-icons">add</i>
-                                <span>Add new</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="manage-pages.php">
-                                <i class="material-icons">list</i>
-                                <span>Manage</span>
-                            </a>
-                        </li>
 
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript:void(0);" class="menu-toggle">
+<!--                <li>
+                    <a href="javascript:void(0);" class="menu-toggle hidden">
                         <i class="material-icons">chevron_right</i>
                         <span>Tour Type</span>
                     </a>
@@ -461,14 +437,12 @@
                             </ul>
                         </li>
                     </ul>
-
                 </li> 
 
-
                 <li>
-                    <a href="javascript:void(0);" class="menu-toggle">
+                    <a href="javascript:void(0);" class="menu-toggle ">
                         <i class="material-icons">chevron_right</i>
-                        <span>Tour Package-Normal</span>
+                        <span>Tour Package</span>
                     </a>
                     <ul class="ml-menu">
                         <li>
@@ -490,9 +464,10 @@
                             </a>
                         </li>
                     </ul>
-                </li> 
+                </li> -->
+
                 <li>
-                    <a href="javascript:void(0);" class="menu-toggle">
+                    <a href="javascript:void(0);" class="menu-toggle hidden">
                         <i class="material-icons">chevron_right</i>
                         <span>Service</span>
                     </a>
@@ -517,6 +492,7 @@
                         </li>
                     </ul>
                 </li> 
+
                 <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">chevron_right</i>
@@ -543,6 +519,42 @@
                         </li>
                     </ul>
                 </li> 
+
+                <li>
+                    <a href="create-dining-type.php" class="menu-toggle">
+                        <i class="material-icons">chevron_right</i>
+                        <span>Dining Type</span>
+                    </a> 
+                </li> 
+
+                 
+                
+                <li>
+                    <a href="javascript:void(0);" class="menu-toggle">
+                        <i class="material-icons">chevron_right</i>
+                        <span>Blog</span>
+                    </a>
+                    <ul class="ml-menu">
+                        <li>
+                            <a href="create-blog.php">
+                                <i class="material-icons">add</i>
+                                <span>Add New</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="manage-blog.php">
+                                <i class="material-icons">list</i>
+                                <span>Manage</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="arrange-blog.php">
+                                <i class="material-icons">compare_arrows</i>
+                                <span>Arrange</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li> 
                 <li>
                     <a href="view-album-photos.php?id=1" class="menu-toggle">
                         <i class="material-icons">chevron_right</i>
@@ -551,7 +563,7 @@
 
                 </li> 
                 <li>
-                    <a href="javascript:void(0);" class="menu-toggle">
+                    <a href="javascript:void(0);" class="menu-toggle hidden">
                         <i class="material-icons">chevron_right</i>
                         <span>Photo Album</span>
                     </a>
@@ -577,7 +589,7 @@
                     </ul>
                 </li> 
                 <li>
-                    <a href="javascript:void(0);" class="menu-toggle">
+                    <a href="javascript:void(0);" class="menu-toggle hidden">
                         <i class="material-icons">chevron_right</i>
                         <span>Offer</span>
                     </a>
@@ -604,7 +616,7 @@
                 </li> 
 
                 <li class="qqq">
-                    <a href="javascript:void(0);" class="menu-toggle">
+                    <a href="javascript:void(0);" class="menu-toggle hidden">
                         <i class="material-icons">chevron_right</i>
                         <span>Product Type</span>
                     </a>
@@ -629,7 +641,32 @@
                         </li>
                     </ul>
                 </li>  
-              
+                <li class="qqq">
+                    <a href="javascript:void(0);" class="menu-toggle">
+                        <i class="material-icons">chevron_right</i>
+                        <span>Comment</span>
+                    </a>
+                    <ul class="ml-menu">
+                        <li>
+                            <a href="create-comment.php">
+                                <i class="material-icons">add</i>
+                                <span>Add New</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="manage-comments.php">
+                                <i class="material-icons">list</i>
+                                <span>Manage</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="arrange-comments.php">
+                                <i class="material-icons">compare_arrows</i>
+                                <span>Arrange</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
         <!-- #Menu -->

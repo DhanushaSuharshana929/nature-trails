@@ -92,10 +92,24 @@ include_once(dirname(__FILE__) . '/auth.php');
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <label for="description">Description</label>
                                         <div class="form-line">
-                                            <textarea id="description" name="description" class="form-control" rows="5"></textarea> 
+                                            <textarea   name="description" class="form-control description" rows="5"></textarea> 
                                         </div>
-
                                     </div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <label for="features">Features </label>
+                                        <div class="form-line">
+                                            <textarea   name="features" class="form-control description" rows="5"></textarea> 
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <label for="features">Amenities </label>
+                                        <div class="form-line">
+                                            <textarea   name="amenities" class="form-control description" rows="5"></textarea> 
+                                        </div>
+                                    </div>
+
+
                                     <div class="col-md-12"> 
                                         <input type="hidden" name="create"value="create"/>
                                         <input type="submit" id="create" class="btn btn-primary m-t-15 waves-effect" value="create"/>
@@ -127,7 +141,7 @@ include_once(dirname(__FILE__) . '/auth.php');
         <script src="tinymce/js/tinymce/tinymce.min.js"></script>
         <script>
             tinymce.init({
-                selector: "#description",
+                selector: ".description",
                 // ===========================================
                 // INCLUDE THE PLUGIN
                 // ===========================================
@@ -149,7 +163,8 @@ include_once(dirname(__FILE__) . '/auth.php');
                 relative_urls: false
 
             });
-
+            
+           
 
         </script>
         <script src="js/ajax/room.js" type="text/javascript"></script>

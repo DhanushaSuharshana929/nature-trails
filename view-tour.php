@@ -1,264 +1,165 @@
 <!DOCTYPE html>
+<?php
+include './class/include.php';
+$id = $_GET['id'];
+$TOUR_PACKAGE = new TourPackage($id);
+?>
 <html lang="en">
 
     <head>
-        <meta charset="utf-8">
-        <title>View Tour -  Nature Trails - Unawatuna</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title><?php echo $TOUR_PACKAGE->title ?> -  Nature Trails - Unawatuna</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Responsive Minimal Hotel Bootstrap Theme">
-        <meta name="keywords" content="responsive,minimal,hotel,bootstrap,theme">
-        <meta name="author" content="">
 
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="images/icons/favicon.png">
+        <link rel="stylesheet" href="css/libs/jquery-ui/jquery-ui.min.css">
+        <!-- REVOLUTION STYLE SHEETS -->
+        <link rel="stylesheet" href="css/style.css"><!-- Style -->
 
-        <link rel="stylesheet" href="css/main.css" type="text/css">
     </head>
+    <body class="room single">
+        <div id="preloading">
+            <div class="loading-icon">
+                <div class="sk-folding-cube">
+                    <div class="sk-cube1 sk-cube"></div>
+                    <div class="sk-cube2 sk-cube"></div>
+                    <div class="sk-cube4 sk-cube"></div>
+                    <div class="sk-cube3 sk-cube"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Wrapper content -->
+        <div id="wrapper-container" class="content-pusher">
+            <div class="overlay-close-menu"></div>
 
-    <body>
-        <div id="preloader"></div>
-        <div id="wrapper">
-
-            <!-- header begin -->
+            <!-- Header -->
             <?php include './header.php'; ?>
-            <!-- header close -->
+            <!-- nav.mobile-menu-container -->
 
-            <!-- subheader -->
-
-            <section id="subheader"  >
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h1>Tour Name</h1>
-                            <h3>For Your Pleasure</h3>
+            <!-- Main Content -->
+            <div id="main-content">
+                <div class="page-title">
+                    <div class="page-title-wrapper" data-stellar-background-ratio="0.5">
+                        <div class="content container">
+                            <h1 class="heading_primary"><?php echo $TOUR_PACKAGE->title ?></h1>
+                            <ul class="breadcrumbs ul-top-title" >
+                                <li class="item"><a href="index.php">Home</a></li>
+                                <li class="item"><span class="separator"></span></li>
+                                <li class="item"><a href="tour.php">Tour Packages</a></li>
+                                <li class="item"><span class="separator"></span></li>
+                                <li class="item active"><?php echo $TOUR_PACKAGE->title ?></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- subheader close -->
 
+                <div class="site-content container">
+                    <div class="room-single row">
+                        <main class="site-main col-sm-12 col-md-12 flex-first">
+                            <div class="room-wrapper">                                 
+                                <div class="title-share clearfix">
+                                    <h2 class="title"><?php echo $TOUR_PACKAGE->title ?></h2>
+                                </div>
 
-            <!-- content begin -->
-            <div id="content" class="no-top no-bottom">
-
-                <!-- section begin -->
-                <section id="section-tourism_details_1" class="side-bg" data-stellar-background-ratio="0.5">
-                    <div class="col-md-8 col-md-offset-4 image-container">
-                        <div class="background-image overlay-light-80"></div>
-                    </div>
-
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-3"> </div>
-                            <div class="col-md-7 col-md-offset-2"> 
-                                <h4>Lombok Island is the most popular destination in West Nusa Tenggara with the spectacular natural beauty and cultural richness.</h4>
-
-                                <div class="spacer-single"></div>
-
-                                <p>Lombok is an Indonesian island east of Bali and west of Sumbawa, part of the Lesser Sunda Island chain. It's known
-                                    for beaches and surfing spots, particularly at Kuta and Banko Banko (in south Lombok). The motor-vehicle-free Gili
-                                    Islands (Gili Trawangan, Gili Air and Gili Meno), off Lombok’s west coast, offer more beaches, reefs for diving and
-                                    snorkeling, and a sea turtle hatchery.
-                                </p>                               
-                            </div> 
-                        </div> 
-                    </div> 
-                </section>
-                <!-- section close -->
-
-                <!-- section begin -->
-                <section id="section-aboutus_3_details_2">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-5 padding20">
-                                <div class="custom-box">
-                                    <div class="inner">
-                                        <img src="images/carousel/explore-1.jpg" class="img-responsive" alt="">
-                                    </div>
+                                <div class="description text-justify">
+                                    <?php echo $TOUR_PACKAGE->description ?>
                                 </div>
                             </div>
+                            <?php
+                            $TOUR_DATE = new TourDate(NULL);
+                            foreach ($TOUR_DATE->getTourDatesById($TOUR_PACKAGE->id) as $tour_date) {
+                                ?>
+                                <div class="room_additinal">
+                                    <h3 class="title style-01">AMENITIES AND SERVICES</h3>
+                                    <div class="sc-gallery">
 
-                            <div class="col-md-7 padding20">
-                                <h4>Tour date 1</h4>
-                                <p class="text-justify">Gili Trawangan is the largest of Lombok's Gili Islands and the only one to rise significantly (30 m) above sea level.
-                                    Measuring 3 km long and 2 km wide, it has a population of around 1500 (see demography). The name Trawangan originates
-                                    from the Indonesian word Terowongan (Tunnel) due to the presence of a cave tunnel built there during Japanese occupation
-                                    in World War 2.[10] Of the Gilis, Trawangan is the most developed and geared towards tourism. The main concentration of settlement, recreation,
-                                    accommodation and diving business is situated on the eastern side of the island. A local pub, Tír na Nóg claims that
-                                    Trawangan is the smallest island in the world with an Irish pub. It was previously administered under Lombok Barat Regency along with
-                                    Senggigi until 2010 when the Gili islands came under the jurisdiction of the new North Lombok Regency (Kabupaten Lombok Utara)</p>
-                            </div> 
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="item furniture gallery">  
-                                    <a href="images/g-b-1.jpg" class="big ">
-                                        <span class="overlay">Jati Chairs   </span>
-                                        <img src="images/g1.jpg" alt="title" title="title" />
-                                    </a> 
-                                </div> 
-                            </div>
-                            <div class="col-md-3">
-                                <div class="item furniture gallery">  
-                                    <a href="images/g-b-1.jpg" class="big ">
-                                        <span class="overlay">Jati Chairs   </span>
-                                        <img src="images/g1.jpg" alt="title" title="title" />
-                                    </a> 
-                                </div> 
-                            </div> 
-                            <div class="col-md-3">
-                                <div class="item furniture gallery">  
-                                    <a href="images/g-b-1.jpg" class="big ">
-                                        <span class="overlay">Jati Chairs   </span>
-                                        <img src="images/g1.jpg" alt="title" title="title" />
-                                    </a> 
-                                </div> 
-                            </div> 
-                            <div class="col-md-3">
-                                <div class="item furniture gallery">  
-                                    <a href="images/g-b-1.jpg" class="big ">
-                                        <span class="overlay">Jati Chairs   </span>
-                                        <img src="images/g1.jpg" alt="title" title="title" />
-                                    </a> 
-                                </div> 
-                            </div> 
-                        </div>
-                        <div class="col-md-12"><div class="divider-line"></div></div>
-                        <div class="row">
-                            <div class="col-md-5 padding20">
-                                <div class="custom-box">
-                                    <div class="inner">
-                                        <img src="images/carousel/explore-2.jpg" class="img-responsive" alt="">
+                                        <div class="wrapper-gallery row" itemscope itemtype="http://schema.org/ItemList">
+                                            <?php
+                                            $TOUR_DATE_PHOTO = new TourDatePhoto(NULL);
+                                            foreach ($TOUR_DATE_PHOTO->getTourDatePhotosById($tour_date['id']) as $tour_date_photo) {
+                                                ?>
+                                                <div class="col-sm-3 filter-room filter-restaurant filter-swimming">
+                                                    <a href="upload/photo-album/gallery/<?php echo $tour_date_photo['image_name'] ?>" class="gallery-popup">
+                                                        <img src="upload/photo-album/gallery/thumb/<?php echo $tour_date_photo['image_name'] ?>" alt=""></a>
+                                                </div> 
+                                            <?php } ?>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            <?php } ?>
 
-                            <div class="col-md-7 padding20">
-                                <h4>Tour date 1</h4>
-                                <p class="text-justify">Gili Trawangan is the largest of Lombok's Gili Islands and the only one to rise significantly (30 m) above sea level.
-                                    Measuring 3 km long and 2 km wide, it has a population of around 1500 (see demography). The name Trawangan originates
-                                    from the Indonesian word Terowongan (Tunnel) due to the presence of a cave tunnel built there during Japanese occupation
-                                    in World War 2.[10] Of the Gilis, Trawangan is the most developed and geared towards tourism. The main concentration of settlement, recreation,
-                                    accommodation and diving business is situated on the eastern side of the island. A local pub, Tír na Nóg claims that
-                                    Trawangan is the smallest island in the world with an Irish pub. It was previously administered under Lombok Barat Regency along with
-                                    Senggigi until 2010 when the Gili islands came under the jurisdiction of the new North Lombok Regency (Kabupaten Lombok Utara)</p>
-                            </div> 
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="item furniture gallery">  
-                                    <a href="images/g-b-1.jpg" class="big ">
-                                        <span class="overlay">Jati Chairs   </span>
-                                        <img src="images/g1.jpg" alt="title" title="title" />
-                                    </a> 
-                                </div> 
-                            </div>
-                            <div class="col-md-3">
-                                <div class="item furniture gallery">  
-                                    <a href="images/g-b-1.jpg" class="big ">
-                                        <span class="overlay">Jati Chairs   </span>
-                                        <img src="images/g1.jpg" alt="title" title="title" />
-                                    </a> 
-                                </div> 
-                            </div> 
-                            <div class="col-md-3">
-                                <div class="item furniture gallery">  
-                                    <a href="images/g-b-1.jpg" class="big ">
-                                        <span class="overlay">Jati Chairs   </span>
-                                        <img src="images/g1.jpg" alt="title" title="title" />
-                                    </a> 
-                                </div> 
-                            </div> 
-                            <div class="col-md-3">
-                                <div class="item furniture gallery">  
-                                    <a href="images/g-b-1.jpg" class="big ">
-                                        <span class="overlay">Jati Chairs   </span>
-                                        <img src="images/g1.jpg" alt="title" title="title" />
-                                    </a> 
-                                </div> 
-                            </div> 
-                        </div>
-                        <div class="col-md-12"><div class="divider-line"></div></div>
+                            <div class="room_additinal">
+                                <h3 class="title style-01">Other Tour Packages</h3>
+                                <div class="sc-about-slides row">
+                                    <ul class="slides owl-theme owl-carousel sc-tourist style-02">
+                                        <?php
+                                        $TOUR_PACKAGE = new TourPackage(NULL);
+                                        foreach ($TOUR_PACKAGE->all() as $tour_package) {
+                                            ?>
+                                            <li>
+                                                <div class="item">
+                                                    <div class="image">
+                                                        <a href="view-tour.php??id=<?php echo $tour_package['id'] ?>"><img src="upload/tour-package/<?php echo $tour_package['image_name'] ?>" alt="<?php echo $room['title'] ?>"></a>
+                                                        <div class="meta-img">
+                                                            <span class="price">$<?php echo $tour_package['price'] ?></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="inner">
+                                                        <div class="content">
+                                                            <div class="title"><a href="view-tour.php??id=<?php echo $tour_package['id'] ?>"><?php echo $tour_package['title'] ?></a></div> 
+                                                            <?php echo substr($tour_package['short_description'], 0, 100) ?> ...
+                                                        </div>
 
+                                                        <div class="review clearfix " >
+                                                            <a href="view-tour.php?id=<?php echo $tour_package['id'] ?>">
+                                                                <div class="time flot-r"><i class="ion-arrow-right-a"></i> View More</div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        <?php } ?>
+                                    </ul>
+                                </div
+                            </div>
                     </div>
-                </section>
+                    </main>
 
 
+                </div>
             </div>
 
-            <!-- footer begin -->
-            <?php include './footer.php'; ?>
-            <!-- footer close -->
-
         </div>
+        <!-- Footer -->
+        <?php include './footer.php'; ?>
+        <!--footer-->
+    </div><!-- wrapper-container -->
 
-        <!-- Javascript Files
-        ================================================== -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/jpreloader.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.isotope.min.js"></script>
-        <script src="js/jquery.prettyPhoto.js"></script>
-        <script src="js/easing.js"></script>
-        <script src="js/jquery.ui.totop.js"></script>
-        <script src="js/ender.js"></script>
-        <script src="js/jquery.scrollto.js"></script>
-        <script src="js/owl.carousel.js"></script>
-        <script src="js/video.resize.js"></script>
-        <script src="js/bootstrap-datepicker.js"></script>
-        <script src="js/jquery.stellar.js"></script>
-        <script src="js/jquery.plugin.js"></script>
-        <script src="js/wow.min.js"></script> 
-        <script src="js/exotheme.js"></script>
+    <div id="back-to-top">
+        <i class="ion-ios-arrow-up" aria-hidden="true"></i>
+    </div>
 
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/validation.js"></script>
-        <script src="js/validation_reservation.js"></script>
-        <script src="js/simple-lightbox.min.js" type="text/javascript"></script>
-        <script>
-            $(function () {
-                var $gallery = $('.gallery a').simpleLightbox();
 
-                $gallery.on('show.simplelightbox', function () {
-                    console.log('Requested for showing');
-                })
-                        .on('shown.simplelightbox', function () {
-                            console.log('Shown');
-                        })
-                        .on('close.simplelightbox', function () {
-                            console.log('Requested for closing');
-                        })
-                        .on('closed.simplelightbox', function () {
-                            console.log('Closed');
-                        })
-                        .on('change.simplelightbox', function () {
-                            console.log('Requested for change');
-                        })
-                        .on('next.simplelightbox', function () {
-                            console.log('Requested for next');
-                        })
-                        .on('prev.simplelightbox', function () {
-                            console.log('Requested for prev');
-                        })
-                        .on('nextImageLoaded.simplelightbox', function () {
-                            console.log('Next image loaded');
-                        })
-                        .on('prevImageLoaded.simplelightbox', function () {
-                            console.log('Prev image loaded');
-                        })
-                        .on('changed.simplelightbox', function () {
-                            console.log('Image changed');
-                        })
-                        .on('nextDone.simplelightbox', function () {
-                            console.log('Image changed to next');
-                        })
-                        .on('prevDone.simplelightbox', function () {
-                            console.log('Image changed to prev');
-                        })
-                        .on('error.simplelightbox', function (e) {
-                            console.log('No image found, go to the next/prev');
-                            console.log(e);
-                        });
-            });
-        </script>
-    </body>
+    <!-- Scripts -->
+    <script src="js/libs/jquery-1.12.4.min.js"></script><!-- jquery -->
+    <script src="js/libs/stellar.min.js"></script><!-- parallax -->
 
+
+    <script src="js/libs/bootstrap.min.js"></script><!-- Bootstrap -->
+    <script src="js/libs/smoothscroll.min.js"></script><!-- smoothscroll -->
+    <script src="js/libs/owl.carousel.min.js"></script><!-- Owl Carousel -->
+    <script src="js/libs/jquery.magnific-popup.min.js"></script><!-- Magnific Popup -->
+    <script src="js/libs/theia-sticky-sidebar.min.js"></script><!-- Sticky sidebar -->
+    <script src="js/libs/counter-box.min.js"></script><!-- counter -->
+    <script src="js/libs/jquery.flexslider-min.js"></script><!-- flexslider -->
+    <script src="js/libs/jquery.thim-content-slider.min.js"></script><!-- Slider -->
+    <script src="js/libs/gallery.min.js"></script><!-- gallery -->
+    <script src="js/libs/moment.min.js"></script><!-- moment -->
+    <script src="js/libs/jquery-ui.min.js"></script><!-- ui -->
+    <script src="js/libs/daterangepicker.min.js"></script><!-- date -->
+    <script src="js/libs/daterangepicker.min-date.min.js"></script><!-- date2 -->
+    <script src="js/theme-customs.js"></script><!-- Theme Custom -->
+
+</body>
 </html>

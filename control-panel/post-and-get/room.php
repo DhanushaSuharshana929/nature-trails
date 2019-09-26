@@ -6,12 +6,14 @@ if (isset($_POST['create'])) {
 
     $ROOM = new Room(NULL);
     $VALID = new Validator();
-    
+
     $ROOM->title = $_POST['title'];
     $ROOM->short_description = $_POST['short_description'];
     $ROOM->description = $_POST['description'];
     $ROOM->no_of_rooms = $_POST['no_of_rooms'];
     $ROOM->price = $_POST['price'];
+    $ROOM->features = $_POST['features'];
+    $ROOM->amenities = $_POST['amenities'];
 
     $dir_dest = '../../upload/room/';
 
@@ -24,8 +26,8 @@ if (isset($_POST['create'])) {
         $handle->file_new_name_ext = 'jpg';
         $handle->image_ratio_crop = 'C';
         $handle->file_new_name_body = Helper::randamId();
-        $handle->image_x = 360;
-        $handle->image_y = 235;
+        $handle->image_x = 434;
+        $handle->image_y = 257;
 
         $handle->Process($dir_dest);
 
@@ -56,8 +58,8 @@ if (isset($_POST['update'])) {
         $handle->file_new_name_ext = FALSE;
         $handle->image_ratio_crop = 'C';
         $handle->file_new_name_body = $_POST ["oldImageName"];
-        $handle->image_x = 360;
-        $handle->image_y = 235;
+        $handle->image_x = 434;
+        $handle->image_y = 257;
 
         $handle->Process($dir_dest);
 
@@ -75,6 +77,9 @@ if (isset($_POST['update'])) {
     $ROOM->description = $_POST['description'];
     $ROOM->no_of_rooms = $_POST['no_of_rooms'];
     $ROOM->price = $_POST['price'];
+    $ROOM->features = $_POST['features'];
+    $ROOM->amenities = $_POST['amenities'];
+
     $ROOM->update();
 
 

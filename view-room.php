@@ -1,272 +1,286 @@
 <!DOCTYPE html>
+<?php
+include './class/include.php';
+$id = $_GET['id'];
+$ROOM = new Room($id);
+?>
 <html lang="en">
+
     <head>
-        <meta charset="utf-8">
-        <title>View Room -  Nature Trails - Unawatuna</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title><?php echo $ROOM->title ?> -  Nature Trails - Unawatuna</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Responsive Minimal Hotel Bootstrap Theme">
-        <meta name="keywords" content="responsive,minimal,hotel,bootstrap,theme">
-        <meta name="author" content="">
 
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="images/icons/favicon.png">
+        <link rel="stylesheet" href="css/libs/jquery-ui/jquery-ui.min.css">
+        <!-- REVOLUTION STYLE SHEETS -->
+        <link rel="stylesheet" href="css/style.css"><!-- Style -->
 
-        <link rel="stylesheet" href="css/main.css" type="text/css">
     </head>
+    <body class="room single">
+        <div id="preloading">
+            <div class="loading-icon">
+                <div class="sk-folding-cube">
+                    <div class="sk-cube1 sk-cube"></div>
+                    <div class="sk-cube2 sk-cube"></div>
+                    <div class="sk-cube4 sk-cube"></div>
+                    <div class="sk-cube3 sk-cube"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Wrapper content -->
+        <div id="wrapper-container" class="content-pusher">
+            <div class="overlay-close-menu"></div>
 
-    <body>
-        <div id="preloader"></div>
-        <div id="wrapper"> 
-
-            <!-- header begin -->
+            <!-- Header -->
             <?php include './header.php'; ?>
-            <!-- header close -->
+            <!-- nav.mobile-menu-container -->
 
-
-
-            <!-- subheader -->
-            
-              <section id="subheader"  >
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h1>Room Name</h1>
-                            <h3>For Your Pleasure</h3>
+            <!-- Main Content -->
+            <div id="main-content">
+                <div class="page-title">
+                    <div class="page-title-wrapper" data-stellar-background-ratio="0.5">
+                        <div class="content container">
+                            <h1 class="heading_primary"><?php echo $ROOM->title ?></h1>
+                            <ul class="breadcrumbs ul-top-title" >
+                                <li class="item"><a href="index.php">Home</a></li>
+                                <li class="item"><span class="separator"></span></li>
+                                <li class="item"><a href="room.php">Rooms Types</a></li>
+                                <li class="item"><span class="separator"></span></li>
+                                <li class="item active"><?php echo $ROOM->title ?></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </section> 
-            <!-- subheader close -->
 
-            <!-- content begin -->
-            <div id="content" class="no-top no-bottom">
-                <section>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <div class="room-pic-slider">
-                                    <img src="images/room/room-deluxe-single.jpg" alt="" />
-                                    <img src="images/room/furniture-3.jpg" alt="" />
-                                    <img src="images/room/furniture-4.jpg" alt="" />
-                                    <img src="images/room/furniture-4.jpg" alt="" />
-                                    <img src="images/room/furniture-4.jpg" alt="" />
+                <div class="site-content container">
+                    <div class="room-single row">
+                        <main class="site-main col-sm-12 col-md-9 flex-first">
+                            <div class="room-wrapper">
+                                <div class="room_gallery clearfix">
+                                    <div class="camera_wrap camera_emboss" id="camera_wrap">
+                                        <?php
+                                        $ROOM_PHOTO = new RoomPhoto(NULL);
+                                        foreach ($ROOM_PHOTO->getRoomPhotosById($id) as $room_photo) {
+                                            ?>
+                                            <div  data-src="upload/room/gallery/<?php echo $room_photo['image_name'] ?>" ></div> 
+                                        <?php } ?>
+                                    </div>
                                 </div>
+                                <div class="title-share clearfix">
+                                    <h2 class="title"><?php echo $ROOM->title ?></h2>
+                                </div>
+                                <div class="room_price">
+                                    <span class="price_value price_min">$<?php echo $ROOM->price ?></span>
+                                    <span class="unit">Night</span>
+                                </div>
+                                <div class="room_additinal">
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <ul>
+                                                <li><img src="images/icons/mountain.png" class="img-right"/>Mountain View</li>
+                                                <li><img src="images/icons/wifi-router.png" class="img-right"/>Internet Access </li>  
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <ul>
+                                                <li><img src="images/icons/room.png" class="img-right"/>Room Size 480ft</li>
+                                                <li><img src="images/icons/locker-rooms.png" class="img-right"/>Locker </li>  
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <ul>
+                                                <li><img src="images/icons/balcony_view.png" class="img-right"/>Balcony / terrace</li>  
+                                                <li><img src="images/icons/bars.png" class="img-right"/>Mini Bar </li>  
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <ul>
 
-                                <div class="spacer-single"></div>
-
-                                <div class="room-carousel-nav">
-                                    <img src="images/room/room-deluxe-single.jpg" alt="" />
-                                    <img src="images/room/furniture-3.jpg" alt=""  />
-                                    <img src="images/room/furniture-4.jpg" alt="" />
-                                    <img src="images/room/furniture-4.jpg" alt="" />
-                                    <img src="images/room/furniture-4.jpg" alt="" />
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="description text-justify">
+                                    <?php echo $ROOM->description ?>
                                 </div>
                             </div>
 
-                            <div class="col-md-4">
-                                <div class="room-description s2">
-                                    <div class="text">
-                                        
-                                        <p class="text-justify">
-                                            A spacious light room in sea colors, Each room is beautifully decorated, personifying contemporary and features the best technological services.
-                                            Special Features: Free Wi-Fi, Free usage of Handy Phone, Bathtub, Separate Shower and Tub, Air Conditioning, 40" Smart TV, Mini-Bar, Washlet,
-                                            Hair Dryer, reading table & table lamp, coffee making facilities and all our signature lifestyle amenities.
-                                        
-                                            Separate Shower and Tub, Air Conditioning, 40" Smart TV, Mini-Bar, Washlet,
-                                            Hair Dryer, reading table & table lamp, coffee making facilities and all our signature lifestyle amenities.
-                                        </p>
 
-                                    </div> 
 
+                            <div class="room_additinal">
+                                <h3 class="title style-01">AMENITIES AND SERVICES</h3>
+                                <?php echo $ROOM->amenities ?>
+                            </div>
+                            <div class="room_additinal">
+                                <h3 class="title style-01">Other Rooms</h3>
+                                <div class="sc-about-slides row">
+                                    <ul class="slides owl-theme owl-carousel sc-tourist style-02">
+                                        <?php
+                                        $ROOM = new Room(NULL);
+                                        foreach ($ROOM->all() as $room) {
+                                            ?>
+                                            <li>
+                                                <div class="item">
+                                                    <div class="image">
+                                                        <a href="view-room.php?id=<?php echo $room['id'] ?>"><img src="upload/room/<?php echo $room['image_name'] ?>" alt="<?php echo $room['title'] ?>"></a>
+                                                        <div class="meta-img">
+                                                            <span class="price">$<?php echo $room['price'] ?></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="inner">
+                                                        <div class="content">
+                                                            <div class="title"><a href="view-room.php?id=<?php echo $room['id'] ?>"><?php echo $room['title'] ?></a></div> 
+
+                                                            <ul class="meta r-top-2">
+                                                                <li>Start From <span class="price-color" >  $12 </span> / Night  </li>
+                                                            </ul>
+
+                                                            <?php echo substr($room['short_description'], 0, 100) ?> ...
+                                                        </div>
+
+                                                        <div class="review clearfix " >
+                                                            <a href="view-room.php?id=<?php echo $room['id'] ?>">
+                                                                <div class="time flot-r"><i class="ion-arrow-right-a"></i> View More</div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        <?php } ?>
+                                    </ul>
+                                </div
+                            </div>
+                    </div>
+                    </main>
+
+                    <aside id="secondary" class="widget-area col-sm-12 col-md-3 sticky-sidebar">
+                        <div class="wd wd-book-room">
+                            <a href="#" class="book-room">Book This Room</a>
+                            <div id="form-popup-room" class="form-popup-room">
+                                <div class="popup-container">
+                                    <a href="#" class="close-popup"><i class="ion-android-close"></i></a>
+                                    <form id="hotel-popup-results" name="hb-search-single-room" class="hotel-popup-results">
+                                        <div class="room-head">
+                                            <h3 class="room-title">Classic Room</h3>
+                                            <p class="description">Please enter the information to complete the book this room.</p>
+                                        </div>
+                                        <div class="search-room-popup">
+                                            <ul class="form-table clearfix">
+                                                <li class="form-field">
+                                                    <input type="text" name="name" id="name" required class="name" placeholder="Your Name*">
+                                                </li>
+                                                <li class="form-field">
+                                                    <input type="email" name="email" id="email" required class="email" placeholder="Your Email*">
+                                                </li>
+                                                <li class="form-field">
+                                                    <input type="tel" name="phone" id="phone" required class="phone" placeholder="Your Phone*">
+                                                </li>
+                                                <li class="form-field">
+                                                    <input type="text" name="add" id="add" required class="add" placeholder="Your Address*">
+                                                </li>
+                                                <li class="form-field">
+                                                    <input type="text" name="check_in_date" id="popup_check_in_date" required class="check_in_date" placeholder="Arrival Date">
+                                                </li>
+                                                <li class="form-field">
+                                                    <input type="text" name="check_out_date" id="popup_check_out_date" required class="check_out_date " placeholder="Departure Date">
+                                                </li>
+
+                                                <li class="form-field room-submit">
+                                                    <button id="check_date" class="submit" type="submit">Book Now</button>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-
-
-                <section>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <h3>Facilities &amp; Services</h3>
-                            </div> 
-                            
-                            <div class="col-md-4">
-                                <div class="room-facilities">
-                                    <ul class="room-facilities-list s2">
-                                        <li><div>Bed</div> </li>
-                                        <li><div>Max</div> </li>
-                                        <li><div>View</div> </li>
-                                        <li><div>Room Size</div> </li>
-                                        <li><div>Room Service</div> </li>
-                                        <li><div>Airport Pick Up</div> </li>
-                                        <li><div>Private Balcony</div> </li>
-                                    </ul>
+                        <div class="wd wd-check-room">
+                            <h3 class="title">CHECK AVAILABILITY</h3>
+                            <form name="search-rooms" class="wd-search-room datepicker" action="http://html.thimpress.com/hotelwp/rooms-search.html">
+                                <ul class="form-table">
+                                    <li class="form-field">
+                                        <input type="text" name="check_in_date" id="check_in_date" required class="check_in_date" placeholder="Check in">
+                                    </li>
+                                    <li class="form-field">
+                                        <input type="text" name="check_out_date" id="check_out_date" required class="check_out_date " placeholder="Check out">
+                                    </li>
+                                    <li class="select-field">
+                                        <select name="adults_capacity" required>
+                                            <option value="">Guest</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                                <div class="room-submit">
+                                    <button class="submit" type="submit">Check Availability</button>
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="room-facilities">
-                                    <ul class="room-facilities-list s2">
-                                        <li><div>Bed</div> </li>
-                                        <li><div>Max</div> </li>
-                                        <li><div>View</div> </li>
-                                        <li><div>Room Size</div> </li>
-                                        <li><div>Room Service</div> </li>
-                                        <li><div>Airport Pick Up</div> </li>
-                                        <li><div>Private Balcony</div> </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="room-facilities">
-                                    <ul class="room-facilities-list s2">
-                                        <li><div>Bed</div> </li>
-                                        <li><div>Max</div> </li>
-                                        <li><div>View</div> </li>
-                                        <li><div>Room Size</div> </li>
-                                        <li><div>Room Service</div> </li>
-                                        <li><div>Airport Pick Up</div> </li>
-                                        <li><div>Private Balcony</div> </li>
-                                    </ul>
-                                </div>
-                            </div> 
+                            </form>
                         </div>
-                    </div>
-                </section>
-
-                <section id="page-rooms-2" data-stellar-background-ratio="-0.1">
-                    <div class="container">
-                        <div class="row">
-                             <h2 class="text-center">Other Rooms</h2>
-                            <div class="col-md-12">
-                                <div class="lt-carousel">
-
-                                    <!-- carousel item -->
-                                    <div class="carousel-item">
-                                        <div class="custom-box">
-                                            <div class="inner">
-                                                <div class="row">
-
-                                                    <div class="col-md-5 xs-mb-30">
-                                                        <img src="images/room/room-deluxe-single.jpg" class="img-responsive" alt="">
-                                                    </div>
-
-                                                    <div class="col-md-7">
-                                                        <h3>Deluxe Single</h3>
-                                                        <div class="price_from"><span>$199</span>/night</div>
-                                                        At approximately 700 square feet in size, each Deluxe Bedroom provides ample room to create
-                                                        a comfortable setting for privacy and relaxation. Equipped with the standard Exotica room amenities.
-                                                        A calming colour palate featuring shades of aquamarine and turquoise combined with the strong architectural
-                                                        character of the heritage rooms and suites creates a relaxed ambiance. Deluxe Bedroom can accommodate 2 to 4 people.
-                                                        <div class="divider-single"></div>
-                                                        <a href="#" class="btn-slider">View Details</a>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- carousel item -->
-                                    <div class="carousel-item">
-                                        <div class="custom-box">
-                                            <div class="inner">
-                                                <div class="row">
-
-                                                    <div class="col-md-5 xs-mb-30">
-                                                        <img src="images/room/room-luxury-single.jpg" class="img-responsive" alt="">
-                                                    </div>
-
-                                                    <div class="col-md-7">
-                                                        <h3>Luxury Single</h3>
-                                                        <div class="price_from"><span>$299</span>/night</div>
-                                                        Our rooms are decorated in a unique style that blends Balinesse and modern, with the beds, furniture
-                                                        and lighting that was specially designed to provide a relaxing and comforting ambience for our guests.
-                                                        have been lovingly restored and tastefully updated. A calming colour palate featuring shades
-                                                        of aquamarine and turquoise combined with the strong architectural character of the Heritage
-                                                        rooms and suites creates a relaxed ambiance.
-                                                        <div class="divider-single"></div>
-                                                        <a href="#" class="btn-slider">View Details</a>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- carousel item -->
-                                    <div class="carousel-item">
-                                        <div class="custom-box">
-                                            <div class="inner">
-                                                <div class="row">
-
-                                                    <div class="col-md-5 xs-mb-30">
-                                                        <img src="images/room/room-premier-single.jpg" class="img-responsive" alt="">
-                                                    </div>
-
-                                                    <div class="col-md-7">
-                                                        <h3>Premier Single</h3>
-                                                        <div class="price_from"><span>$399</span>/night</div>
-                                                        The rooms have large and comfortable beds, LCD, Wi-Fi internet, TV cable, minibar and conditioned air.
-                                                        The bathrooms are equipped with showers, hair dryer, soap and hair wash. The rooms have an area of 20 sqm.
-                                                        have been lovingly restored and tastefully updated. A calming colour palate featuring shades
-                                                        of aquamarine and turquoise combined with the strong architectural character of the Heritage
-                                                        rooms and suites creates a relaxed ambiance.
-                                                        <div class="divider-single"></div>
-                                                        <a href="#" class="btn-slider">View Details</a>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="owl-custom-nav mt30">
-                                    <a class="btn-prev"></a>
-                                    <a class="btn-next"></a>
-                                </div>
-
-                            </div>
-
-
-
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </section>
+                    </aside>
+                </div>
             </div>
-            <!-- section close -->
-
-            <!-- footer begin -->
-            <?php include './footer.php'; ?>
-            <!-- footer close -->
 
         </div>
+        <!-- Footer -->
+        <?php include './footer.php'; ?>
+        <!--footer-->
+    </div><!-- wrapper-container -->
 
-        <!-- Javascript Files
-        ================================================== -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/jpreloader.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.isotope.min.js"></script>
-        <script src="js/jquery.prettyPhoto.js"></script>
-        <script src="js/easing.js"></script>
-        <script src="js/jquery.ui.totop.js"></script>
-        <script src="js/ender.js"></script>
-        <script src="js/jquery.scrollto.js"></script>
-        <script src="js/owl.carousel.js"></script>
-        <script src="js/video.resize.js"></script>
-        <script src="js/bootstrap-datepicker.js"></script>
-        <script src="js/jquery.stellar.js"></script>
-        <script src="js/jquery.plugin.js"></script>
-        <script src="js/wow.min.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/exotheme.js"></script>
-        <script src="js/validation.js"></script>
-        <script src="js/validation_reservation.js"></script>
-
-    </body>
+    <div id="back-to-top">
+        <i class="ion-ios-arrow-up" aria-hidden="true"></i>
+    </div>
 
 
+    <!-- Scripts -->
+    <script src="js/libs/jquery-1.12.4.min.js"></script><!-- jquery -->
+    <script src="js/libs/stellar.min.js"></script><!-- parallax -->
+
+
+    <script src="js/libs/bootstrap.min.js"></script><!-- Bootstrap -->
+    <script src="js/libs/smoothscroll.min.js"></script><!-- smoothscroll -->
+    <script src="js/libs/owl.carousel.min.js"></script><!-- Owl Carousel -->
+    <script src="js/libs/jquery.magnific-popup.min.js"></script><!-- Magnific Popup -->
+    <script src="js/libs/theia-sticky-sidebar.min.js"></script><!-- Sticky sidebar -->
+    <script src="js/libs/counter-box.min.js"></script><!-- counter -->
+    <script src="js/libs/jquery.flexslider-min.js"></script><!-- flexslider -->
+    <script src="js/libs/jquery.thim-content-slider.min.js"></script><!-- Slider -->
+    <script src="js/libs/gallery.min.js"></script><!-- gallery -->
+    <script src="js/libs/moment.min.js"></script><!-- moment -->
+    <script src="js/libs/jquery-ui.min.js"></script><!-- ui -->
+    <script src="js/libs/daterangepicker.min.js"></script><!-- date -->
+    <script src="js/libs/daterangepicker.min-date.min.js"></script><!-- date2 -->
+    <script src="js/theme-customs.js"></script><!-- Theme Custom -->
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+        }
+
+        $('.translation-links a').click(function () {
+
+            var lang = $(this).data('lang');
+            var $frame = $('.goog-te-menu-frame:first');
+            if (!$frame.size()) {
+                alert("Error: Could not find Google translate frame.");
+                return false;
+            }
+            $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+            return false;
+        });
+    </script> 
+</body>
 </html>

@@ -101,7 +101,19 @@ $ROOM = new Room($id);
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <label for="description">Description</label>
                                         <div class="form-line">
-                                            <textarea id="description" name="description" class="form-control" rows="5"><?php echo $ROOM->description; ?></textarea> 
+                                            <textarea   name="description" class="form-control description" rows="5"><?php echo $ROOM->description; ?></textarea> 
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <label for="features">Features</label>
+                                        <div class="form-line">
+                                            <textarea  name="features" class="form-control description" rows="5"><?php echo $ROOM->features; ?></textarea> 
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <label for="features">Amenities</label>
+                                        <div class="form-line">
+                                            <textarea  name="amenities" class="form-control description" rows="5"><?php echo $ROOM->amenities; ?></textarea> 
                                         </div>
                                     </div>
                                     <div class="col-md-12">
@@ -134,7 +146,7 @@ $ROOM = new Room($id);
         <script src="tinymce/js/tinymce/tinymce.min.js"></script>
         <script>
             tinymce.init({
-                selector: "#description",
+                selector: ".description",
                 // ===========================================
                 // INCLUDE THE PLUGIN
                 // ===========================================
@@ -157,7 +169,7 @@ $ROOM = new Room($id);
 
             });
 
-
+           
         </script>
         <script src="js/ajax/room.js" type="text/javascript"></script>
     </body>

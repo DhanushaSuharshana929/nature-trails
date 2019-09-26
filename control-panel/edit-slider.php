@@ -70,11 +70,11 @@ $SLIDER = new Slider($id);
                                     </div>
 
 
-                                    <div class="col-sm-12  hidden">
+                                    <div class="col-sm-12   ">
                                         <div class="form-group form-float">
                                             <div class="form-line">
-                                                <input type="text" id="url" class="form-control" value="<?php echo $SLIDER->url; ?>"  name="url">
-                                                <label class="form-label">URL</label>
+                                                <input type="text" id="url" class="form-control"   value="<?php echo $SLIDER->url; ?>"  name="url">
+                                                <label class="form-label">Short Description</label>
                                             </div>
                                         </div>
                                     </div>

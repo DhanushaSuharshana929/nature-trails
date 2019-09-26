@@ -57,11 +57,11 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                     </div>
                                                     <div class="img-caption">
                                                         <p class="maxlinetitle"><?php echo $tour_package['title']; ?></p>
-                                                        <div class="d">
+                                                        <div class="d"> 
+                                                            <a href="edit-tour-package-normal.php?id=<?php echo $tour_package['id']; ?>"> <button class="glyphicon glyphicon-pencil edit-btn"></button></a> | 
+                                                            <a href="arrange-tour-package.php?id=<?php echo $tour_package['id']; ?>">  <button class="glyphicon glyphicon-random arrange-btn"></button></a> | 
+                                                            <a href="view-tour-photos-normal.php?id=<?php echo $tour_package['id']; ?>">  <button class="glyphicon glyphicon-picture arrange-btn"></button></a> | 
                                                             <a href="#"  class="delete-tour-normal" data-id="<?php echo $tour_package['id']; ?>"> <button class="glyphicon glyphicon-trash delete-btn"></button></a>
-                                                            <a href="edit-tour-package-normal.php?id=<?php echo $tour_package['id']; ?>"> <button class="glyphicon glyphicon-pencil edit-btn"></button></a>
-                                                            <a href="arrange-tour-package.php?id=<?php echo $tour_package['id']; ?>">  <button class="glyphicon glyphicon-random arrange-btn"></button></a>
-                                                            <a href="view-tour-photos-normal.php?id=<?php echo $tour_package['id']; ?>">  <button class="glyphicon glyphicon-picture arrange-btn"></button></a>
                                                         </div>
                                                     </div>
                                                 </div>

@@ -60,9 +60,9 @@ $ROOM = new Room(NULL);
                                                     <div class="img-caption">
                                                         <p class="maxlinetitle"><?php echo $room['title']; ?></p>
                                                         <div class="d">
-                                                            <a href="#"  class="delete-room" data-id="<?php echo $room['id']; ?>"> <button class="glyphicon glyphicon-trash delete-btn"></button></a>
-                                                            <a href="edit-room.php?id=<?php echo $room['id']; ?>"> <button class="glyphicon glyphicon-pencil edit-btn"></button></a>
-                                                            <a href="arrange-room.php?id=<?php echo $room['id']; ?>">  <button class="glyphicon glyphicon-random arrange-btn"></button></a>
+                                                            <a href="#"  class="delete-room" data-id="<?php echo $room['id']; ?>"> <button class="glyphicon glyphicon-trash delete-btn"></button></a> | 
+                                                            <a href="edit-room.php?id=<?php echo $room['id']; ?>"> <button class="glyphicon glyphicon-pencil edit-btn"></button></a> | 
+                                                            <a href="arrange-room.php?id=<?php echo $room['id']; ?>">  <button class="glyphicon glyphicon-random arrange-btn"></button></a> | 
                                                             <a href="view-room-photos.php?id=<?php echo $room['id']; ?>">  <button class="glyphicon glyphicon-picture arrange-btn"></button></a>
                                                         </div>
                                                     </div>
