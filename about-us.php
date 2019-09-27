@@ -79,7 +79,9 @@ $PAGE = new Page(1);
                                         <h3 class="title">CORE VALUES!</h3>
                                         <ul class="list-reason">
                                             <li> 
-                                                We are steadfastly committed to creating an internal culture in which THINK CUSTOMERS permeates at every level.
+                                                
+                                                   We are steadfastly committed to creating an internal culture in which THINK CUSTOMERS permeates at every level. 
+                                              
                                             </li>
                                             <li>  
                                                 We relentlessly focus on exceeding customer expectations in quality and customer service as a way of cultivating long lasting relationships with our internal and external customers.

@@ -1,4 +1,5 @@
-<div id="rev_slider_2_1_wrapper"   class="rev_slider_wrapper fullscreen-container no-mask-bg" data-alias="home-3"
+
+<div id="rev_slider_2_1_wrapper"   class="rev_slider_wrapper    fullscreen-container no-mask-bg" data-alias="home-3"
      data-source="gallery"
      style="padding:0px;background-image:url('images/slides/slider/slider-8.jpg');background-repeat:no-repeat;background-size:cover;background-position:center center;">
     <!-- START REVOLUTION SLIDER 5.4.7.4 fullscreen mode -->
@@ -45,7 +46,7 @@
                     </h1>
 
                     <!-- LAYER NR. 2 -->
-                    <p class="tp-caption   tp-resizeme"
+                    <p class="tp-caption    tp-resizeme"
                        id="slide-4-layer-2"
                        data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
                        data-y="['middle','middle','middle','middle']" data-voffset="['5','5','5','5']"

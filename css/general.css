@@ -1,4 +1,5 @@
 /*===== Css Variable =====*/
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap:200,300,400,500,600,700|Roboto:300,300i,400,400i,500,500i,700,700i,900');
 
 :root {
     --white: #ffffff;
@@ -14,7 +15,7 @@
     --primary-hover-color-2: #dc981c;
     --title-color-2: #4a4a4a;
     --body-font-color-2: #8a8a8a;
-    --body-font-family-2: 'Roboto';
+     
     --body-font-size-2: 15px;
 
     --primary-color-4: #ffb400;
@@ -145,8 +146,8 @@ textarea {
 /* Demo 1*/
 
 body {
-    font-family: var(--body-font-family-1);
-    font-size: var(--body-font-size-1);
+    font-family: 'Libre Baskerville', serif;
+    font-size: 16px;
     line-height: 1.6em;
     letter-spacing: 0;
     color: var(--body-font-color-1);
@@ -173,7 +174,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Demo 2 */
-
+/*
 body.demo-2,
 body.demo-3 {
     font-family: var(--body-font-family-2);
@@ -184,7 +185,7 @@ body.demo-3 {
     text-transform: none;
     font-weight: 400;
     font-style: normal;
-}
+}*/
 
 
 body.demo-2 a,

@@ -275,6 +275,7 @@ body.home .sc-heading.style-01 {
     position: relative;
     overflow: hidden;
     z-index: 4;
+
 }
 .slides-wrapper {
     position: relative;
@@ -925,7 +926,8 @@ body.home .sc-heading.style-01 {
     border: 1px solid var(--primary-color-2);
     position: relative;
     text-align: left;
-    padding: 50px; 
+    padding: 51px 49px 27px 51px;
+
 }
 
 .sc-testimonials.style-02 .name {
@@ -934,6 +936,15 @@ body.home .sc-heading.style-01 {
     text-transform: capitalize;
     margin: 0;
     font-weight: bold;
+
+    font-family: 'Libre Baskerville', serif;
+    font-size: 16px;
+    line-height: 1.6em;
+    letter-spacing: 0;
+    color: var(--body-font-color-1);
+    text-transform: none;
+    font-weight: 400;
+    font-style: normal;
 }
 .sc-testimonials.style-02 .review {
     margin-bottom: 0;
@@ -2391,4 +2402,37 @@ i span span {
 }
 .menu-hidden .ribbon{
     display: none;
+}
+.test-p{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 16px;
+    line-height: 1.6em;
+    letter-spacing: 0;
+    color: var(--body-font-color-1);
+    text-transform: none;
+    font-weight: 400;
+    font-style: normal;
+    margin-right: 30px;
+}
+#test-h{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 24px;
+    line-height: 1.6em;
+    letter-spacing: 0;
+    color: var(--body-font-color-1);
+    text-transform: none;
+    font-weight: 400;
+    font-style: normal;
+}
+#t-p{
+    color: black;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 16px;
+    line-height: 1.6em;
+    letter-spacing: 0;
+    color: var(--body-font-color-1);
+    text-transform: none;
+    font-weight: 400;
+    font-style: normal;
+    margin-right: 30px;
 }

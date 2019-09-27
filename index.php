@@ -61,7 +61,7 @@ $PAGE = new Page(1);
                                 <div class="sc-video style-02">
                                     <div class="background-video">
                                         <div class="cover-image"></div>
-                                        <div class="content container">
+                                        <div class="content ">
                                             <i class="video-play ion-ios-play"></i>
                                             <h4 class="title-video"> Nature Trails Unawatuna</h4>
                                         </div>
@@ -94,10 +94,10 @@ $PAGE = new Page(1);
                                                     </div>
                                                     <div class="col-md-8">
                                                         <div class="content">
-                                                            <h3>Enchanting Beauty</h3>
-                                                            <p  class="div-color" style=" margin-right: 30px;">
+                                                            <h3 id="test-h">Enchanting Beauty</h3>
+                                                            <span  class="div-color test-p"  >
                                                                 The property is built to the highest standard combining the Sri lanka heritage with contemporary architectural designing to strick a balance between luxury and nature. 
-                                                            </p>
+                                                            </span>
                                                         </div> 
                                                     </div>
                                                 </div>
@@ -109,8 +109,8 @@ $PAGE = new Page(1);
                                                     </div>
                                                     <div class="col-md-8">
                                                         <div class="content">
-                                                            <h3>Luxurious Comfort</h3>
-                                                            <p  class="div-color" style=" margin-right: 30px;">
+                                                            <h3 id="test-h">Luxurious Comfort</h3>
+                                                            <p  class="div-color test-p"  >
                                                                 Nature trails consists of 10 well appointed bedroom furnished to 5 star standards. Each room has a large balcony that open to the swimming pool and a beautifully. Landscaped garden with the picturesque Rumassala mountain at the backdrop.
                                                             </p>
                                                         </div> 
@@ -124,8 +124,8 @@ $PAGE = new Page(1);
                                                     </div>
                                                     <div class="col-md-8">
                                                         <div class="content">
-                                                            <h3>Stunning Nature</h3>
-                                                            <p  class="div-color" style=" margin-right: 30px;">
+                                                            <h3 id="test-h">Stunning Nature</h3>
+                                                            <p  class="div-color test-p" >
                                                                 As our name nature trails impliers, gests, staying in our hotel can enback on a nature walk to climb the picturesque ramassala
                                                                 mountain and to read the jungle beach of unawatuna, one of the most beautiful natural beaches of southern sri lanka
                                                             </p>
@@ -141,8 +141,8 @@ $PAGE = new Page(1);
                                                     </div>
                                                     <div class="col-md-8">
                                                         <div class="content">
-                                                            <h3>Succulent Food</h3>
-                                                            <p  class="div-color" style=" margin-right: 30px;">
+                                                            <h3 id="test-h">Succulent Food</h3>
+                                                            <p  class="div-color test-p"  >
                                                                 Nature trails fish market restaurant is well-known among local and foreign guests as a much sought after fine dining restaurant. We offer an exclusive sea food menu with Oder 25 signature dishes of different varieties of seafood.  
                                                             </p>
                                                         </div>
@@ -376,14 +376,24 @@ $PAGE = new Page(1);
                                             foreach ($COMMENT->activeComments() as $comment) {
                                                 ?>
                                                 <div class="item">
-                                                    <div class="description color-black" style="color: black"> 
-                                                        <?php echo $comment['comment'] ?>
+                                                    <div class="description color-black test-p" style="                                                        
+                                                         font-family: 'Libre Baskerville', serif;
+                                                         font-size: 16px;
+                                                         line-height: 1.6em;
+                                                         letter-spacing: 0;
+                                                         color: var(--body-font-color-1);
+                                                         text-transform: none;
+                                                         font-weight: 400;
+                                                         font-style: normal;
+                                                         margin-right: 30px;
+                                                         "> 
+                                                             <?php echo $comment['comment'] ?>
                                                     </div>
 
                                                     <div class="author clearfix">
                                                         <img src="upload/comments/<?php echo $comment['image_name'] ?>" alt="">
                                                         <div class="info">
-                                                            <div class="name"><?php echo $comment['name'] ?></div>
+                                                            <div class="name "><?php echo $comment['name'] ?></div>
                                                             <div class="regency"><?php echo $comment['country'] ?></div>
                                                         </div>
                                                     </div>
@@ -450,7 +460,7 @@ $PAGE = new Page(1);
             }
 
             $('.translation-links a').click(function () {
-                
+
                 var lang = $(this).data('lang');
                 var $frame = $('.goog-te-menu-frame:first');
                 if (!$frame.size()) {
@@ -593,7 +603,7 @@ $PAGE = new Page(1);
             }());
             /* End OF WRAPPING FUNCTION */
 
-        
+
 
         </script>
 
