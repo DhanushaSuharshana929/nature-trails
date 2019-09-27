@@ -14,7 +14,9 @@
                 <div class="width-navigation navigation table-cell">
                     <ul class="nav main-menu">
                         <li class="menu-item  ">
-                            <a href="index.php">Home</a>                             
+                            <a href="index.php"> 
+                                    Home 
+                            </a>                             
                         </li>
                         <li class="menu-item  ">
                             <a href="about-us.php">About Us</a>                             

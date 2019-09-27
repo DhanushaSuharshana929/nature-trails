@@ -271,7 +271,8 @@ header ul.main-menu li >.sub-menu {
     font-style: normal;
     text-transform: uppercase;
     font-weight: normal;
-    letter-spacing: .7px;
+    letter-spacing: .4px;
+    font-family: 'Playfair Display';
     display: inline-block;
 }
 
