@@ -40,17 +40,17 @@ include './class/include.php';
             <div id="main-content">
                 <div class="page-title">
                     <div class="page-title-wrapper" data-stellar-background-ratio="0.5">
-                        <div class="content container">
-                            <h1 class="heading_primary">Contact Us</h1>
-
+                        <div class="content container"> 
                         </div>
                     </div>
                 </div>
 
-                <div class="site-content no-padding">
+                <div class=" no-padding">
                     <div class="page-content">
-                        <div class="container">
-                            <div class="empty-space"></div>
+                        <div class="container"> 
+                            <div  class="padd-header">
+                                <h1 class="heading_primary text-center">Contact Us</h1> 
+                            </div>
                             <div class="row tm-flex">
                                 <div class="col-sm-7">
                                     <div class="sc-heading">

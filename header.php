@@ -24,7 +24,7 @@
                         <li class="menu-item  " >
                             <a href="room.php">Accommodation</a>                             
                         </li>
-                        <li class="menu-item  " style="margin-right: 29px">
+                        <li class="menu-item" style="margin-right: 29px">
                             <a href="dining.php">Dining</a>                             
                         </li>
                         <li class="menu-item  " style="margin-right: 30px">
@@ -39,36 +39,35 @@
                             </div>                       
                         </li>
 
-                        <li class="menu-item  ">
+                        <li class="menu-item">
                             <a href="excursion.php">Excursions</a>                             
                         </li>
-                        <li class="menu-item  "  >
+                        <li class="menu-item"  >
                             <a href="blog.php">Blog</a>                             
                         </li> 
-                        <li class="menu-item  "  >
+                        <li class="menu-item"  >
                             <div class="language">
                                 <div class="dropdown translation-links">
-                                    <a href="#" style="color: white;"class="dropdown-toggle select united kingdom n" data-lang="English" data-hover="dropdown" data-toggle="dropdown" aria-expanded="false">
-                                        <img src="images/english.png" class="img-responsive " />
-
+                                    <a href="#" style="color: white;" class="dropdown-toggle select united kingdom n" data-lang="English" data-hover="dropdown" data-toggle="dropdown" aria-expanded="false">
+                                        <img src="images/english.png" class="img-responsive" alt="english"/>
                                         English<span class="fa fa-caret-down"></span>
                                     </a>
                                     <ul class="dropdown-language ">
                                         <li>
                                             <a href="#" class="chinese" data-lang="Chinese">
-                                                <img src="images/Chinese.png" class="img-responsive " />
+                                                <img src="images/Chinese.png" class="img-responsive" alt="chinese"/>
                                                 Chinese
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#" class="german" data-lang="German">
-                                                <img src="images/germany.png" class="img-responsive" />                                                
+                                                <img src="images/germany.png" class="img-responsive" alt="germany"/>                                                
                                                 German
                                             </a>
                                         </li> 
                                         <li>
                                             <a href="#" class="russian" data-lang="Russian">
-                                                <img src="images/russian.png" class="img-responsive " />
+                                                <img src="images/russian.png" class="img-responsive" alt="russian"/>
                                                 Russian
                                             </a>
                                         </li> 
@@ -112,7 +111,7 @@
                 <a href="dining.php">Dining</a> 
             </li>
             <li class="menu-item  ">
-                <a href="blog.php">Excursions</a> 
+                <a href="excursion.php">Excursions</a> 
             </li>
             <li class="menu-item  ">
                 <a href="blog.php">Blog</a> 

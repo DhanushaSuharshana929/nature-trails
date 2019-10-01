@@ -15,7 +15,7 @@
     --primary-hover-color-2: #dc981c;
     --title-color-2: #4a4a4a;
     --body-font-color-2: #8a8a8a;
-     
+
     --body-font-size-2: 15px;
 
     --primary-color-4: #ffb400;
@@ -31,9 +31,9 @@
     font-family: 'icomoon';
     src: url('../fonts/icomoon/icomoon.eot');
     src: url('../fonts/icomoon/icomoon.eot') format('embedded-opentype'),
-    url('../fonts/icomoon/icomoon.ttf') format('truetype'),
-    url('../fonts/icomoon/icomoon.woff') format('woff'),
-    url('../fonts/icomoon/icomoon.svg') format('svg');
+        url('../fonts/icomoon/icomoon.ttf') format('truetype'),
+        url('../fonts/icomoon/icomoon.woff') format('woff'),
+        url('../fonts/icomoon/icomoon.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -58,7 +58,7 @@
 }
 
 .site-content {
-    padding-top: 100px;
+    padding-top: 40px;
     padding-bottom: 80px;
 }
 
@@ -83,7 +83,7 @@ input[type="submit"] {
 }
 
 .tm-flex {
-/*    align-items: center;*/
+    /*    align-items: center;*/
     display: flex;
 }
 

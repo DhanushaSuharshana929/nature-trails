@@ -802,6 +802,7 @@
                     autoplayHoverPause:true,
                     items: 1,
                     nav: false,
+                    dots: false,
                     animateOut: 'fadeOut',
                     animateIn: 'slideInUp'
                 });

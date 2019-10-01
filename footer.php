@@ -4,7 +4,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-9 xs-mb-30">
-                <h2 style="color: white">It's time to enjoy the atmosphere you desire</h2>
+                <a href="contact.php" class="btn-border-light pull-right" style="float: left;">'HOSPITALITY IS OUR BUSINESS'</a>
+                <h2 style="color: white"></h2>
             </div>
             <div class="col-md-3 ">
                 <a href="contact.php" class="btn-border-light pull-right">Contact Us</a>
@@ -26,7 +27,6 @@
                                     <li class="clearfix"><i class="fa fa-phone"></i><a href="tel:0777118616">(+94) 77 711 8616</a></li>
                                     <li class="clearfix"><i class="fa fa-envelope"></i><a href="mailto:info@naturetrailsunawatuna.com">info@naturetrailsunawatuna.com</a></li>
                                     <li class="address clearfix"><i class="fa fa-map-marker"></i> <a href="#"> 144B, Matara Road, Unawatuna.</a></li>
-
                                 </ul>
                             </div>
                             <ul class="social-link square" style="margin-top: 30px;">
@@ -35,14 +35,11 @@
                                 <li><a class="instagram" href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
                                 <li><a class="tripadvisor" href="https://www.tripadvisor.com/Hotel_Review-g644047-d6206595-Reviews-Nature_Trails_Boutique_Hotel-Unawatuna_Galle_District_Southern_Province.html" target="_blank"><i class="fa fa-tripadvisor"></i></a></li>
                             </ul>
-                           
                         </div>
-
                     </div>
-
                 </div>
 
-                <div class="col-sm-2">
+                <div class="col-sm-2 hidden-sm">
                     <div class="widget-menu">
                         <h3 class="widget-title"> Links</h3>
                         <ul class="menu">
@@ -79,7 +76,6 @@
             </div>
         </div>
     </div>
-
     <div class="copyright">
         <div class="container">
             <div class="row">
@@ -96,33 +92,45 @@
             </div>
         </div>
     </div>
+</footer>
 
-    <div class="feed-main">
-        <div class="feed-main-sub"> 
-            <a href="#" class=" btn_feed  feed-main-sub-2" data-toggle="modal" data-target="#myReview" style="color:white;font-weight: 600">Achievements  </a>
-        </div>
-    </div>
+<div class="container-fluid w-1192 feed-main back-color hidden-search">
+    <div class="sc-travel-search">
+        <div class="travel-search back-color">
+            <div class="row">
+                <div class="col-md-4 hidden-sm filter-room filter-restaurant filter-swimming">
+                    <div class="sc-gallery"> 
+                        <div class="wrapper-gallery " itemscope itemtype="http://schema.org/ItemList">
+                            <a href="images/certificate/tripadvisor.jpg" >
+                                <img src="images/certificate/trip.png" alt="" class="pull-right   border-r" />  
+                            </a>
 
-
-    <div class="modal fade" id="myReview" tabindex="-1" role="dialog" aria-labelledby="myReviewLabel" aria-hidden="true">
-        <div class="modal-dialog" style="max-width: 900px;">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                    </button>
-
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="images/certificate/Booking.com-letter.jpg" alt=""/>
-                        </div>
-                        <div class="col-md-6"  >
-                            <img src="images/certificate/tripadvisor.jpg" alt=""/>
+                            <a href="images/certificate/Booking.com-letter.jpg"  >
+                                <img src="images/certificate/booking.png" alt="" class="pull-right  border-r" style="margin-right: 10px;" />  
+                            </a>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div> 
+                <div class="col-md-8 col-sm-12">
+                    <form action="" class="search-form clearfix hb-form-table clearfix">
+                        <div class="col-md-12 col-sm-12">
+                            <li class="form-field guest check-padd-li">
+                                <input name="chech-in" required type="text"    class="guest datepicker" placeholder="Check-in date" value="" style="color: white"/>
+                            </li>             
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <li class="form-field guest check-padd-li ">
+                                <input name="check-out" required type="text"   class="guest datepicker" placeholder="Check-out date" value="" style="color: white"/>
+                            </li>
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <li class="form-field guest  check-padd-li"> 
+                                <button type="submit" class="submit avg-button  ">Check Availability</button> 
+                            </li>
+                        </div>
+                    </form> 
+                </div> 
+            </div> 
         </div>
     </div>
-</footer>
+</div>

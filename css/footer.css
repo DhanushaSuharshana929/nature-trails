@@ -563,7 +563,7 @@ footer.footer_v4 a {
 }
 .feed-main {
     position: fixed;
-    top: 140px;
+    bottom:0px;
     left: 0;
     z-index: 99;
     -webkit-transform: translate3d(0, 0, 0);
