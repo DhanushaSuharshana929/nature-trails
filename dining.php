@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 include './class/include.php';
+$BANNER = new Banner(3);
 ?>
 <html lang="en">
 
@@ -39,7 +40,8 @@ include './class/include.php';
             <!-- Main Content -->
             <div id="main-content">
                 <div class="page-title">
-                    <div class="page-title-wrapper" data-stellar-background-ratio="0.5">
+                    <div class="page-title-wrapper" data-stellar-background-ratio="0.5" style="background-image: url(upload/banner/<?php echo $BANNER->image_name ?>) ">
+
 
                     </div>
                 </div> 
@@ -94,8 +96,18 @@ include './class/include.php';
                                                         </div> 
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 img-padd" >
-                                                        <div class="thumbnail">
-                                                            <a href="#"><img src="upload/dining/<?php echo $dining['image_name'] ?>" alt="" class="img-thumbnail"></a>
+                                                        <div class="sc-gallery">
+
+                                                            <div class="wrapper-gallery row" itemscope itemtype="http://schema.org/ItemList">
+                                                                <div class="  filter-room filter-restaurant filter-swimming">
+                                                                    <a href="upload/dining/gallery/<?php echo $dining['image_name'] ?>" class="gallery-popup">
+                                                                        <img src="upload/dining/gallery/thumb/<?php echo $dining['image_name'] ?>" alt="" class="img-thumbnail" ></a>
+                                                                </div> 
+                                                            </div> 
+                                                        </div> 
+
+                                                        <div class="">
+                                                            <a href="#"><img src="" alt=""></a>
                                                         </div>
                                                     </div>  
 

@@ -3,6 +3,7 @@
 include './class/include.php';
 $id = $_GET['id'];
 $ROOM = new Room($id);
+$BANNER = new Banner(2);
 ?>
 <html lang="en">
 
@@ -40,17 +41,15 @@ $ROOM = new Room($id);
             <!-- Main Content -->
             <div id="main-content">
                 <div class="page-title">
-                    <div class="page-title-wrapper" data-stellar-background-ratio="0.5">
-                        <div class="content container">
-                          
-                        </div>
+                    <div class="page-title-wrapper" data-stellar-background-ratio="0.5" style="background-image: url(upload/banner/<?php echo $BANNER->image_name ?>) ">
+
                     </div>
                 </div>
 
                 <div class="site-content container">
                     <div class="room-single row">
                         <main class="site-main col-sm-12 col-md-9 flex-first">
-                            <div class="room-wrapper">
+                            <div class=" ">
                                 <div class="room_gallery clearfix">
                                     <div class="camera_wrap camera_emboss" id="camera_wrap">
                                         <?php
@@ -68,35 +67,7 @@ $ROOM = new Room($id);
                                     <span class="price_value price_min">$<?php echo $ROOM->price ?></span>
                                     <span class="unit">Night</span>
                                 </div>
-                                <div class="room_additinal">
-                                    <hr>
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <ul>
-                                                <li><img src="images/icons/mountain.png" class="img-right"/>Mountain View</li>
-                                                <li><img src="images/icons/wifi-router.png" class="img-right"/>Internet Access </li>  
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <ul>
-                                                <li><img src="images/icons/room.png" class="img-right"/>Room Size 480ft</li>
-                                                <li><img src="images/icons/locker-rooms.png" class="img-right"/>Locker </li>  
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <ul>
-                                                <li><img src="images/icons/balcony_view.png" class="img-right"/>Balcony / terrace</li>  
-                                                <li><img src="images/icons/bars.png" class="img-right"/>Mini Bar </li>  
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <ul>
-
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                </div>
+                                   <?php echo $ROOM->features ?>
                                 <div class="description text-justify">
                                     <?php echo $ROOM->description ?>
                                 </div>

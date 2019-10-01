@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 include './class/include.php';
+$BANNER = new Banner(4);
 ?>
 <html lang="en">
     <head>
@@ -37,12 +38,14 @@ include './class/include.php';
             <!-- Main Content -->
             <div id="main-content">
                 <div class="page-title">
-                    <div class="page-title-wrapper" data-stellar-background-ratio="0.5">   </div>
+                    <div class="page-title-wrapper" data-stellar-background-ratio="0.5" style="background-image: url(upload/banner/<?php echo $BANNER->image_name ?>) ">
+
+                    </div>
                 </div>
 
                 <div class="container">
                     <div class="rooms-content layout-grid style-01">
-                        <div  style="padding: 23px 30px 20px;">
+                        <div  class="padd-header">
                             <h1 class="heading_primary text-center">Excursion</h1> 
                         </div>
                         <div class="row">
