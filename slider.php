@@ -34,7 +34,7 @@
 
                         data-frames='[{"from":"y:50px;opacity:0;","speed":1500,"to":"o:1;","delay":900,"ease":"Power3.easeInOut"},{"delay":"wait","speed":100,"to":"y:-50px;opacity:0;","ease":"nothing"}]'
                         data-textAlign="['left','left','center','center']"
-                        data-paddingtop="[10,0,0,0]"
+                        data-paddingtop="[20,0,0,0]"
                         data-paddingright="[80,0,0,0]"
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"  
@@ -57,7 +57,7 @@
 
                        data-frames='[{"from":"y:bottom;rX:-20deg;rY:-20deg;rZ:0deg;","speed":1500,"to":"o:1;","delay":900,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"y:[-100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"nothing"}]'
                        data-textAlign="['justify','justify','right','right']"
-                       data-paddingtop="[70,0,0,0]"
+                       data-paddingtop="[50,0,0,0]"
                        data-paddingright="[12,0,0,0]"
                        data-paddingbottom="[8,0,0,0]"
                        data-paddingleft="[12,0,0,0]"

@@ -303,7 +303,7 @@
 
                     </ul>
                 </li>
-                <li class="qqq hidden">
+                <li class="qqq  ">
                     <a href="create-banner.php" class="">
                         <i class="material-icons">chevron_right</i>
                         <span>Banner</span>

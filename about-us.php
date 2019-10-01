@@ -2,6 +2,7 @@
 <?php
 include './class/include.php';
 $PAGE = new Page(1);
+$BANNER = new Banner(1);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +41,7 @@ $PAGE = new Page(1);
 
             <div id="main-content" class="main-content">
                 <div class="page-title">
-                    <div class="page-title-wrapper" data-stellar-background-ratio="0.5">
+                    <div class="page-title-wrapper" data-stellar-background-ratio="0.5" style="background-image: url(upload/banner/<?php echo $BANNER->image_name?>) ">
 
                     </div>
                 </div> 

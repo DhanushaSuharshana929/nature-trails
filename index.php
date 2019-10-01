@@ -49,7 +49,7 @@ $PAGE = new Page(3);
                     <!-- END REVOLUTION SLIDER -->
 
                     <div class="empty-space"></div>
-                    <div class="container" style="margin-top: -64px;">
+                    <div class="container" style="margin-top: -30px;">
                         <div class="sc-heading">
 
                             <h3 class="second-title">Welcome</h3>
@@ -60,13 +60,13 @@ $PAGE = new Page(3);
                                 <a href="about-us.php" class="btn-icon">Read More</a>
                             </div>
                             <div class="col-sm-6 col-md-6 hidden-mobile" style="margin-top: -71px;"> 
-                                <div class="col-sm-4">
+                                
                                     <div class="sc-hb-rooms-search style-01">
                                         <div class="hotel-booking-search style-01 layout-columns">
                                             <img src="images/bg/about.jpg" alt="" class="img-responsive img-thumbnail" style="border-radius: 4px;margin-top: 70px;"/>
                                         </div>
                                     </div>
-                                </div>
+                               
                             </div>
                         </div>
                     </div>
@@ -80,10 +80,10 @@ $PAGE = new Page(3);
                                         <div class="testimonial-slider2 owl-carousel owl-theme">
                                             <div class="item">
                                                 <div class="row">
-                                                    <div class="col-md-4 img-padd-4" >
+                                                    <div class="col-md-3 img-padd-4" >
                                                         <img src="images/enchanting.jpg" class="img-responsive img-thumbnail" alt=" "/>
                                                     </div>
-                                                    <div class="col-md-8">
+                                                    <div class="col-md-9">
                                                         <div class="content">
                                                             <h3 class="test-h">Enchanting Beauty</h3>
                                                             <p class="div-color test-p text-justify"  >
@@ -95,10 +95,10 @@ $PAGE = new Page(3);
                                             </div>
                                             <div class="item">
                                                 <div class="row">
-                                                    <div class="col-md-4 img-padd-4">
+                                                    <div class="col-md-3 img-padd-4">
                                                         <img src="images/luxuring.jpg" class="img-responsive img-thumbnail" alt=" "/>
                                                     </div>
-                                                    <div class="col-md-8">
+                                                    <div class="col-md-9">
                                                         <div class="content">
                                                             <h3 class="test-h">Luxurious Comfort</h3>
                                                             <p  class="div-color test-p"  >
@@ -110,10 +110,10 @@ $PAGE = new Page(3);
                                             </div>
                                             <div class="item">
                                                 <div class="row">
-                                                    <div class="col-md-4 img-padd-4">
+                                                    <div class="col-md-3 img-padd-4">
                                                         <img src="images/staning.jpg" class="img-responsive img-thumbnail" alt=" "/>
                                                     </div>
-                                                    <div class="col-md-8">
+                                                    <div class="col-md-9">
                                                         <div class="content">
                                                             <h3 class="test-h">Stunning Nature</h3>
                                                             <p  class="div-color test-p" >
@@ -127,10 +127,10 @@ $PAGE = new Page(3);
                                             </div>
                                             <div class="item">
                                                 <div class="row">
-                                                    <div class="col-md-4 img-padd-4">
+                                                    <div class="col-md-3 img-padd-4">
                                                         <img src="images/shedule.jpg" class="img-responsive img-thumbnail" alt=" "/>
                                                     </div>
-                                                    <div class="col-md-8">
+                                                    <div class="col-md-9">
                                                         <div class="content">
                                                             <h3 class="test-h">Succulent Food</h3>
                                                             <p  class="div-color test-p"  >
@@ -176,7 +176,7 @@ $PAGE = new Page(3);
                                                         </ul>
                                                         <div class=" r-top">
                                                             <p>  
-                                                                <?php echo substr($room['short_description'], 0, 50) ?>...
+                                                                <?php echo substr($room['short_description'], 0, 40) ?>...
                                                             </p> 
                                                         </div>
                                                     </div>
@@ -288,7 +288,7 @@ $PAGE = new Page(3);
                                                 <div class="desc">
                                                     <h3>24 / 7 Security</h3>
                                                     <p class="text-justy" style="text-align: justify">
-                                                        Hotel greate a 24 / 7 security service that included a CCTV and intrude detection system.
+                                                        Hotel greate a 24 / 7 security service that included a CCTV and intrude detection system in our Nature Trails Unawatuna hotel. 
                                                     </p>
                                                 </div>
                                                 <div class="clearfix"></div>

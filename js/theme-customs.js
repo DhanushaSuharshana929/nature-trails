@@ -540,7 +540,10 @@
                     height: '470px',
                     loader: 'none',
                     pagination: false,
-                    thumbnails: false
+                    thumbnails: false,
+                    Autoadvance:false,
+                    opacityOnGrid: false, 
+                    
                 });
             });
 
