@@ -41,20 +41,18 @@ include './class/include.php';
                 <div class="page-title">
                     <div class="page-title-wrapper" data-stellar-background-ratio="0.5">
                         <div class="content container">
-                            <h1 class="heading_primary">Blog</h1>
-                            <ul class="breadcrumbs ul-top-title" >
-                                <li class="item"><a href="index.php">Home</a></li>
-                                <li class="item"><span class="separator"></span></li> 
-                                <li class="item active">Blog</li>
-                            </ul>
+                           
                         </div>
                     </div>
                 </div>
 
 
 
-                <div class="site-content container">
+                <div class=" container">
                     <div class="blog-content layout-grid">
+                        <div  class="padd-header">
+                            <h1 class="heading_primary text-center">Blog</h1> 
+                        </div>
                         <div class="row">
                             <?php
                             $BLOG = new Blog(NULL);

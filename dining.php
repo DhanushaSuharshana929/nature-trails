@@ -40,35 +40,31 @@ include './class/include.php';
             <div id="main-content">
                 <div class="page-title">
                     <div class="page-title-wrapper" data-stellar-background-ratio="0.5">
-                        <div class="content container">
-                            <h1 class="heading_primary">Nature Trails Fish Market Restaurant</h1>
-                            <ul class="breadcrumbs ul-top-title" >
-                                <li class="item"><a href="index.php">Home</a></li>
-                                <li class="item"><span class="separator"></span></li> 
-                                <li class="item active">Dining</li>
-                            </ul>
-                        </div>
+
                     </div>
                 </div> 
 
                 <div class="site-content container">
                     <div class="events-content">
                         <div class="sc-events list-style"> 
-                            <h2>Nature Trails Fish Market Restaurant</h2>
+                            <h2 style="font-size: 45px;">Nature Trails Fish Market Restaurant</h2>
                             <p class="text-justify">
                                 Sri Lanka being an Island surrounded by the mighty Indian Ocean is one of the best places in the world
                                 to taste different varieties of ocean fresh seafood ranging from small mussels to the large species of fish
                                 such as yellow fin tuna and shark.
                             </p>
-                            
+
                             <p class="text-justify">
                                 Nature Trails Fish Market Restaurant’s Seafood Menu offers a comprehensive array of signature dishes
                                 each one having its own characteristic taste. Our Sri Lankan Breakfast and the Rice & Curry Lunch are
                                 peppered with a host of truly authentic Sri Lankan delicacies offering distinct tastes.
                                 We also offer a wide range of Western, Chinese and Continental dishes to suit the personal preferences
-                                of our guests. Here are some of the most favourite dishes from our Seafood Menu.
+                                of our guests.
                             </p>
-                           
+                            <p class="text-justify">
+                                Here are some of the most favourite dishes from our Seafood Menu and Ala Carte Menu.
+                            </p>
+
                             <div class="tab-content" id="nav-tabContent">
                                 <div class="tab-pane fade show active" id="happening" role="tabpanel">
                                     <?php

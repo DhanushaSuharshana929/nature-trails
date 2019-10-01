@@ -37,21 +37,16 @@ include './class/include.php';
             <!-- Main Content -->
             <div id="main-content">
                 <div class="page-title">
-                    <div class="page-title-wrapper" data-stellar-background-ratio="0.5">
-                        <div class="content container">
-                            <h1 class="heading_primary">Excursions</h1>
-                            <ul class="breadcrumbs ul-top-title" >
-                                <li class="item"><a href="index-2.html">Home</a></li>
-                                <li class="item"><span class="separator"></span></li> 
-                                <li class="item active">Excursions</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <div class="page-title-wrapper" data-stellar-background-ratio="0.5">   </div>
                 </div>
 
-                <div class="site-content container">
+                <div class="container">
                     <div class="rooms-content layout-grid style-01">
+                        <div  style="padding: 23px 30px 20px;">
+                            <h1 class="heading_primary text-center">Excursion</h1> 
+                        </div>
                         <div class="row">
+
                             <?php
                             $ATTRACTION = new Attraction(NULL);
                             foreach ($ATTRACTION->all() as $attraction) {

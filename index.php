@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 include './class/include.php';
-$PAGE = new Page(1);
+$PAGE = new Page(3);
 ?>
 <html lang="en">
     <head>
@@ -14,20 +14,22 @@ $PAGE = new Page(1);
 
         <!-- REVOLUTION STYLE SHEETS -->
         <link rel="stylesheet" type="text/css" href="css/libs/revolution/settings.css">
-        <link rel="stylesheet" href="css/style.css"><!-- Style -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <!-- Style -->
     </head>
     <body class="demo-3 home">
 
-        <div id="preloading" class="color2">
-            <div class="loading-icon">
-                <div class="sk-folding-cube">
-                    <div class="sk-cube1 sk-cube"></div>
-                    <div class="sk-cube2 sk-cube"></div>
-                    <div class="sk-cube4 sk-cube"></div>
-                    <div class="sk-cube3 sk-cube"></div>
-                </div>
-            </div>
-        </div>
+        <!--        <div id="preloading" class="color2">
+                    <div class="loading-icon">
+                        <div class="sk-folding-cube">
+                            <div class="sk-cube1 sk-cube"></div>
+                            <div class="sk-cube2 sk-cube"></div>
+                            <div class="sk-cube4 sk-cube"></div>
+                            <div class="sk-cube3 sk-cube"></div>
+                        </div>
+                    </div>
+                </div>-->
 
         <!-- Wrapper content -->
         <div id="wrapper-container" class="content-pusher">
@@ -47,36 +49,17 @@ $PAGE = new Page(1);
                     <!-- END REVOLUTION SLIDER -->
 
                     <div class="empty-space"></div>
-                    <div class="container">
+                    <div class="container" style="margin-top: -64px;">
                         <div class="sc-heading">
-                            <p class="first-title">Nature Trails Unawatuna</p>
-                            <h3 class="second-title">Aubowan</h3>
+
+                            <h3 class="second-title">Welcome</h3>
                         </div>
                         <div class="sc-info about-info row">
                             <div class="col-sm-12 col-xs-12 col-md-6">
                                 <?php echo $PAGE->description ?>
-                                <a href="#" class="btn-icon">Read More</a>
+                                <a href="about-us.php" class="btn-icon">Read More</a>
                             </div>
-                            <div class="col-sm-6 col-md-6 hidden-mobile" style="margin-top: -150px;"> 
-                                <div class="sc-video style-02">
-                                    <div class="background-video">
-                                        <div class="cover-image"></div>
-                                        <div class="content ">
-                                            <i class="video-play ion-ios-play"></i>
-                                            <h4 class="title-video"> Nature Trails Unawatuna</h4>
-                                        </div>
-                                        <video loop="" class="full-screen-video" data-autoplay="">
-                                            <source src="images/home/hotel.mp4" type="video/mp4">
-                                        </video>
-                                    </div>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="sc-content-overlay  hidden-mobile " style="margin-top: 10px;">
-                        <div class="container">
-                            <div class="row">
+                            <div class="col-sm-6 col-md-6 hidden-mobile" style="margin-top: -71px;"> 
                                 <div class="col-sm-4">
                                     <div class="sc-hb-rooms-search style-01">
                                         <div class="hotel-booking-search style-01 layout-columns">
@@ -84,7 +67,15 @@ $PAGE = new Page(1);
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-8 hidden-sm">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sc-content-overlay  hidden-mobile " style="margin-top: 10px;">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-md-12 hidden-sm">
                                     <div class="sc-testimonials style-02"> 
                                         <div class="testimonial-slider2 owl-carousel owl-theme">
                                             <div class="item">
@@ -94,10 +85,10 @@ $PAGE = new Page(1);
                                                     </div>
                                                     <div class="col-md-8">
                                                         <div class="content">
-                                                            <h3 id="test-h">Enchanting Beauty</h3>
-                                                            <span  class="div-color test-p"  >
-                                                                The property is built to the highest standard combining the Sri lanka heritage with contemporary architectural designing to strick a balance between luxury and nature. 
-                                                            </span>
+                                                            <h3 class="test-h">Enchanting Beauty</h3>
+                                                            <p class="div-color test-p text-justify"  >
+                                                                The property is built to the highest standards combining the Sri Lankan heritage with contemporary architectural designing to strike a balance between luxury and nature. 
+                                                            </p>
                                                         </div> 
                                                     </div>
                                                 </div>
@@ -109,9 +100,9 @@ $PAGE = new Page(1);
                                                     </div>
                                                     <div class="col-md-8">
                                                         <div class="content">
-                                                            <h3 id="test-h">Luxurious Comfort</h3>
+                                                            <h3 class="test-h">Luxurious Comfort</h3>
                                                             <p  class="div-color test-p"  >
-                                                                Nature trails consists of 10 well appointed bedroom furnished to 5 star standards. Each room has a large balcony that open to the swimming pool and a beautifully. Landscaped garden with the picturesque Rumassala mountain at the backdrop.
+                                                                Nature trails consists of 10 well appointed bedrooms built and furnished to 5 star standards. Each room has a large balcony that opens to the swimming pool and a beautifully landscaped garden with the picturesque Rumassala Mountain at the backdrop.
                                                             </p>
                                                         </div> 
                                                     </div>
@@ -124,10 +115,10 @@ $PAGE = new Page(1);
                                                     </div>
                                                     <div class="col-md-8">
                                                         <div class="content">
-                                                            <h3 id="test-h">Stunning Nature</h3>
+                                                            <h3 class="test-h">Stunning Nature</h3>
                                                             <p  class="div-color test-p" >
-                                                                As our name nature trails impliers, gests, staying in our hotel can enback on a nature walk to climb the picturesque ramassala
-                                                                mountain and to read the jungle beach of unawatuna, one of the most beautiful natural beaches of southern sri lanka
+                                                                Guests staying in our hotel can embark on a nature walk to climb the picturesque Rumassala
+                                                                Mountain and reach the Jungle Beach of Unawatuna, one of the most beautiful natural beaches of Southern Sri Lanka.
                                                             </p>
                                                         </div>
 
@@ -137,13 +128,13 @@ $PAGE = new Page(1);
                                             <div class="item">
                                                 <div class="row">
                                                     <div class="col-md-4 img-padd-4">
-                                                        <img src="images/shedule.jpg" class="img-responsive" alt=" "/>
+                                                        <img src="images/shedule.jpg" class="img-responsive img-thumbnail" alt=" "/>
                                                     </div>
                                                     <div class="col-md-8">
                                                         <div class="content">
-                                                            <h3 id="test-h">Succulent Food</h3>
+                                                            <h3 class="test-h">Succulent Food</h3>
                                                             <p  class="div-color test-p"  >
-                                                                Nature trails fish market restaurant is well-known among local and foreign guests as a much sought after fine dining restaurant. We offer an exclusive sea food menu with Oder 25 signature dishes of different varieties of seafood.  
+                                                                Nature Trails Fish Market Restaurant is very popular among local and foreign guests as a much sought after casual and fine dining restaurant. We offer an exclusive Seafood Menu with over 25 signature dishes of different varieties of Seafood ranging from small mussels to the large Yellow Fin Tuna.  
                                                             </p>
                                                         </div>
                                                     </div>
@@ -211,7 +202,7 @@ $PAGE = new Page(1);
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="sc-heading style-01 text-center">
-                                        <h2>Key Facilities &amp; Services</h2>
+                                        <h2 style="border-bottom: solid 1px #ddd;">Key Facilities And Services</h2>
                                     </div> 
                                 </div>
                             </div>
@@ -367,7 +358,7 @@ $PAGE = new Page(1);
                             <h3 class="title color-black" style="color: black">Gest Reviews</h3>
                         </div> 
                         <div class="sc-quote style-04 text-center"> 
-                            <div class="row">
+                            <div class="row res-t">
                                 <div class="col-sm-12  test-boarder">
                                     <div class="sc-testimonial style-04">
                                         <div class="slider owl-carousel owl-theme">
@@ -409,203 +400,212 @@ $PAGE = new Page(1);
                         </div>
                     </div>            
                     <div class="empty-space"></div>
-                </div>
+                </div> 
             </div>
-
-
-            <!-- Footer -->
-            <?php include './footer.php'; ?>
-        </div><!-- wrapper-container -->
-
-        <div id="back-to-top">
-            <i class="ion-ios-arrow-up" aria-hidden="true"></i>
         </div>
 
 
-        <!-- Scripts -->
-        <script src="js/libs/jquery-1.12.4.min.js"></script><!-- jQuery -->
-        <script src="js/libs/bootstrap.min.js"></script><!-- Bootstrap -->
-        <script src="js/libs/smoothscroll.min.js"></script><!-- smoothscroll -->
-        <script src="js/libs/owl.carousel.min.js"></script><!-- Owl Carousel -->
-        <script src="js/libs/jquery.magnific-popup.min.js"></script><!-- Magnific Popup -->
-        <script src="js/libs/theia-sticky-sidebar.min.js"></script><!-- Sticky sidebar -->
-        <script src="js/libs/stellar.min.js"></script><!-- counter -->
-        <script src="js/libs/counter-box.min.js"></script><!-- counter -->
-        <script src="js/libs/jquery.thim-content-slider.min.js"></script><!-- Slider -->
-        <script src="js/libs/moment.min.js"></script><!-- moment -->
-        <script src="js/libs/jquery-ui.min.js"></script><!-- ui -->
-        <script src="js/libs/daterangepicker.min.js"></script><!-- date -->
-        <script src="js/libs/daterangepicker.min-date.min.js"></script><!-- date2 -->
-        <script src="js/theme-customs.js"></script><!-- Theme Custom -->
+        <!-- Footer -->
+        <?php include './footer.php'; ?>
+    </div><!-- wrapper-container -->
 
-        <!-- REVOLUTION JS FILES -->
-        <script  src="js/libs/revolution/jquery.themepunch.tools.min.js"></script>
-        <script src="js/libs/revolution/jquery.themepunch.revolution.min.js"></script>
+    <div id="back-to-top">
+        <i class="ion-ios-arrow-up" aria-hidden="true"></i>
+    </div>
 
-        <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
-        <script src="js/libs/revolution/extensions/revolution.extension.actions.min.js"></script>
-        <script src="js/libs/revolution/extensions/revolution.extension.carousel.min.js"></script>
-        <script src="js/libs/revolution/extensions/revolution.extension.kenburn.min.js"></script>
-        <script src="js/libs/revolution/extensions/revolution.extension.layeranimation.min.js"></script>
-        <script src="js/libs/revolution/extensions/revolution.extension.migration.min.js"></script>
-        <script src="js/libs/revolution/extensions/revolution.extension.navigation.min.js"></script>
-        <script src="js/libs/revolution/extensions/revolution.extension.parallax.min.js"></script>
-        <script src="js/libs/revolution/extensions/revolution.extension.slideanims.min.js"></script>
-        <script src="js/libs/revolution/extensions/revolution.extension.video.min.js"></script>
-        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
 
-        <script type="text/javascript">
-            function googleTranslateElementInit() {
-                new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
-            }
+    <!-- Scripts -->
+    <script src="js/libs/jquery-1.12.4.min.js"></script><!-- jQuery -->
+    <script src="js/libs/bootstrap.min.js"></script><!-- Bootstrap -->
+    <script src="js/libs/smoothscroll.min.js"></script><!-- smoothscroll -->
+    <script src="js/libs/owl.carousel.min.js"></script><!-- Owl Carousel -->
+    <script src="js/libs/jquery.magnific-popup.min.js"></script><!-- Magnific Popup -->
+    <script src="js/libs/theia-sticky-sidebar.min.js"></script><!-- Sticky sidebar -->
+    <script src="js/libs/stellar.min.js"></script><!-- counter -->
+    <script src="js/libs/counter-box.min.js"></script><!-- counter -->
+    <script src="js/libs/jquery.thim-content-slider.min.js"></script><!-- Slider -->
+    <script src="js/libs/moment.min.js"></script><!-- moment -->
+    <script src="js/libs/jquery-ui.min.js"></script><!-- ui -->
+    <script src="js/libs/daterangepicker.min.js"></script><!-- date -->
+    <script src="js/libs/daterangepicker.min-date.min.js"></script><!-- date2 -->
+    <script src="js/theme-customs.js"></script><!-- Theme Custom -->
 
-            $('.translation-links a').click(function () {
+    <!-- REVOLUTION JS FILES -->
+    <script  src="js/libs/revolution/jquery.themepunch.tools.min.js"></script>
+    <script src="js/libs/revolution/jquery.themepunch.revolution.min.js"></script>
 
-                var lang = $(this).data('lang');
-                var $frame = $('.goog-te-menu-frame:first');
-                if (!$frame.size()) {
-                    alert("Error: Could not find Google translate frame.");
-                    return false;
-                }
-                $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
-                return false;
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script src="js/libs/revolution/extensions/revolution.extension.actions.min.js"></script>
+    <script src="js/libs/revolution/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="js/libs/revolution/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="js/libs/revolution/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="js/libs/revolution/extensions/revolution.extension.migration.min.js"></script>
+    <script src="js/libs/revolution/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="js/libs/revolution/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="js/libs/revolution/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="js/libs/revolution/extensions/revolution.extension.video.min.js"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $(".datepicker").datepicker({
+                dateFormat: 'yy-mm-dd',
+                minDate: 'today'
             });
+        });
 
-            function setREVStartSize(e) {
-                try {
-                    e.c = jQuery(e.c);
-                    var i = jQuery(window).width(), t = 9999, r = 0, n = 0, l = 0, f = 0, s = 0, h = 0;
-                    if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function (e, f) {
-                        f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e)
-                    }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) {
-                        var u = (e.c.width(), jQuery(window).height());
-                        if (void 0 != e.fullScreenOffsetContainer) {
-                            var c = e.fullScreenOffsetContainer.split(",");
-                            if (c)
-                                jQuery.each(c, function (e, i) {
-                                    u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u
-                                }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0))
-                        }
-                        f = u
-                    } else
-                        void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight);
-                    e.c.closest(".rev_slider_wrapper").css({height: f})
-                } catch (d) {
-                    console.log("Failure at Presize of Slider:" + d)
-                }
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+        }
+
+        $('.translation-links a').click(function () {
+
+            var lang = $(this).data('lang');
+            var $frame = $('.goog-te-menu-frame:first');
+            if (!$frame.size()) {
+                alert("Error: Could not find Google translate frame.");
+                return false;
             }
-            ;
+            $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+            return false;
+        });
 
-            var revapi2,
-                    tpj;
-            (function () {
-                if (!/loaded|interactive|complete/.test(document.readyState))
-                    document.addEventListener("DOMContentLoaded", onLoad);
-                else
-                    onLoad();
-
-                function onLoad() {
-                    if (tpj === undefined) {
-                        tpj = jQuery;
-                        if ("off" == "on")
-                            tpj.noConflict();
+        function setREVStartSize(e) {
+            try {
+                e.c = jQuery(e.c);
+                var i = jQuery(window).width(), t = 9999, r = 0, n = 0, l = 0, f = 0, s = 0, h = 0;
+                if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function (e, f) {
+                    f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e)
+                }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) {
+                    var u = (e.c.width(), jQuery(window).height());
+                    if (void 0 != e.fullScreenOffsetContainer) {
+                        var c = e.fullScreenOffsetContainer.split(",");
+                        if (c)
+                            jQuery.each(c, function (e, i) {
+                                u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u
+                            }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0))
                     }
-                    if (tpj("#rev_slider_2_1").revolution == undefined) {
-                        revslider_showDoubleJqueryError("#rev_slider_2_1");
-                    } else {
-                        revapi2 = tpj("#rev_slider_2_1").show().revolution({
-                            sliderType: "standard",
-                            sliderLayout: "fullscreen",
-                            dottedOverlay: "none",
-                            delay: 9000,
-                            navigation: {
-                                keyboardNavigation: "off",
-                                keyboard_direction: "horizontal",
-                                mouseScrollNavigation: "off",
-                                mouseScrollReverse: "default",
-                                onHoverStop: "off",
-                                arrows: {
-                                    style: "zeus",
-                                    enable: true,
-                                    hide_onmobile: false,
-                                    hide_onleave: false,
-                                    tmp: '<div class="tp-title-wrap">  	<div class="tp-arr-imgholder"></div> </div>',
-                                    left: {
-                                        h_align: "left",
-                                        v_align: "center",
-                                        h_offset: 30,
-                                        v_offset: 0
-                                    },
-                                    right: {
-                                        h_align: "right",
-                                        v_align: "center",
-                                        h_offset: 20,
-                                        v_offset: 0
-                                    }
-                                }
-                                ,
-                                bullets: {
-                                    enable: true,
-                                    hide_onmobile: false,
-                                    style: "hermes",
-                                    hide_onleave: false,
-                                    direction: "horizontal",
-                                    h_align: "center",
-                                    v_align: "bottom",
-                                    h_offset: 0,
-                                    v_offset: 60,
-                                    space: 25,
-                                    tmp: ''
-                                }
-                            },
-                            viewPort: {
+                    f = u
+                } else
+                    void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight);
+                e.c.closest(".rev_slider_wrapper").css({height: f})
+            } catch (d) {
+                console.log("Failure at Presize of Slider:" + d)
+            }
+        }
+        ;
+
+        var revapi2,
+                tpj;
+        (function () {
+            if (!/loaded|interactive|complete/.test(document.readyState))
+                document.addEventListener("DOMContentLoaded", onLoad);
+            else
+                onLoad();
+
+            function onLoad() {
+                if (tpj === undefined) {
+                    tpj = jQuery;
+                    if ("off" == "on")
+                        tpj.noConflict();
+                }
+                if (tpj("#rev_slider_2_1").revolution == undefined) {
+                    revslider_showDoubleJqueryError("#rev_slider_2_1");
+                } else {
+                    revapi2 = tpj("#rev_slider_2_1").show().revolution({
+                        sliderType: "standard",
+                        sliderLayout: "fullscreen",
+                        dottedOverlay: "none",
+                        delay: 9000,
+                        navigation: {
+                            keyboardNavigation: "off",
+                            keyboard_direction: "horizontal",
+                            mouseScrollNavigation: "off",
+                            mouseScrollReverse: "default",
+                            onHoverStop: "off",
+                            arrows: {
+                                style: "zeus",
                                 enable: true,
-                                outof: "wait",
-                                visible_area: "80%",
-                                presize: false
-                            },
-                            responsiveLevels: [1240, 1024, 778, 480],
-                            visibilityLevels: [1240, 1024, 778, 480],
-                            gridwidth: [1240, 1024, 778, 480],
-                            gridheight: [690, 690, 500, 400],
-                            lazyType: "none",
-                            shadow: 0,
-                            spinner: "off",
-                            stopLoop: "off",
-                            stopAfterLoops: -1,
-                            stopAtSlide: -1,
-                            shuffle: "off",
-                            sliderLayout: 'fullwidth',
-                            autoHeight: 'on',
-                            fullScreenAutoWidth: "on",
-                            fullScreenAlignForce: "off",
-                            fullScreenOffsetContainer: "",
-                            fullScreenOffset: "",
-                            disableProgressBar: "on",
-                            hideThumbsOnMobile: "off",
-                            hideSliderAtLimit: 0,
-                            hideCaptionAtLimit: 0,
-                            hideAllCaptionAtLilmit: 0,
-                            debugMode: false,
-                            fallbacks: {
-                                simplifyAll: "off",
-                                nextSlideOnWindowFocus: "off",
-                                disableFocusListener: false,
+                                hide_onmobile: false,
+                                hide_onleave: false,
+                                tmp: '<div class="tp-title-wrap">  	<div class="tp-arr-imgholder"></div> </div>',
+                                left: {
+                                    h_align: "left",
+                                    v_align: "center",
+                                    h_offset: 30,
+                                    v_offset: 0
+                                },
+                                right: {
+                                    h_align: "right",
+                                    v_align: "center",
+                                    h_offset: 20,
+                                    v_offset: 0
+                                }
                             }
-                        });
-                    }
-                    ;
-                    /* END OF revapi call */
-
+                            ,
+                            bullets: {
+                                enable: true,
+                                hide_onmobile: false,
+                                style: "hermes",
+                                hide_onleave: false,
+                                direction: "horizontal",
+                                h_align: "center",
+                                v_align: "bottom",
+                                h_offset: 0,
+                                v_offset: 60,
+                                space: 25,
+                                tmp: ''
+                            }
+                        },
+                        viewPort: {
+                            enable: true,
+                            outof: "wait",
+                            visible_area: "80%",
+                            presize: false
+                        },
+                        responsiveLevels: [1240, 1024, 778, 480],
+                        visibilityLevels: [1240, 1024, 778, 480],
+                        gridwidth: [1240, 1024, 778, 480],
+                        gridheight: [690, 690, 500, 400],
+                        lazyType: "none",
+                        shadow: 0,
+                        spinner: "off",
+                        stopLoop: "off",
+                        stopAfterLoops: -1,
+                        stopAtSlide: -1,
+                        shuffle: "off",
+                        sliderLayout: 'fullwidth',
+                        autoHeight: 'on',
+                        fullScreenAutoWidth: "on",
+                        fullScreenAlignForce: "off",
+                        fullScreenOffsetContainer: "",
+                        fullScreenOffset: "",
+                        disableProgressBar: "on",
+                        hideThumbsOnMobile: "off",
+                        hideSliderAtLimit: 0,
+                        hideCaptionAtLimit: 0,
+                        hideAllCaptionAtLilmit: 0,
+                        debugMode: false,
+                        fallbacks: {
+                            simplifyAll: "off",
+                            nextSlideOnWindowFocus: "off",
+                            disableFocusListener: false,
+                        }
+                    });
                 }
                 ;
-                /* END OF ON LOAD FUNCTION */
-            }());
-            /* End OF WRAPPING FUNCTION */
+                /* END OF revapi call */
+
+            }
+            ;
+            /* END OF ON LOAD FUNCTION */
+        }());
+        /* End OF WRAPPING FUNCTION */
 
 
 
-        </script>
+    </script>
 
-    </body>
+</body>
 </html>

@@ -878,6 +878,23 @@
 }
 
 @media (max-width: 480px) {
+    .page-title-wrapper .heading_primary {
+        font-size: 30px; 
+        margin: 20px 0 0px;
+    }
+    .page-title-wrapper {
+        height: 340px;
+        height: 177px;
+    }
+    .hidden-search{
+        display: none;
+    }
+    .tp-mask-wrap{
+        display: none!important;
+    }
+    .res-t{
+        padding: 10px;
+    }
     .sc-video.style-02,
     .sc-video.style-02 .background-video {
         width: 400px;
@@ -885,7 +902,7 @@
         max-width: 100%;
     }
     .sc-testimonial.style-04 {
-        padding: 0 0 50px;
+        padding: 0 0 0px;
     }
     .sc-count-down .countdown-show4 .countdown-section {
         margin: 0 5px;

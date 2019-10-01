@@ -38,20 +38,15 @@ include './class/include.php';
             <div id="main-content">
                 <div class="page-title">
                     <div class="page-title-wrapper" data-stellar-background-ratio="0.5">
-                        <div class="content container">
-                            <h1 class="heading_primary">Room Type</h1>
-                            <ul class="breadcrumbs ul-top-title" >
-                                <li class="item"><a href="#">Home</a></li>
-                                <li class="item"><span class="separator"></span></li> 
-                                <li class="item active">Room Type</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="empty-space"></div>
-                <div class="container"> 
-                    <div class="sc-tourist style-02">
+                    </div>
+                </div> 
+
+                <div class="container">  
+                    <div class="sc-tourist style-02"> 
+                        <div  style="padding: 23px 30px 20px;">
+                            <h1 class="heading_primary text-center">Room Types</h1> 
+                        </div>
                         <div class="row">
                             <?php
                             $ROOM = new Room(NULL);
@@ -67,7 +62,7 @@ include './class/include.php';
                                         </div>
                                         <div class="inner">
                                             <div class="content">
-                                                <div class="title"><a href="view-room.php?id=<?php echo $room['id'] ?>"><?php echo $room['title'] ?></a></div> 
+                                                <div class="title"><a href="view-room.php?id=<?php echo $room['id'] ?>"><?php echo substr($room['title'], 0, 28) ?></a></div> 
                                                 <ul class="meta r-top-2">
                                                     <li>Start From <span class="price-color" >  $12 </span> / Night  </li>
                                                 </ul>
@@ -89,7 +84,7 @@ include './class/include.php';
 
                     </div>
                 </div>
-                <div class="empty-space"></div>
+
             </div>
             <!-- Footer --> 
             <?php include './footer.php'; ?>

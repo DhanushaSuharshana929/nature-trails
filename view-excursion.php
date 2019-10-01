@@ -42,14 +42,7 @@ $ATTRACTION = new Attraction($id);
                 <div class="page-title">
                     <div class="page-title-wrapper" data-stellar-background-ratio="0.5">
                         <div class="content container">
-                            <h1 class="heading_primary"><?php echo $ATTRACTION->title ?></h1>
-                            <ul class="breadcrumbs ul-top-title" >
-                                <li class="item"><a href="index.php">Home</a></li>
-                                <li class="item"><span class="separator"></span></li>
-                                <li class="item"><a href="excursion.php">Excursions</a></li>
-                                <li class="item"><span class="separator"></span></li>
-                                <li class="item active"><?php echo $ATTRACTION->title ?></li>
-                            </ul>
+                            
                         </div>
                     </div>
                 </div>
