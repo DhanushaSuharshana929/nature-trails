@@ -8,11 +8,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-9 xs-mb-30">
-                <a href="contact.php" class="btn-border-light pull-right" style="float: left;">'HOSPITALITY IS OUR BUSINESS'</a>
-                <h2 style="color: white"></h2>
+                <a href="contact.php" class="btn-border-light pull-right" style="float: left;color: white">'HOSPITALITY IS OUR BUSINESS'</a>
+                 
             </div>
             <div class="col-md-3 ">
-                <a href="contact.php" class="btn-border-light pull-right">Contact Us</a>
+                <a href="contact.php" class="btn-border-light pull-right" style="color: white">Contact Us</a>
             </div>
         </div>
     </div>
@@ -34,10 +34,10 @@
                                 </ul>
                             </div>
                             <ul class="social-link square" style="margin-top: 30px;">
-                                <li><a class="facebook" href="https://www.facebook.com/naturetrailshotel/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                <li><a class="twitter" href="https://twitter.com/trailsnature" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                <li><a class="instagram" href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                                <li><a class="tripadvisor" href="https://www.tripadvisor.com/Hotel_Review-g644047-d6206595-Reviews-Nature_Trails_Boutique_Hotel-Unawatuna_Galle_District_Southern_Province.html" target="_blank"><i class="fa fa-tripadvisor"></i></a></li>
+                                <li><a class="facebook" href="https://www.facebook.com/naturetrailshotel/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                                <li><a class="twitter" href="https://twitter.com/trailsnature" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                <li><a class="instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                <li><a class="tripadvisor" href="https://www.tripadvisor.com/Hotel_Review-g644047-d6206595-Reviews-Nature_Trails_Boutique_Hotel-Unawatuna_Galle_District_Southern_Province.html" target="_blank"><i class="fab fa-tripadvisor"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                             $ATTRACTION = new Attraction(NULL);
                             foreach ($ATTRACTION->all() as $key => $attraction) {
                                 $key++;
-                                if ($key < 7) {
+                                if ($key < 6) {
                                     ?>
                                     <li><a href="view-excursion.php?id=<?php echo $attraction['id'] ?>"><?php echo $attraction['title'] ?></a></li>
                                     <?php

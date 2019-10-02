@@ -2,6 +2,7 @@
 <?php
 include './class/include.php';
 $BANNER = new Banner(4);
+$PAGES = new Page(4);
 ?>
 <html lang="en">
     <head>
@@ -48,34 +49,66 @@ $BANNER = new Banner(4);
                         <div  class="padd-header">
                             <h1 class="heading_primary text-center">Excursion</h1> 
                         </div>
+                        <div class="row"> 
+                            <div class="col-md-1"> 
+                            </div>
+                            <div class="room col-md-10 clearfix">
+                                <div class="room-item">
+                                    <div class="room-media">
+                                        <a href="#"><img src="images/jungle_beach.jpg" alt=""></a>
+                                    </div> 
+                                </div> 
+                            </div>
+
+                            <div class="col-md-1">  </div> 
+                        </div> 
+                        <div class="row " style="margin-top: -58px;padding-bottom: 50px;"> 
+                            <div class="col-md-2">
+                            </div>
+                            <div class="room-summary col-md-8" style="background-color: white;padding: 20px;">
+                                <h3 class="room-title">
+                                    <a href="#"> <?php echo $PAGES->title;?> </a>
+                                </h3>
+                                <p class="room-description text-justify">
+                                     <?php echo $PAGES->description;?>
+                                </p>
+                            </div>
+
+                            <div class="col-md-2"> 
+                            </div> 
+                        </div> 
                         <div class="row">
 
                             <?php
                             $ATTRACTION = new Attraction(NULL);
                             foreach ($ATTRACTION->all() as $attraction) {
-                                ?>
-                                <div class="room col-sm-4 clearfix">
-                                    <div class="room-item">
-                                        <div class="room-media">
-                                            <a href="view-excursion.php?id=<?php echo $attraction['id'] ?>"><img src="upload/attraction/<?php echo $attraction['image_name'] ?>" alt="<?php echo $attraction['title'] ?>"></a>
-                                        </div>
-                                        <div class="room-summary">
-                                            <h3 class="room-title">
-                                                <a href="view-excursion.php?id=<?php echo $attraction['id'] ?>"><?php echo $attraction['title'] ?></a>
-                                            </h3>
-
-                                            <p class="room-description text-justify">
-                                                <?php echo substr($attraction['short_description'], 0, 150) ?>... 
-                                            </p>
-
-                                            <div class="room-meta clearfix">
-                                                <a href="view-excursion.php?id=<?php echo $attraction['id'] ?>"> <div class="rating"> <i class="ion-arrow-right-a"></i> View More</div></a>
+                                if ($attraction['id'] != 1) {
+                                    ?>
+                                    <div class="room col-sm-4 clearfix">
+                                        <div class="room-item">
+                                            <div class="room-media">
+                                                <a href="view-excursion.php?id=<?php echo $attraction['id'] ?>"><img src="upload/attraction/<?php echo $attraction['image_name'] ?>" alt="<?php echo $attraction['title'] ?>"></a>
                                             </div>
+                                            <div class="room-summary">
+                                                <h3 class="room-title">
+                                                    <a href="view-excursion.php?id=<?php echo $attraction['id'] ?>"><?php echo $attraction['title'] ?></a>
+                                                </h3>
 
+                                                <p class="room-description text-justify">
+                                                    <?php echo substr($attraction['short_description'], 0, 150) ?>... 
+                                                </p>
+
+                                                <div class="room-meta clearfix">
+                                                    <a href="view-excursion.php?id=<?php echo $attraction['id'] ?>"> <div class="rating"> <i class="ion-arrow-right-a"></i> View More</div></a>
+                                                </div>
+
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            <?php } ?>                   
+                                    <?php
+                                }
+                            }
+                            ?>                   
                         </div>
                     </div>
                 </div>

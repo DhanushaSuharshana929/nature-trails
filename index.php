@@ -168,7 +168,7 @@ $PAGE = new Page(3);
                                                 </div>
                                                 <div class="inner">
                                                     <div class="content">
-                                                        <div class="title"><a href="view-room.php?id=<?php echo $room['id'] ?>"><?php echo $room['title'] ?></a></div>
+                                                        <div class="title"><a href="view-room.php?id=<?php echo $room['id'] ?>"><?php echo substr($room['title'],0,20) ?></a></div>
                                                         <ul class="meta">
                                                             <li>Start From <span class="price-color" >  $12 </span> / Night  </li>
                                                         </ul>
@@ -228,11 +228,11 @@ $PAGE = new Page(3);
                                                 <div class="desc">
                                                     <h3>Dinner</h3>
                                                     <p class="text-justy" style="text-align: justify">
-                                                        We offer an excluive seafood menu and anala carte menu with local and international cousine. Resturant is open daily from 7.30 A.M to 10 P.M
+                                                        We offer an excluive seafood menu and anala carte menu with local and international cousine. Resturant is open daily from 7.30 A.M to 10.00 P.M
                                                     </p>
                                                 </div>
                                                 <div class="icon">
-                                                    <i class="fa fa-cutlery"></i>
+                                                    <i class="fas fa-hamburger"></i>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </div>
@@ -246,7 +246,7 @@ $PAGE = new Page(3);
                                                     </p>
                                                 </div>
                                                 <div class="icon">
-                                                    <i class="fa fa-desktop"></i>
+                                                    <i class="fas fa-tv"></i>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </div>
@@ -269,7 +269,7 @@ $PAGE = new Page(3);
                                             </div>
                                             <div class="f_box right">
                                                 <div class="icon">
-                                                    <i class="fa fa-bath"></i>
+                                                    <i class="fas fa-swimmer"></i>
                                                 </div>
                                                 <div class="desc">
                                                     <h3>Swimming Pool</h3>
@@ -281,7 +281,7 @@ $PAGE = new Page(3);
                                             </div>
                                             <div class="f_box right">
                                                 <div class="icon">
-                                                    <i class="fa fa-shield"></i>
+                                                    <i class="fa fa-camera"></i>
                                                 </div>
                                                 <div class="desc">
                                                     <h3>24 / 7 Security</h3>
@@ -444,7 +444,7 @@ $PAGE = new Page(3);
     <script src="js/libs/revolution/extensions/revolution.extension.video.min.js"></script>
     <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script type="text/javascript">
         $(function () {
             $(".datepicker").datepicker({
