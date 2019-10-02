@@ -1,5 +1,9 @@
  
-
+<style>
+    #neo_bottom_widget_container{
+        background: #118b44!important;
+    }
+</style>
 <div class="call-to-action text-light xs-text-center">
     <div class="container">
         <div class="row">
@@ -94,15 +98,16 @@
     </div>
 </footer>
 
-<div class="container-fluid w-1192 feed-main back-color hidden-search">
+<div class=" ">
     <div class="sc-travel-search">
-        <div class="travel-search back-color">
+        <div class="travel-search  ">
             <div class="row">
-                <div class="col-md-4 hidden-sm filter-room filter-restaurant filter-swimming">
+
+                <div class="col-md-3 hidden-sm filter-room filter-restaurant filter-swimming w-1192 feed-main  hidden-search" style="width: 25%;" >
                     <div class="sc-gallery"> 
                         <div class="wrapper-gallery " itemscope itemtype="http://schema.org/ItemList">
                             <a href="images/certificate/tripadvisor.jpg" >
-                                <img src="images/certificate/trip.png" alt="" class="pull-right   border-r" />  
+                                <img src="images/certificate/trip.png" alt="" class="pull-right   border-r" style="" />  
                             </a>
 
                             <a href="images/certificate/Booking.com-letter.jpg"  >
@@ -111,26 +116,24 @@
                         </div>
                     </div>
                 </div> 
-                <div class="col-md-8 col-sm-12">
-                    <form action="" class="search-form clearfix hb-form-table clearfix">
-                        <div class="col-md-12 col-sm-12">
-                            <li class="form-field guest check-padd-li">
-                                <input name="chech-in" required type="text"    class="guest datepicker" placeholder="Check-in date" value="" style="color: white"/>
-                            </li>             
-                        </div>
-                        <div class="col-md-12 col-sm-12">
-                            <li class="form-field guest check-padd-li ">
-                                <input name="check-out" required type="text"   class="guest datepicker" placeholder="Check-out date" value="" style="color: white"/>
-                            </li>
-                        </div>
-                        <div class="col-md-12 col-sm-12">
-                            <li class="form-field guest  check-padd-li"> 
-                                <button type="submit" class="submit avg-button  ">Check Availability</button> 
-                            </li>
-                        </div>
-                    </form> 
-                </div> 
             </div> 
         </div>
     </div>
 </div>
+
+<!-- NeoHotelier The Greendale Holiday Bungalow Widget Start / NeoHotelier.com -->
+<span id="neobe_root"></span>
+ <script type="text/javascript">
+    !function() {
+        var nbe = document.createElement("script");
+        var nbe_url = "https://www.neohotelier.com/";
+        var prop = 33090258
+        nbe.type = "text/javascript",
+        nbe.async = true,
+        nbe.src = nbe_url+"get_widget/js/?prop="+prop;
+        var el = document.getElementsByTagName("script")[0];
+        el.parentNode.insertBefore(nbe, el),
+        window.neobe_widget_url = nbe_url+"get_widget/html/?prop="+prop;
+    }();
+    </script>
+    <!-- NeoHotelier Nature Trails Boutique Hotel Widget End / NeoHotelier.com -->

@@ -1,7 +1,7 @@
 
 <div id="rev_slider_2_1_wrapper"   class="rev_slider_wrapper    fullscreen-container no-mask-bg" data-alias="home-3"
      data-source="gallery"
-     style="padding:0px;background-image:url('images/slides/slider/slider-8.jpg');background-repeat:no-repeat;background-size:cover;background-position:center center;">
+     style="padding:0px;background-image:url('upload/slider/-40471311_191162669595_1568712463_n.jpg');background-repeat:no-repeat;background-size:cover;background-position:center center;">
     <!-- START REVOLUTION SLIDER 5.4.7.4 fullscreen mode -->
     <div id="rev_slider_2_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.7.4">
         <ul>

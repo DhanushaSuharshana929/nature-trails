@@ -55,26 +55,24 @@ $PAGE = new Page(3);
                             <h3 class="second-title">Welcome</h3>
                         </div>
                         <div class="sc-info about-info row">
-                            <div class="col-sm-12 col-xs-12 col-md-6">
+                            <div class="col-sm-12 col-xs-12 col-md-9">
                                 <?php echo $PAGE->description ?>
                                 <a href="about-us.php" class="btn-icon">Read More</a>
                             </div>
-                            <div class="col-sm-6 col-md-6 hidden-mobile" style="margin-top: -71px;"> 
-                                
-                                    <div class="sc-hb-rooms-search style-01">
-                                        <div class="hotel-booking-search style-01 layout-columns">
-                                            <img src="images/bg/about.jpg" alt="" class="img-responsive img-thumbnail" style="border-radius: 4px;margin-top: 70px;"/>
-                                        </div>
+                            <div class="col-sm-4 col-md-3 hidden-mobile" style="margin-top: -71px;"> 
+
+                                <div class="sc-hb-rooms-search style-01">
+                                    <div class="hotel-booking-search style-01 layout-columns">
+                                        <img src="images/bg/about.JPG" alt="" class="img-responsive img-thumbnail" style="border-radius: 4px;margin-top: 70px;"/>
                                     </div>
-                               
+                                </div> 
                             </div>
                         </div>
                     </div>
 
                     <div class="sc-content-overlay  hidden-mobile " style="margin-top: 10px;">
                         <div class="container">
-                            <div class="row">
-
+                            <div class="row"> 
                                 <div class="col-md-12 hidden-sm">
                                     <div class="sc-testimonials style-02"> 
                                         <div class="testimonial-slider2 owl-carousel owl-theme">
@@ -147,7 +145,7 @@ $PAGE = new Page(3);
                         </div>
                     </div>
 
-                    <div class="empty-space"></div>
+                    <div style="height: 60px"></div>
                     <div class="sc-travel style-02">
                         <div class="sc-content-overlay"> 
                             <div class="container">
@@ -288,7 +286,7 @@ $PAGE = new Page(3);
                                                 <div class="desc">
                                                     <h3>24 / 7 Security</h3>
                                                     <p class="text-justy" style="text-align: justify">
-                                                        Hotel greate a 24 / 7 security service that included a CCTV and intrude detection system in our Nature Trails Unawatuna hotel. 
+                                                        Hotel greate a 24 / 7 security service that included a CCTV and intrude detection system in our Nature Trails Unawatuna Hotel. 
                                                     </p>
                                                 </div>
                                                 <div class="clearfix"></div>

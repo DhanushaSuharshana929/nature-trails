@@ -51,14 +51,36 @@ $BANNER = new Banner(2);
                         <main class="site-main col-sm-12 col-md-9 flex-first">
                             <div class=" ">
                                 <div class="room_gallery clearfix">
-                                    <div class="camera_wrap camera_emboss" id="camera_wrap">
-                                        <?php
-                                        $ROOM_PHOTO = new RoomPhoto(NULL);
-                                        foreach ($ROOM_PHOTO->getRoomPhotosById($id) as $room_photo) {
+                                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <?php
+                                            $ROOM_PHOTO = new RoomPhoto(NULL);
+                                            foreach ($ROOM_PHOTO->getRoomPhotosById($id) as $key => $room_photo) {
+                                                if ($key == 0) {
+                                                    ?>
+                                                    <div class="carousel-item active">
+                                                        <img class="d-block w-100" src="upload/room/gallery/<?php echo $room_photo['image_name'] ?>" alt="First slide">
+                                                    </div>
+                                                <?php } else { ?>
+                                                    <div class="carousel-item">
+                                                        <img class="d-block w-100" src="upload/room/gallery/<?php echo $room_photo['image_name'] ?>" alt="Second slide">
+                                                    </div>
+                                                    <?php
+                                                }
+                                            }
                                             ?>
-                                            <div  data-src="upload/room/gallery/<?php echo $room_photo['image_name'] ?>" ></div> 
-                                        <?php } ?>
+
+                                        </div>
+                                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
                                     </div>
+
                                 </div>
                                 <div class="title-share clearfix">
                                     <h2 class="title"><?php echo $ROOM->title ?></h2>
@@ -67,7 +89,7 @@ $BANNER = new Banner(2);
                                     <span class="price_value price_min">$<?php echo $ROOM->price ?></span>
                                     <span class="unit">Night</span>
                                 </div>
-                                   <?php echo $ROOM->features ?>
+                                <?php echo $ROOM->features ?>
                                 <div class="description text-justify">
                                     <?php echo $ROOM->description ?>
                                 </div>
