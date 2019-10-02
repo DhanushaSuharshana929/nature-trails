@@ -36,7 +36,7 @@
                         data-textAlign="['left','left','center','center']"
                         data-paddingtop="[20,0,0,0]"
                         data-paddingright="[80,0,0,0]"
-                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingbottom="[5,0,0,0]"
                         data-paddingleft="[0,0,0,0]"  
 
                         style="z-index: 5; white-space: nowrap; font-size: 64px; font-weight: 700; color: rgba(255,255,255,1);text-shadow: 0 2px 5px rgba(0, 0, 0, .5);">
@@ -57,7 +57,7 @@
 
                        data-frames='[{"from":"y:bottom;rX:-20deg;rY:-20deg;rZ:0deg;","speed":1500,"to":"o:1;","delay":900,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"y:[-100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"nothing"}]'
                        data-textAlign="['justify','justify','right','right']"
-                       data-paddingtop="[50,0,0,0]"
+                       data-paddingtop="[60,0,0,0]"
                        data-paddingright="[12,0,0,0]"
                        data-paddingbottom="[8,0,0,0]"
                        data-paddingleft="[12,0,0,0]"
