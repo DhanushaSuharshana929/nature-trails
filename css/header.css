@@ -792,7 +792,7 @@ header.header_v2.header-overlay .header-right .dropdown .dropdown-toggle:hover s
     top: 0;
     opacity: .5;
     margin: 0 auto;
-    background: #00000085;
+/*    background: #00000085;*/
 }
 
 .breadcrumbs li {

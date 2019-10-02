@@ -154,7 +154,7 @@ ul.list-social li a.google {
     -moz-transform: translateY(100px);
     -ms-transform: translateY(100px);
     -o-transform: translateY(100px);
-    z-index: 999;
+    z-index: 9999;
     background-color: var(--primary-color-1);
     color: #fff;
 }
@@ -565,7 +565,7 @@ footer.footer_v4 a {
     position: fixed;
     bottom:0px;
     left: 0;
-    z-index: 99;
+    z-index: 9999;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }

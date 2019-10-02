@@ -49,15 +49,37 @@ $BANNER = new Banner(4);
                 <div class="site-content container">
                     <div class="room-single row">
                         <main class="site-main col-sm-12 col-md-9 flex-first">
-                            <div class="room-wrapper">
+                            <div class="room-wrapper"> 
                                 <div class="room_gallery clearfix">
-                                    <div class="camera_wrap camera_emboss" id="camera_wrap">
-                                        <?php
-                                        $ATTRACTION_PHOTO = new AttractionPhoto(NULL);
-                                        foreach ($ATTRACTION_PHOTO->getAttractionPhotosById($id) as $attraction_photo) {
+                                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <?php
+                                            $ATTRACTION_PHOTO = new AttractionPhoto(NULL);
+                                            foreach ($ATTRACTION_PHOTO->getAttractionPhotosById($id) as $key => $attraction_photo) {
+
+                                                if ($key == 0) {
+                                                    ?>
+                                                    <div class="carousel-item active">
+                                                        <img class="d-block w-100" src="upload/attraction/gallery/<?php echo $attraction_photo['image_name'] ?>" alt="First slide">
+                                                    </div>
+                                                <?php } else { ?>
+                                                    <div class="carousel-item">
+                                                        <img class="d-block w-100" src="upload/attraction/gallery/<?php echo $attraction_photo['image_name'] ?>" alt="Second slide">
+                                                    </div>
+                                                    <?php
+                                                }
+                                            }
                                             ?>
-                                            <div  data-src="upload/attraction/gallery/<?php echo $attraction_photo['image_name'] ?>" ></div> 
-                                        <?php } ?>
+
+                                        </div>
+                                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="title-share clearfix">

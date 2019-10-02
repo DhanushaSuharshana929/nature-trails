@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 @import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel:400,400i,700,700i|Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:400,400i,700,700i');
-    
- 
+
+
 
 /* --------------- heading --------------- */
 h1,h2,h3,h4,h5,h6 {
@@ -52,7 +52,7 @@ h4.title {
 h5 {
     font-weight:700
 }
- 
+
 li.icon_location:before,li.icon_phone:before,li.icon_email:before {
     font-family:"FontAwesome";
     font-size:14px;
@@ -76,8 +76,8 @@ li.icon_email:before {
 #default-page header.clone {
     top:0
 }
- 
- 
+
+
 .lt-form-2 .form-control{
     border-radius:0;
     -moz-border-radius:0;
@@ -97,7 +97,7 @@ li.icon_email:before {
     color:#222;
 }
 
- 
+
 .pf_text {
     color:#fff;
     text-shadow:1px 1px rgba(000,000,000,0.5)
@@ -152,7 +152,7 @@ span.overlay {
     height:33px;
     background:url(../images/plus.html) top no-repeat
 }
- 
+
 /* ////////////////////////////////////////////////////////////---------- */
 /* section
 /* ////////////////////////////////////////////////////////////---------- */
@@ -190,13 +190,13 @@ section {
 #section-facilities{
     background:#f7f7f7;
 }
- 
+
 
 #section-facilities-2{
     background: url(../images/bg/bg-pic-9.jpg) left top;
 }
-       
- 
+
+
 
 .f_box {
     display:table;
@@ -260,8 +260,11 @@ section {
     margin-top:20px
 }
 
- 
+
 .col-md-offset-4{
     margin-left: 33.33333333333333%;
 
+}
+.empty-space-2{
+    height: 80px;
 }
