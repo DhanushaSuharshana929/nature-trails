@@ -20,6 +20,7 @@ class Room {
     public $description;
     public $no_of_rooms;
     public $price;
+    public $discount;
     public $features;
     public $amenities;
     public $queue;
@@ -27,7 +28,7 @@ class Room {
     public function __construct($id) {
         if ($id) {
 
-            $query = "SELECT `id`,`title`,`image_name`,`short_description`,`description`,`no_of_rooms`,`price`,`features`,`amenities`,`queue` FROM `room` WHERE `id`=" . $id;
+            $query = "SELECT * FROM `room` WHERE `id`=" . $id;
 
             $db = new Database();
 
@@ -40,6 +41,7 @@ class Room {
             $this->description = $result['description'];
             $this->no_of_rooms = $result['no_of_rooms'];
             $this->price = $result['price'];
+            $this->discount = $result['discount'];
             $this->features = $result['features'];
             $this->amenities = $result['amenities'];
             $this->queue = $result['queue'];
@@ -50,13 +52,14 @@ class Room {
 
     public function create() {
 
-        $query = "INSERT INTO `room` (`title`,`image_name`,`short_description`,`description`,`no_of_rooms`,`price`,`features`,`amenities`,`queue`) VALUES  ('"
+        $query = "INSERT INTO `room` (`title`,`image_name`,`short_description`,`description`,`no_of_rooms`,`price`,`discount`,`features`,`amenities`,`queue`) VALUES  ('"
                 . $this->title . "','"
                 . $this->image_name . "', '"
                 . $this->short_description . "', '"
                 . $this->description . "', '"
                 . $this->no_of_rooms . "', '"
                 . $this->price . "', '"
+                . $this->discount . "', '"
                 . $this->features . "', '"
                 . $this->amenities . "', '"
                 . $this->queue . "')";
@@ -97,6 +100,7 @@ class Room {
                 . "`description` ='" . $this->description . "', "
                 . "`no_of_rooms` ='" . $this->no_of_rooms . "', "
                 . "`price` ='" . $this->price . "', "
+                . "`discount` ='" . $this->discount . "', "
                 . "`features` ='" . $this->features . "', "
                 . "`amenities` ='" . $this->amenities . "', "
                 . "`queue` ='" . $this->queue . "' "
