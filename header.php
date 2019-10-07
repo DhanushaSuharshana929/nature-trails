@@ -1,3 +1,6 @@
+<?php 
+$PAGES = new Page(5);
+?>
 <header id="masthead" class="header-overlay affix-top sticky-header header_v2">
     <div class="container">
         <div class="row">
@@ -24,10 +27,10 @@
                         <li class="menu-item  " >
                             <a href="room.php">Accommodation</a>                             
                         </li>
-                        <li class="menu-item" style="margin-right: 29px">
+                        <li class="menu-item" style="margin-right: 35px">
                             <a href="dining.php">Dining</a>                             
                         </li>
-                        <li class="menu-item  " style="margin-right: 30px">
+                        <li class="menu-item  " style="margin-right: 35px">
                             <div class="width-logo sm-logo table-cell">
                                 <a href="index.php" class="no-sticky-logo" title="Nature Trails Unawatuna">
                                     <img class="logo" src="images/logo3.png" alt=""> 
@@ -78,7 +81,7 @@
                         <li class=" header-right "  >
                             <div class="  uk-width-auto uk-position-relative" style="margin-top: -12px;">
                                 <div class="ribbon">
-                                    <i><span><s></s>30% <span class="">Off!</span><s></s></span></i>
+                                    <i><span><?php echo substr(substr($PAGES->description, 3), 0, -4) ?>% <span class="">Off!</span><s></s></span></i>
                                 </div>
                             </div>                        
                         </li> 

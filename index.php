@@ -162,15 +162,24 @@ $PAGE = new Page(3);
                                             <div class="item">
                                                 <div class="image">
                                                     <a href="view-room.php?id=<?php echo $room['id'] ?>"><img src="upload/room/<?php echo $room['image_name'] ?>" alt="<?php echo $room['title'] ?>"></a>
-                                                    <div class="meta-img">
-                                                        <span class="price">20% off</span>
-                                                    </div>
+                                                    <?php
+                                                    if ($room['discount'] != 0) {
+                                                        ?>
+                                                        <div class="meta-img">
+                                                            <span class="price"><?php echo $room['discount'] ?> % off</span>
+                                                        </div>
+                                                    <?php } ?>
                                                 </div>
                                                 <div class="inner">
                                                     <div class="content">
-                                                        <div class="title"><a href="view-room.php?id=<?php echo $room['id'] ?>"><?php echo substr($room['title'],0,20) ?></a></div>
+                                                        <div class="title"><a href="view-room.php?id=<?php echo $room['id'] ?>"><?php echo substr($room['title'], 0, 20) ?></a></div>
                                                         <ul class="meta">
-                                                            <li>Start From <span class="price-color" >  $12 </span> / Night  </li>
+                                                            <li>Starting From <span class="price-color" > $ <?php
+                                                                    $discount_price = 0;
+                                                                    $discount_price = $room['price'] * $room['discount'] / 100;
+                                                                    $price = $room['price'] - $discount_price;
+                                                                    echo number_format($price, 2)
+                                                                    ?></span>  </li>
                                                         </ul>
                                                         <div class=" r-top">
                                                             <p>  
@@ -303,7 +312,7 @@ $PAGE = new Page(3);
                             <div class="container">
                                 <div class="empty-space"></div>
                                 <div class="sc-heading style-01 text-center">
-                                    <h3 class="title">Top Excursion</h3>
+                                    <h3 class="title">Excursions</h3>
                                 </div>
                                 <div class="sc-posts style-01 auto-height">
                                     <div class="item row">
@@ -444,7 +453,7 @@ $PAGE = new Page(3);
     <script src="js/libs/revolution/extensions/revolution.extension.video.min.js"></script>
     <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script type="text/javascript">
         $(function () {
             $(".datepicker").datepicker({

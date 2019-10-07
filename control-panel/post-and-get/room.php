@@ -12,6 +12,7 @@ if (isset($_POST['create'])) {
     $ROOM->description = $_POST['description'];
     $ROOM->no_of_rooms = $_POST['no_of_rooms'];
     $ROOM->price = $_POST['price'];
+    $ROOM->discount = $_POST['discount'];
     $ROOM->features = $_POST['features'];
     $ROOM->amenities = $_POST['amenities'];
 
@@ -77,6 +78,7 @@ if (isset($_POST['update'])) {
     $ROOM->description = $_POST['description'];
     $ROOM->no_of_rooms = $_POST['no_of_rooms'];
     $ROOM->price = $_POST['price'];
+    $ROOM->discount = $_POST['discount'];
     $ROOM->features = $_POST['features'];
     $ROOM->amenities = $_POST['amenities'];
 

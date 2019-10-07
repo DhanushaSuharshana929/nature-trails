@@ -47,7 +47,7 @@ $PAGES = new Page(4);
                 <div class="container">
                     <div class="rooms-content layout-grid style-01">
                         <div  class="padd-header">
-                            <h1 class="heading_primary text-center">Excursion</h1> 
+                            <h1 class="heading_primary text-center">Excursions</h1> 
                         </div>
                         <div class="row"> 
                             <div class="col-md-1"> 
