@@ -60,13 +60,12 @@ $BANNER = new Banner(5);
                                 <article class="post col-sm-4 clearfix">
                                     <div class="post-content">
                                         <div class="post-media">
-                                            <a href="view-blog.php?id=<?php echo $blog['id'] ?>"><img src="upload/blog/gallery/thumb/<?php echo $blog['image_name'] ?>" alt="<?php echo $blog['title'] ?>"></a>
+                                            <a href="view-blog.php?id=<?php echo $blog['id'] ?>"><img src="upload/blog/<?php echo $blog['image_name'] ?>" alt="<?php echo $blog['title'] ?>"></a>
                                         </div>
                                         <div class="post-summary">
-                                            <h2 class="post-title">
-                                                <a href="view-blog.php?id=<?php echo $blog['id'] ?>"><?php echo $blog['title'] ?></a>
-                                            </h2>
-
+                                            <h4 class="post-title">
+                                                <a href="view-blog.php?id=<?php echo $blog['id'] ?>"><?php echo substr($blog['title'],0,40) ?>..</a>
+                                            </h4>
                                             <p class="post-description text-justify" lang="zxx">
                                                 <?php echo substr($blog['short_description'], 0, 100) ?>....
                                             </p>

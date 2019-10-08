@@ -2,7 +2,7 @@
 <?php
 include './class/include.php';
 $BANNER = new Banner(4);
-$PAGES = new Page(4);
+$PAGE_E = new Page(4);
 ?>
 <html lang="en">
     <head>
@@ -67,10 +67,10 @@ $PAGES = new Page(4);
                             </div>
                             <div class="room-summary col-md-8" style="background-color: white;padding: 20px;">
                                 <h3 class="room-title">
-                                    <a href="#"> <?php echo $PAGES->title;?> </a>
+                                    <a href="#"> <?php echo $PAGE_E->title;?> </a>
                                 </h3>
                                 <p class="room-description text-justify">
-                                     <?php echo $PAGES->description;?>
+                                     <?php echo $PAGE_E->description;?>
                                 </p>
                             </div>
 

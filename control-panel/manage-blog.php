@@ -46,7 +46,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                             <div class="body">
                                 <!--                                <div class="table-responsive">-->
                                 <div>
-                          
+
                                     <div class="row clearfix">
                                         <?php
                                         $BLOG = Blog::all();
@@ -55,15 +55,16 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                 ?>
                                                 <div class="col-md-3"  id="div<?php echo $blog['id']; ?>">
                                                     <div class="photo-img-container">
-                                                        <img src="../upload/blog/gallery/thumb/<?php echo $blog['image_name']; ?>" class="img-responsive ">
+                                                        <img src="../upload/blog/<?php echo $blog['image_name']; ?>" class="img-responsive ">
                                                     </div>
                                                     <div class="img-caption">
                                                         <p class="maxlinetitle"><?php echo $blog['title']; ?></p>
                                                         <div class="d">
                                                             <a href="#"  class="delete-blog" data-id="<?php echo $blog['id']; ?>"> <button class="glyphicon glyphicon-trash delete-btn"></button></a> | 
                                                             <a href="edit-blog.php?id=<?php echo $blog['id']; ?>"> <button class="glyphicon glyphicon-pencil edit-btn"></button></a> | 
-                                                            <a href="arrange-blog.php">  <button class="glyphicon glyphicon-random arrange-btn"></button></a>
-                                                            
+                                                            <a href="arrange-blog.php">  <button class="glyphicon glyphicon-random arrange-btn"></button></a> | 
+                                                            <a href="view-blog-photos.php?id=<?php echo $blog['id']; ?>">  <button class="glyphicon glyphicon-picture arrange-btn"></button></a>
+
                                                         </div>
                                                     </div>
                                                 </div>

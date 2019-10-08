@@ -58,15 +58,24 @@ $BANNER = new Banner(2);
                                     <div class="item">
                                         <div class="image">
                                             <a href="view-room.php?id=<?php echo $room['id'] ?>"><img src="upload/room/<?php echo $room['image_name'] ?>" alt="<?php echo $room['title'] ?>"></a>
-                                            <div class="meta-img">
-                                                <span class="price">$40.00</span>
-                                            </div>
+                                            <?php
+                                            if ($room['discount'] != 0) {
+                                                ?>
+                                                <div class="meta-img">
+                                                    <span class="price">UP TO <?php echo $room['discount'] ?> % OFF</span>
+                                                </div>
+                                            <?php } ?>
                                         </div>
                                         <div class="inner">
                                             <div class="content">
                                                 <div class="title"><a href="view-room.php?id=<?php echo $room['id'] ?>"><?php echo substr($room['title'], 0, 28) ?></a></div> 
-                                                <ul class="meta r-top-2">
-                                                    <li>Start From <span class="price-color" >  $12 </span> / Night  </li>
+                                                <ul class="meta">
+                                                    <li>Starting From <span class="price-color" > $ <?php
+                                                            $discount_price = 0;
+                                                            $discount_price = $room['price'] * $room['discount'] / 100;
+                                                            $price = $room['price'] - $discount_price;
+                                                            echo number_format($price, 2)
+                                                            ?></span>  </li>
                                                 </ul>
                                                 <p>
                                                     <?php echo substr($room['short_description'], 0, 120) ?>...
