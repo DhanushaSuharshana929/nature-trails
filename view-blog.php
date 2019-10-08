@@ -53,7 +53,36 @@ $BANNER = new Banner(5);
                                 <article class="post clearfix">
                                     <div class="post-content">
                                         <div class="post-media">
-                                            <img src="upload/blog/gallery/<?php echo $BLOG->image_name ?>" alt="<?php echo $BLOG->title ?>">
+                                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <?php
+                                                    $BLOG_PHOTO = new BlogPhoto(NULL);
+                                                    foreach ($BLOG_PHOTO->getBlogPhotosById($id) as $key => $blog_photo) {
+
+                                                        if ($key == 0) {
+                                                            ?>
+                                                            <div class="carousel-item active">
+                                                                <img class="d-block w-100" src="upload/blog/gallery/<?php echo $blog_photo['image_name'] ?>" alt="First slide">
+                                                            </div>
+                                                        <?php } else { ?>
+                                                            <div class="carousel-item">
+                                                                <img class="d-block w-100" src="upload/blog/gallery/<?php echo $blog_photo['image_name'] ?>" alt="Second slide">
+                                                            </div>
+                                                            <?php
+                                                        }
+                                                    }
+                                                    ?>
+
+                                                </div>
+                                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Previous</span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Next</span>
+                                                </a>
+                                            </div>
                                         </div>
 
                                         <div class="post-summary">

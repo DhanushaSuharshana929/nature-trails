@@ -1,20 +1,20 @@
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
-
 $id = '';
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 }
-$BLOG = new Blog($id);
+$BLOG = new Blog($id)
 ?> 
-
 <!DOCTYPE html>
+
+
 <html> 
     <head>
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <title>Blog</title>
+        <title>Blog photo</title>
         <!-- Favicon-->
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
@@ -25,6 +25,7 @@ $BLOG = new Blog($id);
         <link href="plugins/sweetalert/sweetalert.css" rel="stylesheet" />
         <link href="css/style.css" rel="stylesheet">
         <link href="css/themes/all-themes.css" rel="stylesheet" />
+
     </head>
 
     <body class="theme-red">
@@ -33,7 +34,7 @@ $BLOG = new Blog($id);
         ?>
 
         <section class="content">
-            <div class="container-fluid">  
+            <div class="container-fluid">
                 <?php
                 $vali = new Validator();
                 $vali->show_message();
@@ -43,59 +44,74 @@ $BLOG = new Blog($id);
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="header">
-                                <h2>
-                                    Edit Blog
-                                </h2>
-
+                                <h2>Create Blog Photos</h2>
+                                <ul class="header-dropdown">
+                                    <li class="">
+                                        <a href="manage-blog.php">
+                                            <i class="material-icons">list</i> 
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                             <div class="body">
-                                <form class="form-horizontal" method="post"  id="form-data" enctype="multipart/form-data"> 
-                                    <div class="col-md-12">
-                                        <div class="form-group form-float">
-                                            <div class="form-line">
-                                                <input type="text" id="title" class="form-control"  value="<?php echo $BLOG->title; ?>"  name="title"  required="TRUE">
-                                                <label class="form-label">Title</label>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <form class="form-horizontal"  method="post" action="post-and-get/blog-photo.php" enctype="multipart/form-data"> 
                                     <div class="col-md-12">                                       
                                         <div class="form-group form-float">
                                             <div class="form-line">
-                                                <input type="file"  class="form-control" value="<?php echo $BLOG->image_name; ?>"  name="image">
-                                                <input type="hidden" id="image" class="form-control" value="<?php echo $BLOG->image_name; ?>"  name="image">
-                                                <img src="../upload/blog/<?php echo $BLOG->image_name; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
+                                                <input type="file" id="image" class="form-control" name="image"  required="true">
                                             </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-sm-12">
-                                        <div class="form-group form-float">
-                                            <div class="form-line">
-                                                <input type="text" id="short_description" class="form-control" value="<?php echo $BLOG->short_description; ?>"  name="short_description">
-                                                <label class="form-label">Short Description</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <label for="description">Description</label>
-                                        <div class="form-line">
-                                            <textarea id="description" name="description" class="form-control" rows="5"><?php echo $BLOG->description; ?></textarea> 
                                         </div>
                                     </div>
                                     <div class="col-md-12">
-                                        <input type="hidden" name="update"value="update"/>
-                                        <input type="hidden" id="oldImageName" value="<?php echo $BLOG->image_name; ?>" name="oldImageName"/>
-                                        <input type="hidden" id="id" value="<?php echo $BLOG->id; ?>" name="id"/>
-                                        <button type="submit" class="btn btn-primary m-t-15 waves-effect" id="update" value="update">Save Changes</button>
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="text" id="caption" class="form-control" autocomplete="off" name="caption" required="true">
+                                                <label class="form-label">Caption</label>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="row clearfix">  </div>
+                                    <div class="col-md-12"> 
+                                          <input type="hidden" id="id" value="<?php echo $BLOG->id; ?>" name="id"/>
+                                        <input type="submit" name="create" class="btn btn-primary m-t-15 waves-effect" value="create"/>
+                                    </div>
                                 </form>
+                                <div class="row">
+                                </div>
+                                <hr/>
+                                <div class="row clearfix">
+                                    <?php
+                                    $BLOG_PHOTO = BlogPhoto::getBlogPhotosById($id);
+                                    if (count($BLOG_PHOTO) > 0) {
+                                        foreach ($BLOG_PHOTO as $key => $blog_photo) {
+                                            ?>
+                                            <div class="col-md-3" id="div<?php echo $blog_photo['id']; ?>">
+                                                <div class="photo-img-container">
+                                                    <img src="../upload/blog/gallery/thumb/<?php echo $blog_photo['image_name']; ?>" class="img-responsive ">
+                                                </div>
+                                                <div class="img-caption">
+                                                    <p class="maxlinetitle"><?php echo $blog_photo['caption']; ?></p>
+                                                    <div class="d">
+                                                        <a href="#" class="delete-blog-photo" data-id="<?php echo $blog_photo['id']; ?>"> <button class="glyphicon glyphicon-trash delete-btn"></button></a>
+                                                        <a href="edit-blog-photo.php?id=<?php echo $blog_photo['id']; ?>"> <button class="glyphicon glyphicon-pencil edit-btn"></button></a>
+                                                        <a href="arrange-blog-photo.php?id=<?php echo $id; ?>">  <button class="glyphicon glyphicon-random arrange-btn"></button></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <?php
+                                        }
+                                    } else {
+                                        ?> 
+                                    <?php } ?> 
+
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
                 <!-- #END# Vertical Layout -->
+
             </div>
         </section>
 
@@ -107,7 +123,12 @@ $BLOG = new Blog($id);
         <script src="js/admin.js"></script>
         <script src="js/demo.js"></script>
         <script src="js/add-new-ad.js" type="text/javascript"></script>
+
         <script src="plugins/sweetalert/sweetalert.min.js"></script>
+        <script src="plugins/bootstrap-notify/bootstrap-notify.js"></script>
+        <script src="js/pages/ui/dialogs.js"></script>
+        <script src="js/demo.js"></script>
+        <script src="delete/js/blog-photo.js" type="text/javascript"></script>
 
         <script src="tinymce/js/tinymce/tinymce.min.js"></script>
         <script>
@@ -137,7 +158,6 @@ $BLOG = new Blog($id);
 
 
         </script>
-        <script src="js/ajax/blog.js" type="text/javascript"></script>
     </body>
 
 </html>

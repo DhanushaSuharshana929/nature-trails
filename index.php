@@ -16,6 +16,8 @@ $PAGE = new Page(3);
         <link rel="stylesheet" type="text/css" href="css/libs/revolution/settings.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
         <!-- Style -->
     </head>
     <body class="demo-3 home">
@@ -166,7 +168,7 @@ $PAGE = new Page(3);
                                                     if ($room['discount'] != 0) {
                                                         ?>
                                                         <div class="meta-img">
-                                                            <span class="price"><?php echo $room['discount'] ?> % off</span>
+                                                           <span class="price">UP TO <?php echo $room['discount'] ?> % OFF</span>
                                                         </div>
                                                     <?php } ?>
                                                 </div>
@@ -453,7 +455,7 @@ $PAGE = new Page(3);
     <script src="js/libs/revolution/extensions/revolution.extension.video.min.js"></script>
     <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  
     <script type="text/javascript">
         $(function () {
             $(".datepicker").datepicker({

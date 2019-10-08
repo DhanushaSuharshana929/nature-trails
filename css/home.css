@@ -1695,7 +1695,7 @@ select[name="countries"] {
 .travel-content-search .item .image .meta-img {
     position: absolute;
     left: -3px;
-    top: 35px;
+    top: 15px;
 }
 
 .sc-travel.style-02  .content .description,
@@ -1770,11 +1770,11 @@ select[name="countries"] {
 }
 .meta-img span {
     padding: 0 6px;
-    height: 35px;
+    height: 33px;
     line-height: 34px;
     display: inline-block;
     vertical-align: middle;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -1988,7 +1988,7 @@ select[name="countries"] {
 .sc-tourist.style-02 .meta-img {
     position: absolute;
     left: -3px;
-    top: 35px;
+    top: 15px;
 }
 .sc-tourist.style-02 .item:hover {
     border-color: var(--primary-color-4);
