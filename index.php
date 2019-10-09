@@ -225,7 +225,7 @@ $PAGE = new Page(3);
                                             <div class="f_box left">
                                                 <div class="desc">
                                                     <h3>Tea / Coffee </h3>
-                                                    <p class="text-justy" style="text-align: justify">
+                                                    <p class="text-justy"  >
                                                         Each Room has a tea / coffee making facility with complementary tea / coffee
                                                     </p>
                                                 </div>
@@ -237,8 +237,8 @@ $PAGE = new Page(3);
 
                                             <div class="f_box left">
                                                 <div class="desc">
-                                                    <h3>Dinner</h3>
-                                                    <p class="text-justy" style="text-align: justify">
+                                                    <h3>Dining</h3>
+                                                    <p class="text-justy"  >
                                                         We offer an excluive seafood menu and anala carte menu with local and international cousine. Resturant is open daily from 7.30 A.M to 10.00 P.M
                                                     </p>
                                                 </div>
@@ -252,7 +252,7 @@ $PAGE = new Page(3);
                                             <div class="f_box left">
                                                 <div class="desc">
                                                     <h3>Satellite  TV</h3>
-                                                    <p class="text-justy" style="text-align: justify">
+                                                    <p class="text-justy" >
                                                         Each room is provided with a high definition flat screen television loaded with over 100 local and international Satellite channels.
                                                     </p>
                                                 </div>
@@ -272,7 +272,7 @@ $PAGE = new Page(3);
                                                 <div class="desc">
                                                     <h3>Free Wifi</h3>
 
-                                                    <p class="text-justy" style="text-align: justify">
+                                                    <p class="text-justy" >
                                                         Entire hotel is cover with high speed internet offered free of charge in house geasts.
                                                     </p>
                                                 </div>
@@ -284,7 +284,7 @@ $PAGE = new Page(3);
                                                 </div>
                                                 <div class="desc">
                                                     <h3>Swimming Pool</h3>
-                                                    <p class="text-justy" style="text-align: justify">
+                                                    <p class="text-justy" >
                                                         Hotel swimming pool is the nestled in the centre of a beautifully landscaped graden. Pool is open for use from 8.00 A.M to 8.00 P.M
                                                     </p>
                                                 </div>
@@ -296,7 +296,7 @@ $PAGE = new Page(3);
                                                 </div>
                                                 <div class="desc">
                                                     <h3>24 / 7 Security</h3>
-                                                    <p class="text-justy" style="text-align: justify">
+                                                    <p class="text-justy" >
                                                         Hotel greate a 24 / 7 security service that included a CCTV and intrude detection system in our Nature Trails Unawatuna Hotel. 
                                                     </p>
                                                 </div>
@@ -364,7 +364,7 @@ $PAGE = new Page(3);
 
                     <div class="container">  
                         <div class="sc-heading style-01 text-center">
-                            <h3 class="title color-black" style="color: black">Gest Reviews</h3>
+                            <h3 class="title color-black" style="color: black">Guest Reviews</h3>
                         </div> 
                         <div class="sc-quote style-04 text-center"> 
                             <div class="row res-t">
@@ -402,7 +402,7 @@ $PAGE = new Page(3);
                                         </div>
                                     </div>
                                     <div class="view-all text-center" style="margin-bottom: 20px">
-                                        <a href="feedback.php" class="btn-radius">Gest Reviews</a>
+                                        <a href="feedback.php" class="btn-radius">Guest Reviews</a>
                                     </div>
                                 </div>                                
                             </div> 

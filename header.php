@@ -4,7 +4,7 @@ $PAGES = new Page(5);
 <header id="masthead" class="header-overlay affix-top sticky-header header_v2">
     <div class="container">
         <div class="row">
-            <div class="header-menu col-sm-12 tm-table">
+            <div class="header-menu   tm-table">
                 <div class="menu-mobile-effect navbar-toggle" data-effect="mobile-effect">
                     <div class="icon-wrap">
                         <span class="icon-bar"></span>
@@ -27,10 +27,10 @@ $PAGES = new Page(5);
                         <li class="menu-item  " >
                             <a href="room.php">Accommodation</a>                             
                         </li>
-                        <li class="menu-item" style="margin-right: 35px">
+                        <li class="menu-item"  >
                             <a href="dining.php">Dining</a>                             
                         </li>
-                        <li class="menu-item  " style="margin-right: 35px">
+                        <li class="menu-item  "  >
                             <div class="width-logo sm-logo table-cell">
                                 <a href="index.php" class="no-sticky-logo" title="Nature Trails Unawatuna">
                                     <img class="logo" src="images/logo3.png" alt=""> 
@@ -49,29 +49,32 @@ $PAGES = new Page(5);
                             <a href="blog.php">Blog</a>                             
                         </li> 
                         <li class="menu-item"  >
+                            <a href="gallery.php">Gallery</a>                             
+                        </li> 
+                        <li class=" "  style="margin-right: 18px;">
                             <div class="language">
                                 <div class="dropdown translation-links">
                                     <a href="#" style="color: white;" class="dropdown-toggle select united kingdom n" data-lang="English" data-hover="dropdown" data-toggle="dropdown" aria-expanded="false">
                                         <img src="images/english.png" class="img-responsive" alt="english"/>
-                                        English<span class="fa fa-caret-down"></span>
+                                         <span class="fa fa-caret-down"></span>
                                     </a>
                                     <ul class="dropdown-language ">
                                         <li>
                                             <a href="#" class="chinese" data-lang="Chinese">
                                                 <img src="images/Chinese.png" class="img-responsive" alt="chinese"/>
-                                                Chinese
+                                                 
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#" class="german" data-lang="German">
                                                 <img src="images/germany.png" class="img-responsive" alt="germany"/>                                                
-                                                German
+                                                
                                             </a>
                                         </li> 
                                         <li>
                                             <a href="#" class="russian" data-lang="Russian">
                                                 <img src="images/russian.png" class="img-responsive" alt="russian"/>
-                                                Russian
+                                           
                                             </a>
                                         </li> 
                                     </ul>

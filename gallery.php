@@ -93,7 +93,22 @@ $BANNER = new Banner(6);
         <script src="js/libs/theia-sticky-sidebar.min.js"></script><!-- Sticky sidebar -->
         <script src="js/libs/counter-box.min.js"></script><!-- counter -->
         <script src="js/libs/isotope.pkgd.min.js"></script><!-- Sticky sidebar -->
+        
+        <script src="js/libs/jquery-1.12.4.min.js"></script><!-- jQuery -->
+        <script src="js/libs/jquery.plugin.min.js"></script><!-- jQuery -->
+        <script src="js/libs/bootstrap.min.js"></script><!-- Bootstrap -->
+        <script src="js/libs/smoothscroll.min.js"></script><!-- smoothscroll -->
+        <script src="js/libs/owl.carousel.min.js"></script><!-- Owl Carousel -->
+        <script src="js/libs/jquery.magnific-popup.min.js"></script><!-- Magnific Popup -->
+        <script src="js/libs/theia-sticky-sidebar.min.js"></script><!-- Sticky sidebar -->
+        <script src="js/libs/counter-box.min.js"></script><!-- counter -->
+        <script src="js/libs/stellar.min.js"></script><!-- parallax -->
+        <script src="js/libs/moment.min.js"></script><!-- moment -->
+        <script src="js/libs/jquery-ui.min.js"></script><!-- ui -->
+        <script src="js/libs/daterangepicker.min.js"></script><!-- date -->
+        <script src="js/libs/daterangepicker.min-date.min.js"></script><!-- date2 -->
         <script src="js/libs/jquery.thim-content-slider.min.js"></script><!-- Slider -->
+        <script src="js/libs/jquery.countdown.min.js"></script><!-- coming soon -->
         <script src="js/theme-customs.js"></script><!-- Theme Custom -->
         <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
 
