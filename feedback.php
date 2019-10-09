@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 include './class/include.php';
+$BANNER = new Banner(1);
 ?>
 <html lang="en">
 
@@ -38,16 +39,8 @@ include './class/include.php';
             <!-- Main Content -->
             <div id="main-content">
                 <div class="page-title">
-                    <div class="page-title-wrapper" data-stellar-background-ratio="0.5">
-                        <div class="content container">
-                            <h1 class="heading_primary">Gest Reviews</h1>
-                            <ul class="breadcrumbs ul-top-title" >
-                                <li class="item"><a href="index.php">Home</a></li>
-                                <li class="item"><span class="separator"></span></li> 
-                                <li class="item"><span class="separator"></span></li>
-                                <li class="item active">Gest Reviews</li>
-                            </ul>
-                        </div>
+                    <div class="page-title-wrapper" data-stellar-background-ratio="0.5" style="background-image: url(upload/banner/<?php echo $BANNER->image_name ?>) ">
+
                     </div>
                 </div>
 
@@ -55,7 +48,7 @@ include './class/include.php';
                     <div class="row">
                         <main class="site-main col-sm-12 col-md-12 flex-first">
                             <div class="comments-list" id="comments-list">
-                                <h3 class="total-comments">Gest Reviews</h3>
+                                <h3 class="total-comments">Guest Reviews</h3>
                                 <ul>
                                     <?php
                                     $COMMENT = new Comments(NULL);
