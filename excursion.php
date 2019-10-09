@@ -82,7 +82,7 @@ $PAGE_E = new Page(4);
                             <?php
                             $ATTRACTION = new Attraction(NULL);
                             foreach ($ATTRACTION->all() as $attraction) {
-                                if ($attraction['id'] != 1) {
+                                if ($attraction['id'] != 7) {
                                     ?>
                                     <div class="room col-sm-4 clearfix">
                                         <div class="room-item">

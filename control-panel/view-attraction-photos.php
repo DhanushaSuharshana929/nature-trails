@@ -14,7 +14,7 @@ $ATTRACTION = new Attraction($id)
     <head>
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <title>Attraction photo</title>
+        <title>Excursions photo</title>
         <!-- Favicon-->
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
@@ -44,7 +44,7 @@ $ATTRACTION = new Attraction($id)
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="header">
-                                <h2>Create Attraction Photos</h2>
+                                <h2>Create Excursions Photos</h2>
                                 <ul class="header-dropdown">
                                     <li class="">
                                         <a href="manage-attraction.php">
@@ -101,7 +101,7 @@ $ATTRACTION = new Attraction($id)
                                         }
                                     } else {
                                         ?> 
-                                        <b style="padding-left: 15px;">No slides in the database.</b> 
+                                        <b style="padding-left: 15px;">No Excursions in the database.</b> 
                                     <?php } ?> 
 
                                 </div>

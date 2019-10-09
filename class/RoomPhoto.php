@@ -44,7 +44,7 @@ class RoomPhoto {
                 . $this->room . "','"
                 . $this->image_name . "', '"
                 . $this->caption . "', '"
-                . $this->queue . "')";
+                . 0 . "')";
 
         $db = new Database();
 
