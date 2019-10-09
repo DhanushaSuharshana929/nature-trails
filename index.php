@@ -243,7 +243,7 @@ $PAGE = new Page(3);
                                                     </p>
                                                 </div>
                                                 <div class="icon">
-                                                    <i class="fas fa-hamburger"></i>
+                                                    <i class="fa fa-cutlery "></i>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </div>
@@ -257,7 +257,7 @@ $PAGE = new Page(3);
                                                     </p>
                                                 </div>
                                                 <div class="icon">
-                                                    <i class="fas fa-tv"></i>
+                                                    <i class="fa fa-television"></i>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </div>
@@ -280,7 +280,7 @@ $PAGE = new Page(3);
                                             </div>
                                             <div class="f_box right">
                                                 <div class="icon">
-                                                    <i class="fas fa-swimmer"></i>
+                                                    <i class="fa fa-shower "></i>
                                                 </div>
                                                 <div class="desc">
                                                     <h3>Swimming Pool</h3>
