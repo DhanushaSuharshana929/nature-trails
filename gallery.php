@@ -41,28 +41,43 @@ $BANNER = new Banner(6);
             <div id="main-content">
                 <div class="page-title">
                     <div class="page-title-wrapper" data-stellar-background-ratio="0.5" style="background-image: url(upload/banner/<?php echo $BANNER->image_name ?>) ">
-
                     </div>
+                    
                 </div>
 
 
-                <div class="page-content">
-                    <div class="container">
-                        <div  class="padd-header">
+                <div class="site-content">
+                    <div class="page-content">
+                        <div class="container">
+                            <div  class="padd-header">
                             <h1 class="heading_primary text-center">Gallery</h1> 
                         </div>
-                        <div class="sc-gallery">
+                            <div class="sc-gallery">
+                                <ul class="filter-controls">
+                                    <li><a href="#" class="filter active">All</a></li>
+                                    <?php
+                                    $PHOT_ALBUM = new PhotoAlbum(NULL);
+                                    foreach ($PHOT_ALBUM->all()as $key => $album) {
+                                        ?>
 
-                            <div class="wrapper-gallery row" itemscope itemtype="http://schema.org/ItemList">
-                                <?php
-                                $ALBUM_PHOTO = new AlbumPhoto(NULL);
-                                foreach ($ALBUM_PHOTO->getAlbumPhotosById(1) as $album_photo) {
+                                        <li><a href="javascript:;" class="filter" data-filter=".filter-<?php echo $album['id']; ?>"> <?php echo $album['title']; ?></a></li>
+
+                                        <?php
+                                    }
                                     ?>
-                                    <div class="col-sm-3 filter-room filter-restaurant filter-swimming">
-                                        <a href="upload/photo-album/gallery/<?php echo $album_photo['image_name'] ?>" class="gallery-popup">
-                                            <img src="upload/photo-album/gallery/thumb/<?php echo $album_photo['image_name'] ?>" alt=""></a>
-                                    </div> 
-                                <?php } ?>
+                                </ul>
+                                <div class="wrapper-gallery row" itemscope itemtype="http://schema.org/ItemList">
+                                    <?php
+                                    $ALBUM_PHOTO = new AlbumPhoto(NULL);
+                                    foreach ($ALBUM_PHOTO->all() as $album_photo) {
+                                        ?>
+                                        <div class="col-sm-3 filter-<?php echo $album_photo['album']; ?>">
+                                            <a href="upload/photo-album/gallery/<?php echo $album_photo['image_name'] ?>" class="gallery-popup">
+                                                <img src="upload/photo-album/gallery/thumb/<?php echo $album_photo['image_name'] ?>" alt=""></a>
+                                        </div>
+                                    <?php } ?>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -80,29 +95,13 @@ $BANNER = new Banner(6);
 
 
         <!-- Scripts -->
-        <script src="js/libs/jquery.min.js"></script><!-- jQuery -->
-        <script src="js/libs/stellar.min.js"></script><!-- parallax -->
 
-        <script src="js/libs/jquery-ui.min.js"></script><!-- ui -->
-        <script src="js/libs/daterangepicker.min.js"></script><!-- date -->
-        <script src="js/libs/daterangepicker.min-date.min.js"></script><!-- date2 -->
-        <script src="js/libs/bootstrap.min.js"></script><!-- Bootstrap -->
-        <script src="js/libs/smoothscroll.min.js"></script><!-- smoothscroll -->
-        <script src="js/libs/owl.carousel.min.js"></script><!-- Owl Carousel -->
-        <script src="js/libs/jquery.magnific-popup.min.js"></script><!-- Magnific Popup -->
-        <script src="js/libs/theia-sticky-sidebar.min.js"></script><!-- Sticky sidebar -->
-        <script src="js/libs/counter-box.min.js"></script><!-- counter -->
-        <script src="js/libs/isotope.pkgd.min.js"></script><!-- Sticky sidebar -->
-        
+
         <script src="js/libs/jquery-1.12.4.min.js"></script><!-- jQuery -->
-        <script src="js/libs/jquery.plugin.min.js"></script><!-- jQuery -->
-        <script src="js/libs/bootstrap.min.js"></script><!-- Bootstrap -->
-        <script src="js/libs/smoothscroll.min.js"></script><!-- smoothscroll -->
-        <script src="js/libs/owl.carousel.min.js"></script><!-- Owl Carousel -->
-        <script src="js/libs/jquery.magnific-popup.min.js"></script><!-- Magnific Popup -->
-        <script src="js/libs/theia-sticky-sidebar.min.js"></script><!-- Sticky sidebar -->
-        <script src="js/libs/counter-box.min.js"></script><!-- counter -->
-        <script src="js/libs/stellar.min.js"></script><!-- parallax -->
+        <script src="js/libs/jquery.plugin.min.js"></script><!-- jQuery -->  
+        <script src="js/libs/isotope.pkgd.min.js"></script><!-- Sticky sidebar -->
+        <script src="js/libs/bootstrap.min.js"></script><!-- Bootstrap --> 
+        <script src="js/libs/jquery.magnific-popup.min.js"></script><!-- Magnific Popup --> 
         <script src="js/libs/moment.min.js"></script><!-- moment -->
         <script src="js/libs/jquery-ui.min.js"></script><!-- ui -->
         <script src="js/libs/daterangepicker.min.js"></script><!-- date -->

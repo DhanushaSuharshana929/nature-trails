@@ -64,10 +64,10 @@ include_once(dirname(__FILE__) . '/auth.php');
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden">
                                         <label for="description">Description</label>
                                         <div class="form-line">
-                                            <textarea id="description" name="description" class="form-control" rows="5"></textarea> 
+                                            <textarea id="description" name="description" class="form-control" rows="5">test</textarea> 
                                         </div>
 
                                     </div>
@@ -98,7 +98,7 @@ include_once(dirname(__FILE__) . '/auth.php');
         <script src="js/admin.js"></script>
         <script src="js/demo.js"></script>
         <script src="js/add-new-ad.js" type="text/javascript"></script>
-
+        <script src="js/ajax/photo-album.js" type="text/javascript"></script>
         <script src="plugins/sweetalert/sweetalert.min.js"></script>
         <script src="tinymce/js/tinymce/tinymce.min.js"></script>
         <script>

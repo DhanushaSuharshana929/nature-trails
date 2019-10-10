@@ -44,7 +44,7 @@ class PhotoAlbum {
                 . $this->title . "','"
                 . $this->image_name . "', '"
                 . $this->description . "', '"
-                . $this->queue . "')";
+                . 0 . "')";
 
         $db = new Database();
 

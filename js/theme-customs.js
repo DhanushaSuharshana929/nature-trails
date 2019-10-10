@@ -801,7 +801,7 @@
                 var testimonial_slider2 = elem.owlCarousel({
                     loop: true,
                     autoplay:true,
-                    autoplayTimeout:2000,
+                    autoplayTimeout:8000,
                     autoplayHoverPause:true,
                     items: 1,
                     nav: false,
