@@ -556,14 +556,14 @@
                     </ul>
                 </li> 
                 <li>
-                    <a href="view-album-photos.php?id=1" class="menu-toggle">
+                    <a href="view-album-photos.php?id=1" class="menu-toggle hidden">
                         <i class="material-icons">chevron_right</i>
                         <span>Gallery</span>
                     </a>
 
                 </li> 
                 <li>
-                    <a href="javascript:void(0);" class="menu-toggle hidden">
+                    <a href="javascript:void(0);" class="menu-toggle ">
                         <i class="material-icons">chevron_right</i>
                         <span>Photo Album</span>
                     </a>
