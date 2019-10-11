@@ -48,7 +48,7 @@ $BANNER = new Banner(2);
 
                 <div class="site-content container">
                     <div class="room-single row">
-                        <main class="site-main col-sm-12 col-md-9 flex-first">
+                        <main class="site-main col-sm-12 col-md-12 flex-first">
                             <div class=" ">
                                 <div class="room_gallery clearfix">
                                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -85,10 +85,7 @@ $BANNER = new Banner(2);
                                 <div class="title-share clearfix">
                                     <h2 class="title"><?php echo $ROOM->title ?></h2>
                                 </div>
-                                <div class="room_price">
-                                    <span class="price_value price_min">$<?php echo $ROOM->price ?></span>
-                                    <span class="unit">Night</span>
-                                </div>
+
                                 <?php echo $ROOM->features ?>
                                 <div class="description text-justify">
                                     <?php echo $ROOM->description ?>
@@ -125,16 +122,11 @@ $BANNER = new Banner(2);
                                                         <div class="content">
                                                             <div class="title"><a href="view-room.php?id=<?php echo $room['id'] ?>"><?php echo $room['title'] ?></a></div> 
 
-                                                            <ul class="meta r-top-2">
-                                                                <li>Starting From <span class="price-color" > $ <?php
-                                                                        $discount_price = 0;
-                                                                        $discount_price = $room['price'] * $room['discount'] / 100;
-                                                                        $price = $room['price'] - $discount_price;
-                                                                        echo number_format($price, 2)
-                                                                        ?></span>  </li>
-                                                            </ul>
 
-                                                            <?php echo substr($room['short_description'], 0, 100) ?> ...
+                                                            <p class="text-justify">
+                                                                <?php echo substr($room['short_description'], 0, 100) ?> ...
+                                                            </p>
+
                                                         </div>
 
                                                         <div class="review clearfix " >
@@ -152,79 +144,7 @@ $BANNER = new Banner(2);
                     </div>
                     </main>
 
-                    <aside id="secondary" class="widget-area col-sm-12 col-md-3 sticky-sidebar">
-                        <div class="wd wd-book-room">
-                            <a href="#" class="book-room">Book This Room</a>
-                            <div id="form-popup-room" class="form-popup-room">
-                                <div class="popup-container">
-                                    <a href="#" class="close-popup"><i class="ion-android-close"></i></a>
-                                    <form id="hotel-popup-results" name="hb-search-single-room" class="hotel-popup-results">
-                                        <div class="room-head">
-                                            <h3 class="room-title">Classic Room</h3>
-                                            <p class="description">Please enter the information to complete the book this room.</p>
-                                        </div>
-                                        <div class="search-room-popup">
-                                            <ul class="form-table clearfix">
-                                                <li class="form-field">
-                                                    <input type="text" name="name" id="name" required class="name" placeholder="Your Name*">
-                                                </li>
-                                                <li class="form-field">
-                                                    <input type="email" name="email" id="email" required class="email" placeholder="Your Email*">
-                                                </li>
-                                                <li class="form-field">
-                                                    <input type="tel" name="phone" id="phone" required class="phone" placeholder="Your Phone*">
-                                                </li>
-                                                <li class="form-field">
-                                                    <input type="text" name="add" id="add" required class="add" placeholder="Your Address*">
-                                                </li>
-                                                <li class="form-field">
-                                                    <input type="text" name="check_in_date" id="popup_check_in_date" required class="check_in_date" placeholder="Arrival Date">
-                                                </li>
-                                                <li class="form-field">
-                                                    <input type="text" name="check_out_date" id="popup_check_out_date" required class="check_out_date " placeholder="Departure Date">
-                                                </li>
 
-                                                <li class="form-field room-submit">
-                                                    <button id="check_date" class="submit" type="submit">Book Now</button>
-                                                </li>
-                                            </ul>
-
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="wd wd-check-room">
-                            <h3 class="title">CHECK AVAILABILITY</h3>
-                            <form name="search-rooms" class="wd-search-room datepicker" action="http://html.thimpress.com/hotelwp/rooms-search.html">
-                                <ul class="form-table">
-                                    <li class="form-field">
-                                        <input type="text" name="check_in_date" id="check_in_date" required class="check_in_date" placeholder="Check in">
-                                    </li>
-                                    <li class="form-field">
-                                        <input type="text" name="check_out_date" id="check_out_date" required class="check_out_date " placeholder="Check out">
-                                    </li>
-                                    <li class="select-field">
-                                        <select name="adults_capacity" required>
-                                            <option value="">Guest</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                        </select>
-                                    </li>
-                                </ul>
-                                <div class="room-submit">
-                                    <button class="submit" type="submit">Check Availability</button>
-                                </div>
-                            </form>
-                        </div>
-                    </aside>
                 </div>
             </div>
 
