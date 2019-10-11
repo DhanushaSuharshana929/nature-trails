@@ -84,7 +84,7 @@ $PAGES = new Page(5);
                         <li class=" header-right "  >
                             <div class="  uk-width-auto uk-position-relative" style="margin-top: -12px;">
                                 <div class="ribbon">
-                                    <i><span><?php echo substr(substr($PAGES->description, 3), 0, -4) ?>% <span class="">Off!</span><s></s></span></i>
+                                    <i><span><?php echo substr(substr($PAGES->description, 3), 0, -4) ?>% <span class="">UP TO!</span><s></s></span></i>
                                 </div>
                             </div>                        
                         </li> 

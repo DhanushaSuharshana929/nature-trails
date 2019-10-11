@@ -8,7 +8,8 @@ $PAGE = new Page(3);
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Nature Trails Boutique Hotel - Unawatuna</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <meta name="description" content="Welcome to Nature Trails Boutique Hotel. We are located on the other side of the Rumassala mountain by which the bay-like Unawatuna Beach is surrounded. ">
+        <meta name="keywords" content="unawatuna hotels, best hotel in unawatuna, unawatuna resorts, hotels in unawatuna">
         <!-- Favicons -->
         <link rel="shortcut icon" href="images/icons/favicon.png">
 
@@ -17,7 +18,7 @@ $PAGE = new Page(3);
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
+
         <!-- Style -->
     </head>
     <body class="demo-3 home">
@@ -168,29 +169,22 @@ $PAGE = new Page(3);
                                                     if ($room['discount'] != 0) {
                                                         ?>
                                                         <div class="meta-img">
-                                                           <span class="price">UP TO <?php echo $room['discount'] ?> % OFF</span>
+                                                            <span class="price">UP TO <?php echo $room['discount'] ?> % OFF</span>
                                                         </div>
                                                     <?php } ?>
                                                 </div>
                                                 <div class="inner">
                                                     <div class="content">
                                                         <div class="title"><a href="view-room.php?id=<?php echo $room['id'] ?>"><?php echo substr($room['title'], 0, 20) ?></a></div>
-                                                        <ul class="meta">
-                                                            <li>Starting From <span class="price-color" > $ <?php
-                                                                    $discount_price = 0;
-                                                                    $discount_price = $room['price'] * $room['discount'] / 100;
-                                                                    $price = $room['price'] - $discount_price;
-                                                                    echo number_format($price, 2)
-                                                                    ?></span>  </li>
-                                                        </ul>
+                                                       
                                                         <div class=" r-top">
                                                             <p>  
-                                                                <?php echo substr($room['short_description'], 0, 40) ?>...
+                                                                <?php echo substr($room['short_description'], 0, 60) ?>...
                                                             </p> 
                                                         </div>
                                                     </div>
                                                     <div class="review clearfix">                                                    
-                                                        <a href="view-room.php?id=<?php echo $room['id'] ?>">
+                                                        <a href="room.php">
                                                             <div class="time"><i class="ion-arrow-right-a"></i> View More</div>
                                                         </a>
                                                     </div>
@@ -455,7 +449,7 @@ $PAGE = new Page(3);
     <script src="js/libs/revolution/extensions/revolution.extension.video.min.js"></script>
     <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  
+
     <script type="text/javascript">
         $(function () {
             $(".datepicker").datepicker({

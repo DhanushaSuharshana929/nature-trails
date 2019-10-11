@@ -69,15 +69,8 @@ $BANNER = new Banner(2);
                                         <div class="inner">
                                             <div class="content">
                                                 <div class="title"><a href="view-room.php?id=<?php echo $room['id'] ?>"><?php echo substr($room['title'], 0, 28) ?></a></div> 
-                                                <ul class="meta">
-                                                    <li>Starting From <span class="price-color" > $ <?php
-                                                            $discount_price = 0;
-                                                            $discount_price = $room['price'] * $room['discount'] / 100;
-                                                            $price = $room['price'] - $discount_price;
-                                                            echo number_format($price, 2)
-                                                            ?></span>  </li>
-                                                </ul>
-                                                <p>
+                                                 
+                                                <p style="text-align: justify">
                                                     <?php echo substr($room['short_description'], 0, 120) ?>...
                                                 </p>
                                             </div>
