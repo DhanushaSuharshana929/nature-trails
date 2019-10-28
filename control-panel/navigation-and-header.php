@@ -35,7 +35,7 @@
         <div class="navbar-header">
             <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
             <a href="javascript:void(0);" class="bars"></a>
-            <a class="navbar-brand" href="index.php">SUBLIME - WEB SITE CONTROL PANEL</a>
+            <a class="navbar-brand" href="index.php">SYNOTEC HOLDINGS - WEB SITE CONTROL PANEL</a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -276,6 +276,76 @@
                     </a>
                 </li>
                 <li class="qqq">
+                    <a href="javascript:void(0);" class="menu-toggle">
+                        <i class="material-icons">chevron_right</i>
+                        <span>Web Invoice Manager</span>
+                    </a>
+                    <ul class="ml-menu">
+                        <li>
+                            <a href="create-invoice.php">
+                                <i class="material-icons">add</i>
+                                <span>Add New</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="manage-invoices.php?status=0">
+                                <i class="material-icons">list</i>
+                                <span>Manage Pending Invoices</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="manage-invoices.php?status=1">
+                                <i class="material-icons">list</i>
+                                <span>Manage Paid Invoices</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="manage-invoices.php?status=2">
+                                <i class="material-icons">list</i>
+                                <span>Manage Refund Invoices</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="manage-invoices.php?status=3">
+                                <i class="material-icons">list</i>
+                                <span>Manage Expired Invoices</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="qqq">
+                    <a href="javascript:void(0);" class="menu-toggle">
+                        <i class="material-icons">chevron_right</i>
+                        <span>Booking.com Invoice Manager</span>
+                    </a>
+                    <ul class="ml-menu">
+                        <li>
+                            <a href="create-booking-invoice.php">
+                                <i class="material-icons">add</i>
+                                <span>Add New</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="manage-orders.php?status=1">
+                                <i class="material-icons">list</i>
+                                <span>Manage Paid Orders</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="manage-orders.php?status=2">
+                                <i class="material-icons">list</i>
+                                <span>Manage Refund Orders</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="manage-orders.php?status=0">
+                                <i class="material-icons">list</i>
+                                <span>Manage Unsuccessful Orders</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="qqq">
                     <a href="create-slider.php" class="">
                         <i class="material-icons">chevron_right</i>
                         <span>Slider</span>
@@ -336,33 +406,6 @@
                         </li>
                     </ul>
                 </li>
-
-<!--                <li class="qqq  ">
-                    <a href="javascript:void(0);" class="menu-toggle hidden">
-                        <i class="material-icons">chevron_right</i>
-                        <span>Tour Package</span>
-                    </a>
-                    <ul class="ml-menu">
-                        <li>
-                            <a href="create-tour-package.php">
-                                <i class="material-icons">add</i>
-                                <span>Add New</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="manage-tour-package.php">
-                                <i class="material-icons">list</i>
-                                <span>Manage</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="arrange-tour-package.php">
-                                <i class="material-icons">compare_arrows</i>
-                                <span>Arrange</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>-->
                 <li class="qqq hidden">
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">chevron_right</i>
@@ -389,110 +432,6 @@
                         </li>
                     </ul>
                 </li>
-
-<!--                <li>
-                    <a href="javascript:void(0);" class="menu-toggle hidden">
-                        <i class="material-icons">chevron_right</i>
-                        <span>Tour Type</span>
-                    </a>
-                    <ul class="ml-menu">
-                        <li>
-                            <a href="create-tour-type.php">
-                                <i class="material-icons">add</i>
-                                <span>Add New</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="manage-tour-type.php">
-                                <i class="material-icons">list</i>
-                                <span>Manage</span>
-                            </a>
-                        </li>
-
-
-                        <li>
-                            <a href="javascript:void(0);" class="menu-toggle">
-                                <i class="material-icons">chevron_right</i>
-                                <span>Tour Package</span>
-                            </a>
-                            <ul class="ml-menu">
-                                <li>
-                                    <a href="create-tour-package.php">
-                                        <i class="material-icons">add</i>
-                                        <span>Add New</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="manage-tour-package.php">
-                                        <i class="material-icons">list</i>
-                                        <span>Manage</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="arrange-tour-package.php">
-                                        <i class="material-icons">compare_arrows</i>
-                                        <span>Arrange</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li> 
-
-                <li>
-                    <a href="javascript:void(0);" class="menu-toggle ">
-                        <i class="material-icons">chevron_right</i>
-                        <span>Tour Package</span>
-                    </a>
-                    <ul class="ml-menu">
-                        <li>
-                            <a href="create-tour-package-normal.php">
-                                <i class="material-icons">add</i>
-                                <span>Add New</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="manage-tour-package-normal.php">
-                                <i class="material-icons">list</i>
-                                <span>Manage</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="arrange-tour-package.php">
-                                <i class="material-icons">compare_arrows</i>
-                                <span>Arrange</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li> -->
-
-                <li>
-                    <a href="javascript:void(0);" class="menu-toggle hidden">
-                        <i class="material-icons">chevron_right</i>
-                        <span>Service</span>
-                    </a>
-                    <ul class="ml-menu">
-                        <li>
-                            <a href="create-service.php">
-                                <i class="material-icons">add</i>
-                                <span>Add New</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="manage-service.php">
-                                <i class="material-icons">list</i>
-                                <span>Manage</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="arrange-services.php">
-                                <i class="material-icons">compare_arrows</i>
-                                <span>Arrange</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li> 
-
                 <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">chevron_right</i>
@@ -519,16 +458,12 @@
                         </li>
                     </ul>
                 </li> 
-
                 <li>
                     <a href="create-dining-type.php" class="menu-toggle">
                         <i class="material-icons">chevron_right</i>
                         <span>Dining Type</span>
                     </a> 
                 </li> 
-
-                 
-                
                 <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">chevron_right</i>
@@ -556,13 +491,6 @@
                     </ul>
                 </li> 
                 <li>
-                    <a href="view-album-photos.php?id=1" class="menu-toggle hidden">
-                        <i class="material-icons">chevron_right</i>
-                        <span>Gallery</span>
-                    </a>
-
-                </li> 
-                <li>
                     <a href="javascript:void(0);" class="menu-toggle ">
                         <i class="material-icons">chevron_right</i>
                         <span>Photo Album</span>
@@ -588,59 +516,6 @@
                         </li>
                     </ul>
                 </li> 
-                <li>
-                    <a href="javascript:void(0);" class="menu-toggle hidden">
-                        <i class="material-icons">chevron_right</i>
-                        <span>Offer</span>
-                    </a>
-                    <ul class="ml-menu">
-                        <li>
-                            <a href="create-offer.php">
-                                <i class="material-icons">add</i>
-                                <span>Add New</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="manage-offer.php">
-                                <i class="material-icons">list</i>
-                                <span>Manage</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="arrange-offer.php">
-                                <i class="material-icons">compare_arrows</i>
-                                <span>Arrange</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li> 
-
-                <li class="qqq">
-                    <a href="javascript:void(0);" class="menu-toggle hidden">
-                        <i class="material-icons">chevron_right</i>
-                        <span>Product Type</span>
-                    </a>
-                    <ul class="ml-menu">
-                        <li>
-                            <a href="create-product-type.php">
-                                <i class="material-icons">add</i>
-                                <span>Add New</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="manage-product-type.php">
-                                <i class="material-icons">list</i>
-                                <span>Manage</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="arrange-product-type.php">
-                                <i class="material-icons">compare_arrows</i>
-                                <span>Arrange</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>  
                 <li class="qqq">
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">chevron_right</i>
@@ -673,7 +548,7 @@
         <!-- Footer -->
         <div class="legal">
             <div class="copyright">
-                &copy; <?php echo date('Y'); ?> <a href="javascript:void(0);">BY : SUBLIME HOLDINGS</a>.
+                &copy; <?php echo date('Y'); ?> <a href="javascript:void(0);">BY : SYNOTEC HOLDINGS</a>.
             </div>
             <div class="version">
                 <b>Version: </b> 2.0.0

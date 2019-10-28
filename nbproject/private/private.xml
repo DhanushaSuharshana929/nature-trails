@@ -2,6 +2,23 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/xampp/htdocs/nature-trails/control-panel/js/create-invoice.js</file>
+            <file>file:/C:/xampp/htdocs/nature-trails/class/Invoice.php</file>
+            <file>file:/C:/xampp/htdocs/nature-trails/payment.php</file>
+            <file>file:/C:/xampp/htdocs/nature-trails/invoice_response.php</file>
+            <file>file:/C:/xampp/htdocs/nature-trails/class/Order.php</file>
+            <file>file:/C:/xampp/htdocs/nature-trails/class/DefaultData.php</file>
+            <file>file:/C:/xampp/htdocs/nature-trails/order_response.php</file>
+            <file>file:/C:/xampp/htdocs/nature-trails/css/invoice.css</file>
+            <file>file:/C:/xampp/htdocs/nature-trails/invoice-pay.php</file>
+            <file>file:/C:/xampp/htdocs/nature-trails/control-panel/create-invoice.php</file>
+            <file>file:/C:/xampp/htdocs/nature-trails/booking-invoice-pay.php</file>
+            <file>file:/C:/xampp/htdocs/nature-trails/control-panel/ajax/add-invoice.php</file>
+            <file>file:/C:/xampp/htdocs/nature-trails/control-panel/ajax/add-booking-invoice.php</file>
+            <file>file:/C:/xampp/htdocs/nature-trails/control-panel/js/create-booking-invoice.js</file>
+            <file>file:/C:/xampp/htdocs/nature-trails/order-payment.php</file>
+            <file>file:/C:/xampp/htdocs/nature-trails/control-panel/create-booking-invoice.php</file>
+        </group>
     </open-files>
 </project-private>
