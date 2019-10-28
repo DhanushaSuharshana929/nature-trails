@@ -1,0 +1,62 @@
+table {
+    border: 1px solid #d0d0d0;
+}
+th {
+    border-bottom: 1px solid #d0d0d0;
+    padding: 15px 10px 10px 25px;
+    text-align: left;
+    margin: 0px;
+}
+td {
+    padding: 10px 10px 5px 10px;
+    text-align: left;
+    margin: 0px;
+}
+.contact-form ul {
+    font-size: 18px;
+    list-style-type: square;
+    margin: 0px 20px 30px 2%;
+}
+.contact-form ul li {
+    padding: 5px;
+}
+.bdr {
+    border-left: 1px solid #d0d0d0;
+}
+.bdr-top {
+    border-top: 1px solid #d0d0d0;
+}
+.bb {
+    font-weight: bold;
+}
+.right {
+    text-align: right;
+}
+.terms-of-the-condition {
+    margin-top: 20px;
+}
+.invoice-section .alert{
+    margin-left: auto;
+    margin-right: auto;
+}
+.invoice-section .main-section{
+    margin-left: auto;
+    margin-right: auto;
+}
+.pay-btn {
+    padding: 0.7rem 2.5rem;
+    margin-right: 10px;
+    color: #fff;
+    background-color: #d90615;
+    border-color: #d90615;
+    margin-top: 20px;
+}
+.pay-btn:hover {
+    color: #d90615;
+    background-color: #fff;
+    border-color: #d90615;
+}
+@media (max-width: 450px) {
+    ul { font-size: 14px; }
+    td { font-size: 12px; }
+}

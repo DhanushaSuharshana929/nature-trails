@@ -27,7 +27,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
     <head>
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <title>Sign In | Sublime Web Manager</title>
+        <title>Sign In | Synotec Holdings Web Manager</title>
         <!-- Favicon-->
         <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -51,8 +51,8 @@ include_once(dirname(__FILE__) . '/../class/include.php');
     <body class="login-page">
         <div class="login-box">
             <div class="logo">
-                <a href="javascript:void(0);">Web <b>Mananger</b></a>
-                <small>Lorem ipsum dolor sit amet.</small>
+                <a href="javascript:void(0);"><b>Nature Trails</b></a>
+                <small>www.naturetrailsunawatuna.com</small>
             </div>
             <div class="card">
                 <div class="body">
