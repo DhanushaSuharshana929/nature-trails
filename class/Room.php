@@ -153,5 +153,12 @@ class Room {
         $result = $db->readQuery($query);
         return $result;
     }
+    
+    public function getRoomIDByName($name) {
+            $query = "SELECT `id` FROM `room` WHERE `title` LIKE '" . $name . "'";
+            $db = new Database();
+            $result = mysql_fetch_array($db->readQuery($query));
+            return $result['id'];
+    }
 
 }

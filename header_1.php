@@ -17,63 +17,63 @@ $PAGES = new Page(5);
                 <div class="width-navigation navigation table-cell">
                     <ul class="nav main-menu">
                         <li class="menu-item  ">
-                            <a href="<?php echo actual_link(); ?>home/"> 
+                            <a href="home.php"> 
                                     Home 
                             </a>                             
                         </li>
                         <li class="menu-item  ">
-                            <a href="<?php echo actual_link(); ?>about-us/">About Us</a>                             
+                            <a href="about-us.php">About Us</a>                             
                         </li>
                         <li class="menu-item  " >
-                            <a href="<?php echo actual_link(); ?>accommodation-in-unawatuna/">Accommodation</a>                             
+                            <a href="room.php">Accommodation</a>                             
                         </li>
                         <li class="menu-item"  >
-                            <a href="<?php echo actual_link(); ?>restaurants-in-unawatuna/">Dining</a>                             
+                            <a href="dining.php">Dining</a>                             
                         </li>
                         <li class="menu-item  "  >
                             <div class="width-logo sm-logo table-cell">
-                                <a href="<?php echo actual_link(); ?>home/" class="no-sticky-logo" title="Nature Trails Unawatuna">
-                                    <img class="logo" src="<?php echo actual_link(); ?>images/logo3.png" alt=""> 
-                                    <img class="mobile-logo" src="<?php echo actual_link(); ?>images/logo3.png" alt="">
+                                <a href="home.php" class="no-sticky-logo" title="Nature Trails Unawatuna">
+                                    <img class="logo" src="images/logo3.png" alt=""> 
+                                    <img class="mobile-logo" src="images/logo3.png" alt="">
                                 </a>
-                                <a href="<?php echo actual_link(); ?>home/" class="sticky-logo">
-                                    <img src="<?php echo actual_link(); ?>images/logo3.png" alt="">
+                                <a href="home.php" class="sticky-logo">
+                                    <img src="images/logo3.png" alt="">
                                 </a>
                             </div>                       
                         </li>
 
                         <li class="menu-item">
-                            <a href="<?php echo actual_link(); ?>things-to-do-in-unawatuna/">Excursions</a>                             
+                            <a href="excursion.php">Excursions</a>                             
                         </li>
                         <li class="menu-item"  >
-                            <a href="<?php echo actual_link(); ?>blog/">Blog</a>                             
+                            <a href="blog.php">Blog</a>                             
                         </li> 
                         <li class="menu-item"  >
-                            <a href="<?php echo actual_link(); ?>photo-gallery/">Gallery</a>                             
+                            <a href="gallery.php">Gallery</a>                             
                         </li> 
                         <li class=" "  style="margin-right: 18px;">
                             <div class="language">
                                 <div class="dropdown translation-links">
                                     <a href="#" style="color: white;" class="dropdown-toggle select united kingdom n" data-lang="English" data-hover="dropdown" data-toggle="dropdown" aria-expanded="false">
-                                        <img src="<?php echo actual_link(); ?>images/english.png" class="img-responsive" alt="english"/>
+                                        <img src="images/english.png" class="img-responsive" alt="english"/>
                                          <span class="fa fa-caret-down"></span>
                                     </a>
                                     <ul class="dropdown-language ">
                                         <li>
                                             <a href="#" class="chinese" data-lang="Chinese">
-                                                <img src="<?php echo actual_link(); ?>images/Chinese.png" class="img-responsive" alt="chinese"/>
+                                                <img src="images/Chinese.png" class="img-responsive" alt="chinese"/>
                                                  
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#" class="german" data-lang="German">
-                                                <img src="<?php echo actual_link(); ?>images/germany.png" class="img-responsive" alt="germany"/>                                                
+                                                <img src="images/germany.png" class="img-responsive" alt="germany"/>                                                
                                                 
                                             </a>
                                         </li> 
                                         <li>
                                             <a href="#" class="russian" data-lang="Russian">
-                                                <img src="<?php echo actual_link(); ?>images/russian.png" class="img-responsive" alt="russian"/>
+                                                <img src="images/russian.png" class="img-responsive" alt="russian"/>
                                            
                                             </a>
                                         </li> 
@@ -100,27 +100,27 @@ $PAGES = new Page(5);
         <div class="menu-mobile-effect navbar-toggle">Close <i class="fa fa-times"></i></div>
         <ul class="nav main-menu">
             <li class="menu-item ">
-                <a href="<?php echo actual_link(); ?>home/" class="no-sticky-logo" title="Nature Trails Unawatuna">                   
-                    <img class="mobile-logo" src="<?php echo actual_link(); ?>images/mobile-logo.png" alt="">
+                <a href="home.php" class="no-sticky-logo" title="Nature Trails Unawatuna">                   
+                    <img class="mobile-logo" src="images/mobile-logo.png" alt="">
                 </a>           
             </li>
             <li class="menu-item ">
-                <a href="<?php echo actual_link(); ?>home/">Home</a>              
+                <a href="home.php">Home</a>              
             </li>
             <li class="menu-item  ">
-                <a href="<?php echo actual_link(); ?>about-us/">About us</a> 
+                <a href="about-us.php">About us</a> 
             </li>
             <li class="menu-item  ">
-                <a href="<?php echo actual_link(); ?>accommodation-in-unawatuna/">Accommodation</a> 
+                <a href="room.php">Accommodation</a> 
             </li>
             <li class="menu-item  ">
-                <a href="<?php echo actual_link(); ?>restaurants-in-unawatuna/">Dining</a> 
+                <a href="dining.php">Dining</a> 
             </li>
             <li class="menu-item  ">
-                <a href="<?php echo actual_link(); ?>things-to-do-in-unawatuna/">Excursions</a> 
+                <a href="excursion.php">Excursions</a> 
             </li>
             <li class="menu-item  ">
-                <a href="<?php echo actual_link(); ?>blog/">Blog</a> 
+                <a href="blog.php">Blog</a> 
             </li> 
         </ul>
     </div>

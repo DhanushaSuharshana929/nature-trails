@@ -229,6 +229,8 @@ class Invoice {
         $inv = $invoices->getById($id);
 
         if ($inv) {
+            $total = 0;
+            $total = (float) $inv['total_amount'] + (float) $inv['fees_or_taxes'];
 
             $site = str_replace("www.", "", $_SERVER['HTTP_HOST']);
             $subject = 'Nature Trails Hotel | Web Invoice | #' . $inv["id"];
@@ -311,18 +313,22 @@ class Invoice {
                                 <li><span class="bb">Customer Country: </span><span>' . $inv["country"] . '</span></li>
                                 <li><span class="bb">Customer Contact Number: </span><span>' . $inv["contact"] . '</span></li>
                             </ul>
-                            <table width="80%" style="margin: 0px auto; font-size: 15px; font-family: sans-serif; padding: 0;">
+                            <table width="80%" style="margin: 0px auto 25px; font-size: 15px; font-family: sans-serif; padding: 0;">
                                 <tr>
-                                    <th width="100%"  colspan="2">Goods or Services</th> 
+                                    <th width="100%"  colspan="2">Invoice Description</th> 
                                 </tr>
                                 <tr>
                                     <td colspan="2">' . $inv["goods_or_services"] . '</td> 
                                 </tr>
                                 <tr>
-                                    <td class="bdr-top"><b>Total Amount</b></td>
+                                    <td class="bdr-top"><b>Invoice Amount</b></td>
                                     <td class="bdr bdr-top right"><b> ' . $inv["currency"] . ' ' . $inv["total_amount"] . '</b></td>
                                 </tr>
                             </table>
+                            <ul>
+                                <li><span class="bb">Fees or Taxes: </span><span>' . $inv["currency"] . ' ' . $inv["fees_or_taxes"] . '</span></li>
+                                <li><span class="bb">Total Amount: </span><span>' . $inv["currency"] . ' ' . number_format($total, 2) . '</span></li>
+                            </ul>
                             <div style="margin-top: 20px;">
                                 <h6>The Terms of the Transaction</h6>
                                 <p>Thank you for your business. Please send your payment within 7 days of receiving this invoice.</p>
@@ -349,6 +355,8 @@ class Invoice {
         $inv = $invoices->getById($id);
 
         if ($inv) {
+            $total = 0;
+            $total = (float) $inv['total_amount'] + (float) $inv['fees_or_taxes'];
 
             $site = str_replace("www.", "", $_SERVER['HTTP_HOST']);
             $subject = 'Web Invoice Copy | #' . $inv["id"];
@@ -430,18 +438,22 @@ class Invoice {
                                 <li><span class="bb">Customer Country: </span><span>' . $inv["country"] . '</span></li>
                                 <li><span class="bb">Customer Contact Number: </span><span>' . $inv["contact"] . '</span></li>
                             </ul>
-                            <table width="80%" style="margin: 0px auto; font-size: 15px; font-family: sans-serif; padding: 0;">
+                            <table width="80%" style="margin: 0px auto 25px; font-size: 15px; font-family: sans-serif; padding: 0;">
                                 <tr>
-                                    <th width="100%"  colspan="2">Goods or Services</th> 
+                                    <th width="100%"  colspan="2">Description</th> 
                                 </tr>
                                 <tr>
                                     <td colspan="2">' . $inv["goods_or_services"] . '</td> 
                                 </tr>
                                 <tr>
-                                    <td class="bdr-top"><b>Total Amount</b></td>
+                                    <td class="bdr-top"><b>Invoice Amount</b></td>
                                     <td class="bdr bdr-top right"><b> ' . $inv["currency"] . ' ' . $inv["total_amount"] . '</b></td>
                                 </tr>
                             </table>
+                            <ul>
+                                <li><span class="bb">Fees or Taxes: </span><span>' . $inv["currency"] . ' ' . $inv["fees_or_taxes"] . '</span></li>
+                                <li><span class="bb">Total Amount: </span><span>' . $inv["currency"] . ' ' . number_format($total, 2) . '</span></li>
+                            </ul>
                             <div style="margin-top: 20px;">
                                 <h6>The Terms of the Transaction</h6>
                                 <p>Thank you for your business. Please send your payment within 7 days of receiving this invoice.</p>
@@ -469,6 +481,8 @@ class Invoice {
         $inv = $invoices->getById($id);
 
         if ($inv) {
+            $total = 0;
+            $total = (float) $inv['total_amount'] + (float) $inv['fees_or_taxes'];
 
             $site = str_replace("www.", "", $_SERVER['HTTP_HOST']);
             $subject = 'Payment Status | Web Invoice | #' . $id;
@@ -566,7 +580,7 @@ class Invoice {
                                 <li><span class="bb">Customer : </span><span>' . $inv["full_name"] . '</span></li>
                                 <li><span class="bb">Payment Reference No : </span>' . $recieptno . '<span></span></li>
                                 <li><span class="bb">Date of Payment : </span>' . $inv["date"] . '<span></span></li>
-                                <li><span class="bb">Amount : </span> ' . $inv["currency"] . ' ' . $inv["total_amount"] . '<span></span></li>
+                                <li><span class="bb">Total Amount : </span> ' . $inv["currency"] . ' ' . number_format($total, 2) . '<span></span></li>
                             </ul>
                             ' . $repay . '
                             
@@ -590,7 +604,9 @@ class Invoice {
         $inv = $invoices->getById($id);
 
         if ($inv) {
-
+            $total = 0;
+            $total = (float) $inv['total_amount'] + (float) $inv['fees_or_taxes'];
+            
             $site = str_replace("www.", "", $_SERVER['HTTP_HOST']);
             $subject = 'Payment Status';
 
@@ -678,7 +694,7 @@ class Invoice {
                                 <li><span class="bb">Customer : </span><span>' . $inv["full_name"] . '</span></li>
                                 <li><span class="bb">Payment Reference No : </span>' . $recieptno . '<span></span></li>
                                 <li><span class="bb">Date of Payment : </span>' . $inv["date"] . '<span></span></li>
-                                <li><span class="bb">Amount : </span>' . $inv["currency"] . ' ' . $inv["total_amount"] . '<span></span></li>
+                                <li><span class="bb">Total Amount : </span>' . $inv["currency"] . ' ' . number_format($total,2) . '<span></span></li>
                             </ul>
                             ' . $repay . '
                             

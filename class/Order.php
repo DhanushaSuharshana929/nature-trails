@@ -209,6 +209,8 @@ class Order {
         $inv = $orders->getById($id);
 
         if ($inv) {
+            $total = 0;
+            $total = (float) $inv['total_amount'] + (float) $inv['fees_or_taxes'];
 
             $site = str_replace("www.", "", $_SERVER['HTTP_HOST']);
             $subject = 'Nature Trails Hotel | Web Invoice | #' . $inv["id"];
@@ -291,9 +293,9 @@ class Order {
                                 <li><span class="bb">Customer Country: </span><span>' . $inv["country"] . '</span></li>
                                 <li><span class="bb">Customer Contact Number: </span><span>' . $inv["contact"] . '</span></li>
                             </ul>
-                            <table width="80%" style="margin: 0px auto; font-size: 15px; font-family: sans-serif; padding: 0;">
+                            <table width="80%" style="margin: 0px auto 25px; font-size: 15px; font-family: sans-serif; padding: 0;">
                                 <tr>
-                                    <th width="100%"  colspan="2">Goods or Services</th> 
+                                    <th width="100%"  colspan="2">Invoice Description</th> 
                                 </tr>
                                 <tr>
                                     <td colspan="2">' . $inv["description"] . '</td> 
@@ -329,6 +331,8 @@ class Order {
         $inv = $orders->getById($id);
 
         if ($inv) {
+            $total = 0;
+            $total = (float) $inv['total_amount'] + (float) $inv['fees_or_taxes'];
 
             $site = str_replace("www.", "", $_SERVER['HTTP_HOST']);
             $subject = 'Web Invoice Copy | #' . $inv["id"];
@@ -410,9 +414,9 @@ class Order {
                                 <li><span class="bb">Customer Country: </span><span>' . $inv["country"] . '</span></li>
                                 <li><span class="bb">Customer Contact Number: </span><span>' . $inv["contact"] . '</span></li>
                             </ul>
-                            <table width="80%" style="margin: 0px auto; font-size: 15px; font-family: sans-serif; padding: 0;">
+                            <table width="80%" style="margin: 0px auto 25px; font-size: 15px; font-family: sans-serif; padding: 0;">
                                 <tr>
-                                    <th width="100%"  colspan="2">Goods or Services</th> 
+                                    <th width="100%"  colspan="2">Invoice Description</th> 
                                 </tr>
                                 <tr>
                                     <td colspan="2">' . $inv["description"] . '</td> 
@@ -449,6 +453,8 @@ class Order {
         $inv = $orders->getById($id);
 
         if ($inv) {
+            $total = 0;
+            $total = (float) $inv['total_amount'] + (float) $inv['fees_or_taxes'];
 
             $site = str_replace("www.", "", $_SERVER['HTTP_HOST']);
             $subject = 'Payment Status | Web Invoice | #' . $id;
@@ -534,7 +540,7 @@ class Order {
                         <body>
                             <div style="width: 100%; text-align: center; font-size: 20px; margin: 10px 0px 30px 0px;">
                                 <img src="http://' . $site . '/images/logo3.png" alt="Nature Trails" style="width:250px;"/><br/>
-                                <span style="font-size: 20px; font-weight:900;">Web Invoice</span><br/>
+                                <span style="font-size: 20px; font-weight:900;">Booking.com Invoice</span><br/>
                                 <span style="font-size: 15px;"><a href="" style="text-decoration:none;color: #000;">144B, Matara Road, Unawatuna</a></span><br/>
                                 <span style="font-size: 15px;">Email: info@naturetrailsunawatuna&#173;.com</span><br/>
                                 <span style="font-size: 15px;">Phone: (+94) 77 711 8616</span>
@@ -542,11 +548,11 @@ class Order {
                             ' . $msg . '
                             <ul>
                                 <li><span class="bb">Status : </span>' . $status . '<span></span></li>
-                                <li><span class="bb">Web Invoice ID : </span>#' . $id . '<span></span></li>
+                                <li><span class="bb">Booking.com Invoice ID : </span>#' . $id . '<span></span></li>
                                 <li><span class="bb">Customer : </span><span>' . $inv["full_name"] . '</span></li>
                                 <li><span class="bb">Payment Reference No : </span>' . $recieptno . '<span></span></li>
                                 <li><span class="bb">Date of Payment : </span>' . $inv["date"] . '<span></span></li>
-                                <li><span class="bb">Amount : </span>' . $inv["currency"] . ' ' . $inv["total_amount"] . '<span></span></li>
+                                <li><span class="bb">Total Amount : </span>' . $inv["currency"] . ' ' . number_format($total,2) . '<span></span></li>
                             </ul>
                             ' . $repay . '
                             
@@ -570,6 +576,8 @@ class Order {
         $inv = $orders->getById($id);
 
         if ($inv) {
+            $total = 0;
+            $total = (float) $inv['total_amount'] + (float) $inv['fees_or_taxes'];
 
             $site = str_replace("www.", "", $_SERVER['HTTP_HOST']);
             $subject = 'Payment Status';
@@ -647,18 +655,18 @@ class Order {
                         <body>
                             <div style="width: 100%; text-align: center; font-size: 20px; margin: 10px 0px 30px 0px;">
                                 <img src="http://' . $site . '/images/logo3.png" alt="Nature Trails" style="width:250px;"/><br/>
-                                <span style="font-size: 20px; font-weight:900;">Web Invoice</span><br/>
+                                <span style="font-size: 20px; font-weight:900;">Booking.com Invoice</span><br/>
                                 <span style="font-size: 15px;"><a href="" style="text-decoration:none;color: #000;">144B, Matara Road, Unawatuna</a></span><br/>
                                 <span style="font-size: 15px;">Email: info@naturetrailsunawatuna&#173;.com</span><br/>
                                 <span style="font-size: 15px;">Phone: (+94) 77 711 8616</span>
                             </div>
                             <ul>
                                 <li><span class="bb">Status : </span>' . $status . '<span></span></li>
-                                <li><span class="bb">Web Invoice ID : </span>#' . $id . '<span></span></li>
+                                <li><span class="bb">Booking.com Invoice ID : </span>#' . $id . '<span></span></li>
                                 <li><span class="bb">Customer : </span><span>' . $inv["full_name"] . '</span></li>
                                 <li><span class="bb">Payment Reference No : </span>' . $recieptno . '<span></span></li>
                                 <li><span class="bb">Date of Payment : </span>' . $inv["date"] . '<span></span></li>
-                                <li><span class="bb">Amount : </span>' . $inv["currency"] . ' ' . $inv["total_amount"] . '<span></span></li>
+                                <li><span class="bb">Total Amount : </span>' . $inv["currency"] . ' ' . number_format($total,2) . '<span></span></li>
                             </ul>
                             ' . $repay . '
                             

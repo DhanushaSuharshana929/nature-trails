@@ -63,11 +63,11 @@ if (isset($_GET["status"])) {
                                         <thead>
                                             <tr>
                                                 <th>ID</th>
-                                                <th>Date</th>                               
+                                                <th>Date</th>                                
+                                                <th>Due</th>                                    
                                                 <th>Customer</th>                               
                                                 <th>Email</th>                               
-                                                <th>Amount</th>                               
-                                                <th>Due</th>                               
+                                                <th>Total Amount</th>                         
                                                 <th>Status</th>
                                                 <th>Option</th>
                                             </tr>
@@ -75,11 +75,11 @@ if (isset($_GET["status"])) {
                                         <tfoot>
                                             <tr>
                                                 <th>ID</th>
-                                                <th>Date</th>                               
+                                                <th>Date</th>                                 
+                                                <th>Due</th>                                   
                                                 <th>Customer</th>                               
                                                 <th>Email</th>                               
-                                                <th>Amount</th>                               
-                                                <th>Due</th>                               
+                                                <th>Total Amount</th>                              
                                                 <th>Status</th>
                                                 <th>Option</th>
                                             </tr>
@@ -97,14 +97,15 @@ if (isset($_GET["status"])) {
                                                 $INVOICES = Invoice::getExpiredInvoices();
                                             }
                                             foreach ($INVOICES as $key => $invoice) {
+                                                $total = (float) $invoice['total_amount'] + (float) $invoice['fees_or_taxes'];
                                                 ?>
                                                 <tr id="row_<?php echo $invoice['id']; ?>">
                                                     <td><?php echo $invoice['id']; ?></td> 
-                                                    <td><?php echo $invoice['date']; ?></td> 
+                                                    <td><?php echo $invoice['date']; ?></td>  
+                                                    <td><?php echo $invoice['due_date']; ?></td> 
                                                     <td><?php echo $invoice['full_name']; ?></td> 
                                                     <td><?php echo $invoice['email']; ?></td> 
-                                                    <td><?php echo $invoice['total_amount']; ?></td> 
-                                                    <td><?php echo $invoice['due_date']; ?></td> 
+                                                    <td><?php echo $invoice['currency'] . ' ' . number_format($total,2); ?></td>
                                                     <td><?php echo $status; ?></td> 
 
 
@@ -117,7 +118,7 @@ if (isset($_GET["status"])) {
                                                             | <a href="#" class="resend-payment-receipt btn btn-sm btn-warning" data-id="<?php echo $invoice['id']; ?>" status="<?php echo $invoice['status']; ?>" receipt_no="<?php echo $invoice['reference']; ?>"title="Resend Payment Receipt">
                                                                 <i class="waves-effect glyphicon glyphicon-send" data-type="cancel"></i>
                                                             </a> |   
-                                                            <a href="#" class="mark-as-refund btn btn-sm btn-danger" inv-id="<?php echo $invoice['id']; ?>" title="Mark as Refund">
+                                                            <a href="#" class="mark-as-refund btn btn-sm btn-danger" inv-id="<?php echo $invoice['id']; ?>" inv-currency="<?php echo $invoice['currency']; ?>" title="Mark as Refund">
                                                                 <i class="waves-effect glyphicon glyphicon-forward" data-type="cancel"></i>
                                                             </a>
                                                             <?php
@@ -159,7 +160,7 @@ if (isset($_GET["status"])) {
                                 <h4 class="modal-title"><b>Invoice Refund Confirmation</b></h4>
                             </div>
                             <div class="modal-body">
-                                <p>Amount ($):</p> <input class="form-control" type="text" id="ref-amount" name="ref-amount" value=""/>
+                                <p>Amount (<span id="inv-currency"></span>):</p> <input class="form-control" type="text" id="ref-amount" name="ref-amount" value=""/>
                                 <p>Reason:</p> <input class="form-control" type="text" id="ref-reason" name="ref-reason" value=""/>
                                 <p>Date:</p> <input class="form-control" type="text" id="ref-date" name="ref-date" value="<?php echo date("Y-m-d"); ?>"/>
                             </div>

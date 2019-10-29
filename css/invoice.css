@@ -59,4 +59,13 @@ td {
 @media (max-width: 450px) {
     ul { font-size: 14px; }
     td { font-size: 12px; }
+    .invoice-section .alert {
+        margin-left: 27px;
+    }
+}
+table.desc-table {
+    margin: 0px auto 25px;
+    font-size: 15px;
+    font-family: sans-serif;
+    padding: 0;
 }

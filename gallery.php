@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <?php
-include './class/include.php';
 $BANNER = new Banner(6);
 ?>
 <html lang="en">
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Gallery -  Nature Trails - Unawatuna</title>
+        <title>Gallery | Unawatuna Hotels | Hotels in Unawatuna | Nature Trails Boutique Hotel</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Favicons -->
-        <link rel="shortcut icon" href="images/icons/favicon.png">
+        <link rel="shortcut icon" href="<?php echo actual_link(); ?>images/icons/favicon.png">
 
         <!-- REVOLUTION STYLE SHEETS -->
-        <link rel="stylesheet" href="css/style.css"><!-- Style -->
+        <link rel="stylesheet" href="<?php echo actual_link(); ?>css/style.css"><!-- Style -->
 
     </head>
     <body class="page">
@@ -40,7 +39,7 @@ $BANNER = new Banner(6);
             <!-- Main Content -->
             <div id="main-content">
                 <div class="page-title">
-                    <div class="page-title-wrapper" data-stellar-background-ratio="0.5" style="background-image: url(upload/banner/<?php echo $BANNER->image_name ?>) ">
+                    <div class="page-title-wrapper" data-stellar-background-ratio="0.5" style="background-image: url(<?php echo actual_link(); ?>upload/banner/<?php echo $BANNER->image_name ?>) ">
                     </div>
                     
                 </div>
@@ -72,8 +71,8 @@ $BANNER = new Banner(6);
                                     foreach ($ALBUM_PHOTO->all() as $album_photo) {
                                         ?>
                                         <div class="col-sm-3 filter-<?php echo $album_photo['album']; ?>">
-                                            <a href="upload/photo-album/gallery/<?php echo $album_photo['image_name'] ?>" class="gallery-popup">
-                                                <img src="upload/photo-album/gallery/thumb/<?php echo $album_photo['image_name'] ?>" alt=""></a>
+                                            <a href="<?php echo actual_link(); ?>upload/photo-album/gallery/<?php echo $album_photo['image_name'] ?>" class="gallery-popup">
+                                                <img src="<?php echo actual_link(); ?>upload/photo-album/gallery/thumb/<?php echo $album_photo['image_name'] ?>" alt=""></a>
                                         </div>
                                     <?php } ?>
 
@@ -97,18 +96,18 @@ $BANNER = new Banner(6);
         <!-- Scripts -->
 
 
-        <script src="js/libs/jquery-1.12.4.min.js"></script><!-- jQuery -->
-        <script src="js/libs/jquery.plugin.min.js"></script><!-- jQuery -->  
-        <script src="js/libs/isotope.pkgd.min.js"></script><!-- Sticky sidebar -->
-        <script src="js/libs/bootstrap.min.js"></script><!-- Bootstrap --> 
-        <script src="js/libs/jquery.magnific-popup.min.js"></script><!-- Magnific Popup --> 
-        <script src="js/libs/moment.min.js"></script><!-- moment -->
-        <script src="js/libs/jquery-ui.min.js"></script><!-- ui -->
-        <script src="js/libs/daterangepicker.min.js"></script><!-- date -->
-        <script src="js/libs/daterangepicker.min-date.min.js"></script><!-- date2 -->
-        <script src="js/libs/jquery.thim-content-slider.min.js"></script><!-- Slider -->
-        <script src="js/libs/jquery.countdown.min.js"></script><!-- coming soon -->
-        <script src="js/theme-customs.js"></script><!-- Theme Custom -->
+        <script src="<?php echo actual_link(); ?>js/libs/jquery-1.12.4.min.js"></script><!-- jQuery -->
+        <script src="<?php echo actual_link(); ?>js/libs/jquery.plugin.min.js"></script><!-- jQuery -->  
+        <script src="<?php echo actual_link(); ?>js/libs/isotope.pkgd.min.js"></script><!-- Sticky sidebar -->
+        <script src="<?php echo actual_link(); ?>js/libs/bootstrap.min.js"></script><!-- Bootstrap --> 
+        <script src="<?php echo actual_link(); ?>js/libs/jquery.magnific-popup.min.js"></script><!-- Magnific Popup --> 
+        <script src="<?php echo actual_link(); ?>js/libs/moment.min.js"></script><!-- moment -->
+        <script src="<?php echo actual_link(); ?>js/libs/jquery-ui.min.js"></script><!-- ui -->
+        <script src="<?php echo actual_link(); ?>js/libs/daterangepicker.min.js"></script><!-- date -->
+        <script src="<?php echo actual_link(); ?>js/libs/daterangepicker.min-date.min.js"></script><!-- date2 -->
+        <script src="<?php echo actual_link(); ?>js/libs/jquery.thim-content-slider.min.js"></script><!-- Slider -->
+        <script src="<?php echo actual_link(); ?>js/libs/jquery.countdown.min.js"></script><!-- coming soon -->
+        <script src="<?php echo actual_link(); ?>js/theme-customs.js"></script><!-- Theme Custom -->
         <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
 
         <script type="text/javascript">

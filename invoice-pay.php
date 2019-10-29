@@ -21,11 +21,13 @@ if ($_GET['id']) {
         }
     }
 }
+$total = 0;
+$total = (float) $inv['total_amount'] + (float) $inv['fees_or_taxes'];
 ?>
 <html lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Web Invoice | Nature Trails Boutique Hotel</title>
+        <title>Web Invoice | Unawatuna Hotels | Hotels in Unawatuna | Nature Trails Boutique Hotel</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Welcome to Nature Trails Boutique Hotel. We are located on the other side of the Rumassala mountain by which the bay-like Unawatuna Beach is surrounded. ">
         <meta name="keywords" content="unawatuna hotels, best hotel in unawatuna, unawatuna resorts, hotels in unawatuna">
@@ -115,20 +117,23 @@ if ($_GET['id']) {
                                                             <li><span class="bb">Customer City: </span><span><?php echo $inv["city"]; ?></span></li>
                                                             <li><span class="bb">Customer Country: </span><span><?php echo $inv["country"]; ?></span></li>
                                                             <li><span class="bb">Customer Contact Number: </span><span><?php echo $inv["contact"]; ?></span></li>
-                                                            <li><span class="bb">Fees or Taxes: </span><span><?php echo $inv["fees_or_taxes"]; ?></span></li>
-                                                        </ul>
-                                                        <table width="80%" style="margin: 0px auto; font-size: 15px; font-family: sans-serif; padding: 0;">
+                                                            </ul>
+                                                        <table width="80%" class="desc-table">
                                                             <tr>
-                                                                <th width="100%" colspan="2">Goods or Services</th> 
+                                                                <th width="100%" colspan="2">Invoice Description</th> 
                                                             </tr>
                                                             <tr>
                                                                 <td  colspan="2"><?php echo $inv["goods_or_services"]; ?></td>
                                                             </tr>
                                                             <tr>
-                                                                <td class="bdr-top right"><b>Total Amount:</b></td>
+                                                                <td class="bdr-top right"><b>Invoice Amount:</b></td>
                                                                 <td class="bdr bdr-top right"><b><?php echo $inv["currency"] . ' ' . number_format($inv["total_amount"], 2); ?></b></td>
                                                             </tr>
                                                         </table>
+                                                        <ul>
+                                                            <li><span class="bb">Fees or Taxes: </span><span><?php echo $inv["currency"] . ' ' . $inv["fees_or_taxes"]; ?></span></li>
+                                                            <li><span class="bb">Total Amount: </span><span><?php echo $inv["currency"] . ' ' . number_format($total,2); ?></span></li>
+                                                        </ul>
                                                         <div class="terms-of-the-condition">
                                                             <h6>The Terms of the Transaction</h6>
                                                             <p>Thank you for your business. Please send your payment within 7 days of receiving this invoice.</p>
@@ -147,7 +152,7 @@ if ($_GET['id']) {
                                                             ?>
                                                             <form id="invoice-pay" action="payment.php" method="post" accept-charset="UTF-8">
                                                                 <input type="hidden" name="order.id" value="<?php echo $inv["id"]; ?>"/>
-                                                                <input type="hidden" name="order.amount" value="<?php echo $inv["total_amount"]; ?>"/>
+                                                                <input type="hidden" name="order.amount" value="<?php echo $total; ?>"/>
                                                                 <input type="hidden" name="order.currency" value="<?php echo $inv["currency"]; ?>"/>
                                                                 <?php
                                                                 if ($inv['status'] == 0) {
