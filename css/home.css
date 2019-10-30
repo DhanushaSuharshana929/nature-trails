@@ -27,7 +27,7 @@ body.home .sc-heading.style-01 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url("../images/home/h1-bg-destinations.jpg");
+    /*background-image: url("../images/home/h1-bg-destinations.jpg");*/
 }
 .group-destination .sc-content-overlay:before {
     position: absolute;

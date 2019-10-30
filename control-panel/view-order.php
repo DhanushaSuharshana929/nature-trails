@@ -17,6 +17,8 @@ if (isset($_GET["status"])) {
         $status = 'Unsuccessfull';
     }
 }
+$total = 0;
+$total = (float) $order['total_amount'] + (float) $order['fees_or_taxes'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -100,12 +102,20 @@ if (isset($_GET["status"])) {
                                         <td><?php echo $order['contact']; ?></td>
                                     </tr>
                                     <tr>
-                                        <th>Total Amount</th>
-                                        <td><?php echo $order['total_amount']; ?></td>
-                                    </tr>
-                                    <tr>
                                         <th>Description</th>
                                         <td><?php echo $order['description']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Invoice Amount</th>
+                                        <td><?php echo $order['currency'] . ' ' . $order['total_amount']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Other Fees or Taxes</th>
+                                        <td><?php echo $order['currency'] . ' ' . $order['fees_or_taxes']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Total Amount</th>
+                                        <td><?php echo $order['currency'] . ' ' . number_format($total,2) ; ?></td>
                                     </tr>
                                     <tr>
                                         <th>Status</th>
@@ -127,7 +137,7 @@ if (isset($_GET["status"])) {
                                         </tr>
                                         <tr>
                                             <th>Refund Amount</th>
-                                            <td><?php echo $order['refund_amount']; ?></td>
+                                            <td><?php echo $order['currency'] . ' ' . $order['refund_amount']; ?></td>
                                         </tr>
                                         <tr>
                                             <th>Refund Date</th>

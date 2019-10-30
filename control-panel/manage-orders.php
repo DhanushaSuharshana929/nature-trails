@@ -65,7 +65,7 @@ if (isset($_GET["status"])) {
                                                 <th>Booking ID</th>                               
                                                 <th>Customer</th>                               
                                                 <th>Email</th>                               
-                                                <th>Amount</th>                             
+                                                <th>Total Amount</th>                             
                                                 <th>Status</th>
                                                 <th>Option</th>
                                             </tr>
@@ -77,7 +77,7 @@ if (isset($_GET["status"])) {
                                                 <th>Booking ID</th>        
                                                 <th>Customer</th>                               
                                                 <th>Email</th>                               
-                                                <th>Amount</th>                              
+                                                <th>Total Amount</th>                              
                                                 <th>Status</th>
                                                 <th>Option</th>
                                             </tr>
@@ -93,6 +93,7 @@ if (isset($_GET["status"])) {
                                                 $ORDERS = Order::getUnsuccessfulOrders();
                                             }
                                             foreach ($ORDERS as $key => $order) {
+                                                $total = (float) $order['total_amount'] + (float) $order['fees_or_taxes'];
                                                 ?>
                                                 <tr id="row_<?php echo $order['id']; ?>">
                                                     <td><?php echo $order['id']; ?></td> 
@@ -100,7 +101,7 @@ if (isset($_GET["status"])) {
                                                     <td><?php echo $order['booking_id']; ?></td> 
                                                     <td><?php echo $order['full_name']; ?></td> 
                                                     <td><?php echo $order['email']; ?></td> 
-                                                    <td><?php echo $order['total_amount']; ?></td> 
+                                                    <td><?php echo $order['currency'] . ' ' . number_format($total,2); ?></td> 
                                                     <td><?php echo $status; ?></td> 
 
 
@@ -113,7 +114,7 @@ if (isset($_GET["status"])) {
                                                             | <a href="#" class="resend-payment-receipt btn btn-sm btn-warning" data-id="<?php echo $order['id']; ?>" status="<?php echo $order['status']; ?>" receipt_no="<?php echo $order['reference']; ?>"title="Resend Payment Receipt">
                                                                 <i class="waves-effect glyphicon glyphicon-send" data-type="cancel"></i>
                                                             </a> |   
-                                                            <a href="#" class="mark-as-refund btn btn-sm btn-danger" inv-id="<?php echo $order['id']; ?>" title="Mark as Refund">
+                                                            <a href="#" class="mark-as-refund btn btn-sm btn-danger" inv-id="<?php echo $order['id']; ?>" inv-currency="<?php echo $order['currency']; ?>" title="Mark as Refund">
                                                                 <i class="waves-effect glyphicon glyphicon-forward" data-type="cancel"></i>
                                                             </a>
                                                             <?php
@@ -123,7 +124,7 @@ if (isset($_GET["status"])) {
                                                                 <i class="waves-effect glyphicon glyphicon-trash" data-type="cancel"></i>
                                                             </a>
                                                             <?php
-                                                        } 
+                                                        }
                                                         ?>
 
                                                     </td>
@@ -146,7 +147,7 @@ if (isset($_GET["status"])) {
                                 <h4 class="modal-title"><b>Order Refund Confirmation</b></h4>
                             </div>
                             <div class="modal-body">
-                                <p>Amount ($):</p> <input class="form-control" type="text" id="ref-amount" name="ref-amount" value=""/>
+                                <p>Amount (<span id="inv-currency"></span>):</p> <input class="form-control" type="text" id="ref-amount" name="ref-amount" value=""/>
                                 <p>Reason:</p> <input class="form-control" type="text" id="ref-reason" name="ref-reason" value=""/>
                                 <p>Date:</p> <input class="form-control" type="text" id="ref-date" name="ref-date" value="<?php echo date("Y-m-d"); ?>"/>
                             </div>

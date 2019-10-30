@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <?php
-include './class/include.php';
 $BANNER = new Banner(1);
 ?>
 <html lang="en">
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Nature Trails Boutique Hotel - Unawatuna</title>
+        <title>Feedback | Unawatuna Hotels | Hotels in Unawatuna | Nature Trails Boutique Hotel</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Favicons -->
-        <link rel="shortcut icon" href="images/icons/favicon.png">
+        <link rel="shortcut icon" href="<?php echo actual_link(); ?>images/icons/favicon.png">
 
         <!-- REVOLUTION STYLE SHEETS -->
-        <link rel="stylesheet" href="css/style.css"><!-- Style -->
+        <link rel="stylesheet" href="<?php echo actual_link(); ?>css/style.css"><!-- Style -->
 
     </head>
     <body class="single single-post">
@@ -39,7 +38,7 @@ $BANNER = new Banner(1);
             <!-- Main Content -->
             <div id="main-content">
                 <div class="page-title">
-                    <div class="page-title-wrapper" data-stellar-background-ratio="0.5" style="background-image: url(upload/banner/<?php echo $BANNER->image_name ?>) ">
+                    <div class="page-title-wrapper" data-stellar-background-ratio="0.5" style="background-image: url(<?php echo actual_link(); ?>upload/banner/<?php echo $BANNER->image_name ?>) ">
 
                     </div>
                 </div>
@@ -58,7 +57,7 @@ $BANNER = new Banner(1);
                                             <?php if ($key % 2 == 0) {
                                                 ?>
                                                 <div class="comment-img">
-                                                    <img src="upload/comments/<?php echo $comment['image_name'] ?>" alt="">
+                                                    <img src="<?php echo actual_link(); ?>upload/comments/<?php echo $comment['image_name'] ?>" alt="">
                                                 </div>
                                                 <div class="comment-content">
                                                     <h6><?php echo $comment['name'] ?></h6>
@@ -72,7 +71,7 @@ $BANNER = new Banner(1);
                                                 <ul class="children">
                                                     <li class="comment clearfix">
                                                         <div class="comment-img">
-                                                            <img src="upload/comments/<?php echo $comment['image_name'] ?>" alt="">
+                                                            <img src="<?php echo actual_link(); ?>upload/comments/<?php echo $comment['image_name'] ?>" alt="">
                                                         </div>
 
                                                         <div class="comment-content">
@@ -101,21 +100,21 @@ $BANNER = new Banner(1);
 
 
         <!-- Scripts -->
-        <script src="js/libs/jquery.min.js"></script><!-- jQuery -->
-        <script src="js/libs/stellar.min.js"></script><!-- parallax -->
+        <script src="<?php echo actual_link(); ?>js/libs/jquery.min.js"></script><!-- jQuery -->
+        <script src="<?php echo actual_link(); ?>js/libs/stellar.min.js"></script><!-- parallax -->
 
-        <script src="js/libs/jquery-ui.min.js"></script><!-- ui -->
-        <script src="js/libs/daterangepicker.min.js"></script><!-- date -->
-        <script src="js/libs/daterangepicker.min-date.min.js"></script><!-- date2 -->
-        <script src="js/libs/bootstrap.min.js"></script><!-- Bootstrap -->
-        <script src="js/libs/smoothscroll.min.js"></script><!-- smoothscroll -->
-        <script src="js/libs/owl.carousel.min.js"></script><!-- Owl Carousel -->
-        <script src="js/libs/jquery.magnific-popup.min.js"></script><!-- Magnific Popup -->
-        <script src="js/libs/theia-sticky-sidebar.min.js"></script><!-- Sticky sidebar -->
-        <script src="js/libs/counter-box.min.js"></script><!-- counter -->
-        <script src="js/libs/gallery.min.js"></script><!-- gallery -->
-        <script src="js/libs/jquery.thim-content-slider.min.js"></script><!-- Slider -->
-        <script src="js/theme-customs.js"></script><!-- Theme Custom -->
+        <script src="<?php echo actual_link(); ?>js/libs/jquery-ui.min.js"></script><!-- ui -->
+        <script src="<?php echo actual_link(); ?>js/libs/daterangepicker.min.js"></script><!-- date -->
+        <script src="<?php echo actual_link(); ?>js/libs/daterangepicker.min-date.min.js"></script><!-- date2 -->
+        <script src="<?php echo actual_link(); ?>js/libs/bootstrap.min.js"></script><!-- Bootstrap -->
+        <script src="<?php echo actual_link(); ?>js/libs/smoothscroll.min.js"></script><!-- smoothscroll -->
+        <script src="<?php echo actual_link(); ?>js/libs/owl.carousel.min.js"></script><!-- Owl Carousel -->
+        <script src="<?php echo actual_link(); ?>js/libs/jquery.magnific-popup.min.js"></script><!-- Magnific Popup -->
+        <script src="<?php echo actual_link(); ?>js/libs/theia-sticky-sidebar.min.js"></script><!-- Sticky sidebar -->
+        <script src="<?php echo actual_link(); ?>js/libs/counter-box.min.js"></script><!-- counter -->
+        <script src="<?php echo actual_link(); ?>js/libs/gallery.min.js"></script><!-- gallery -->
+        <script src="<?php echo actual_link(); ?>js/libs/jquery.thim-content-slider.min.js"></script><!-- Slider -->
+        <script src="<?php echo actual_link(); ?>js/theme-customs.js"></script><!-- Theme Custom -->
         <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
 
         <script type="text/javascript">

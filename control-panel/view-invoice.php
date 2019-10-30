@@ -19,6 +19,8 @@ if (isset($_GET["status"])) {
         $status = 'Expired';
     }
 }
+$total = 0;
+$total = (float) $invoice['total_amount'] + (float) $invoice['fees_or_taxes'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -74,6 +76,10 @@ if (isset($_GET["status"])) {
                                         <td><?php echo $invoice['date']; ?></td>
                                     </tr>
                                     <tr>
+                                        <th>Due Date</th>
+                                        <td><?php echo $invoice['due_date']; ?></td>
+                                    </tr>
+                                    <tr>
                                         <th>Full Name</th>
                                         <td><?php echo $invoice['full_name']; ?></td>
                                     </tr>
@@ -98,16 +104,20 @@ if (isset($_GET["status"])) {
                                         <td><?php echo $invoice['contact']; ?></td>
                                     </tr>
                                     <tr>
-                                        <th>Total Amount</th>
-                                        <td><?php echo $invoice['total_amount']; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <th>Due Date</th>
-                                        <td><?php echo $invoice['due_date']; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <th>Goods or Services</th>
+                                        <th>Invoice Description</th>
                                         <td><?php echo $invoice['goods_or_services']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Invoice Amount</th>
+                                        <td><?php echo $invoice['currency'] . ' ' . $invoice['total_amount']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Other Fees or Taxes</th>
+                                        <td><?php echo $invoice['currency'] . ' ' . $invoice['fees_or_taxes']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Total Amount</th>
+                                        <td><?php echo $invoice['currency'] . ' ' . number_format($total,2); ?></td>
                                     </tr>
                                     <tr>
                                         <th>Status</th>
@@ -137,7 +147,7 @@ if (isset($_GET["status"])) {
                                         </tr>
                                         <tr>
                                             <th>Refund Amount</th>
-                                            <td><?php echo $invoice['refund_amount']; ?></td>
+                                            <td><?php echo $invoice['currency'] . ' ' . $invoice['refund_amount']; ?></td>
                                         </tr>
                                         <tr>
                                             <th>Refund Date</th>

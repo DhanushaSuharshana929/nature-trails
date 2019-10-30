@@ -57,7 +57,14 @@ include_once(dirname(__FILE__) . '/auth.php');
                                             </div>
                                         </div>
                                     </div>
-
+                                    <div class="col-md-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="text" id="due_date" class="form-control to-clear" autocomplete="off" name="due_date" required="true">
+                                                <label class="form-label">Due Date</label>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="col-md-12">
                                         <div class="form-group form-float">
                                             <div class="form-line">
@@ -117,14 +124,6 @@ include_once(dirname(__FILE__) . '/auth.php');
                                     <div class="col-md-12">
                                         <div class="form-group form-float">
                                             <div class="form-line">
-                                                <input type="text" id="fees_or_taxes" class="form-control to-clear" autocomplete="off" name="fees_or_taxes" required="true">
-                                                <label class="form-label">Fees or Taxes</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group form-float">
-                                            <div class="form-line">
                                                 <label class="form-label">Currency</label>
                                                 <select class="form-control to-clear" id="currency" name="currency">
                                                     <option>--Please Select--</option>
@@ -146,15 +145,15 @@ include_once(dirname(__FILE__) . '/auth.php');
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <input type="text" id="total_amount" class="form-control to-clear" autocomplete="off" name="total_amount" required="true">
-                                                <label class="form-label">Total Amount</label>
+                                                <label class="form-label">Invoice Amount</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group form-float">
                                             <div class="form-line">
-                                                <input type="text" id="due_date" class="form-control to-clear" autocomplete="off" name="due_date" required="true">
-                                                <label class="form-label">Due Date</label>
+                                                <input type="text" id="fees_or_taxes" class="form-control to-clear" autocomplete="off" name="fees_or_taxes" required="true">
+                                                <label class="form-label">Other Fees or Taxes</label>
                                             </div>
                                         </div>
                                     </div>

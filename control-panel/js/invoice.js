@@ -82,6 +82,7 @@ $(document).ready(function () {
     $('.mark-as-refund').click(function () {
 
         $('#do-refund').attr('inv-id', $(this).attr('inv-id'));
+        $('#inv-currency').text($(this).attr('inv-currency'));
         $("#myModal").modal('show');
 
     });
@@ -117,6 +118,8 @@ $(document).ready(function () {
                             'Successfully Marked Refund!',
                             'success'
                             );
+                    
+                    $('#row_' + id).remove();
                 } else {
                     swal(
                             'Error...',

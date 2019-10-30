@@ -8,11 +8,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-9 xs-mb-30">
-                <a href="contact.php" class="btn-border-light pull-right" style="float: left;color: white">'HOSPITALITY IS OUR BUSINESS'</a>
+                <a href="<?php echo actual_link(); ?>contact-us/" class="btn-border-light pull-right" style="float: left;color: white">'HOSPITALITY IS OUR BUSINESS'</a>
                  
             </div>
             <div class="col-md-3 ">
-                <a href="contact.php" class="btn-border-light pull-right" style="color: white">Contact Us</a>
+                <a href="<?php echo actual_link(); ?>contact-us/" class="btn-border-light pull-right" style="color: white">Contact Us</a>
             </div>
         </div>
     </div>
@@ -25,7 +25,7 @@
                 <div class="col-sm-4">
                     <div class="widget-menu">
                         <div class="widget-text">
-                            <img src="images/logo-2.png" alt="">
+                            <img src="<?php echo actual_link(); ?>images/logo-2.png" alt="">
                             <div class="footer-location">
                                 <ul class="info">
                                     <li class="clearfix"><i class="fa fa-phone"></i><a href="tel:0777118616">(+94) 77 711 8616</a></li>
@@ -47,12 +47,12 @@
                     <div class="widget-menu">
                         <h3 class="widget-title"> Links</h3>
                         <ul class="menu">
-                            <li><a href="index.php">Home</a></li>
-                            <li><a href="about-us.php">About Us</a></li>
-                            <li><a href="room.php">Accommodation</a></li>
-                            <li><a href="excursion.php">Excursions</a></li>
-                            <li><a href="gallery.php">Gallery</a></li>
-                            <li><a href="contact.php">Contact Us</a></li>
+                            <li><a href="<?php echo actual_link(); ?>home/">Home</a></li>
+                            <li><a href="<?php echo actual_link(); ?>about-us/">About Us</a></li>
+                            <li><a href="<?php echo actual_link(); ?>accommodation-in-unawatuna/">Accommodation</a></li>
+                            <li><a href="<?php echo actual_link(); ?>things-to-do-in-unawatuna/">Excursions</a></li>
+                            <li><a href="<?php echo actual_link(); ?>photo-gallery/">Gallery</a></li>
+                            <li><a href="<?php echo actual_link(); ?>contact-us/">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -66,7 +66,7 @@
                                 $key++;
                                 if ($key < 6) {
                                     ?>
-                                    <li><a href="view-excursion.php?id=<?php echo $attraction['id'] ?>"><?php echo $attraction['title'] ?></a></li>
+                                    <li><a href="<?php echo actual_link(); ?>things-to-do-in-unawatuna/<?php echo str_replace(" ", "-", strtolower($attraction['title'])) ?>/"><?php echo $attraction['title'] ?></a></li>
                                     <?php
                                 }
                             }
@@ -106,12 +106,12 @@
                 <div class="col-md-3 hidden-sm filter-room filter-restaurant filter-swimming w-1192 feed-main  hidden-search" style="width: 25%;" >
                     <div class="sc-gallery"> 
                         <div class="wrapper-gallery " itemscope itemtype="http://schema.org/ItemList">
-                            <a href="images/certificate/tripadvisor.jpg" >
-                                <img src="images/certificate/trip.png" alt="" class="pull-right   border-r" style="" />  
+                            <a href="<?php echo actual_link(); ?>images/certificate/tripadvisor.jpg" >
+                                <img src="<?php echo actual_link(); ?>images/certificate/trip.png" alt="" class="pull-right   border-r" style="" />  
                             </a>
 
-                            <a href="images/certificate/Booking.com-letter.jpg"  >
-                                <img src="images/certificate/booking.png" alt="" class="pull-right  border-r" style="margin-right: 10px;" />  
+                            <a href="<?php echo actual_link(); ?>images/certificate/Booking.com-letter.jpg"  >
+                                <img src="<?php echo actual_link(); ?>images/certificate/booking.png" alt="" class="pull-right  border-r" style="margin-right: 10px;" />  
                             </a>
                         </div>
                     </div>
