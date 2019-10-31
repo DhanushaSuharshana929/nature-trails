@@ -157,6 +157,19 @@ include_once(dirname(__FILE__) . '/auth.php');
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <label class="form-label">Terms & Conditions</label>
+                                                <select class="form-control to-clear" id="terms_and_conditions" name="terms_and_conditions">
+                                                    <option>--Please Select--</option>
+                                                    <option value="6">Accommodations</option>
+                                                    <option value="7">Foods</option>
+                                                    <option value="8">Functions</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="col-md-12"> 
                                         <span id="create" class="btn btn-primary m-t-15 waves-effect">Create </span>
                                     </div>

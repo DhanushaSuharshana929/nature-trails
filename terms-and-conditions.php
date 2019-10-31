@@ -56,7 +56,6 @@ $BANNER = new Banner(4);
                                                 </div>
                                                 <div>
                                                     <?php
-                                                    $PAGE = new Page(6);
                                                     echo $PAGE->description;
                                                     ?>
                                                 </div>

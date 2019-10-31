@@ -50,9 +50,10 @@ if ($params[2] == 'home' || $params[2] == "") {
 } elseif ($params[2] == 'feedback') {
     include './feedback.php';
     exit();
-}elseif ($params[2] == 'terms-and-conditions') {
-include './terms-and-conditions.php';
-exit();
+} elseif ($params[2] == 'terms-and-conditions' && $params[3] != "") {
+    $PAGE = new Page($params[3]);
+    include './terms-and-conditions.php';
+    exit();
 } elseif ($params[2] == 'not-found') {
     include './not-found.php';
     exit();
@@ -102,7 +103,8 @@ exit();
 //} elseif ($params[1] == 'feedback') {
 //    include './feedback.php';
 //    exit();
-//} elseif ($params[1] == 'terms-and-conditions') {
+//}  elseif ($params[1] == 'terms-and-conditions' && $params[2] != "") {
+//    $PAGE = new Page($params[2]);
 //    include './terms-and-conditions.php';
 //    exit();
 //} elseif ($params[1] == 'not-found') {
