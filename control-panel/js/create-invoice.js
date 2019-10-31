@@ -5,6 +5,7 @@ $(document).ready(function () {
         var date = $('#invoice_date').val();
         var fullName = $('#full_name').val();
         var email = $('#email').val();
+        var email2 = $('#email2').val();
         var address = $('#address').val();
         var city = $('#city').val();
         var country = $('#country').val();
@@ -23,6 +24,7 @@ $(document).ready(function () {
                 date: date,
                 fullName: fullName,
                 email: email,
+                email2: email2,
                 address: address,
                 city: city,
                 country: country,

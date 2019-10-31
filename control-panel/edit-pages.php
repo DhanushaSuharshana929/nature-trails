@@ -73,9 +73,10 @@ $PAGES = new Page($id);
                                             <div class="form-group">
                                                 <div class="form-line">
                                                     <input type="file"  class="form-control" value="<?php echo $PAGES->image_name; ?>"  name="image">
+                                                    <span>(422px * 513px)</span>
                                                     <input type="hidden" id="image" class="form-control" value="<?php echo $PAGES->image_name; ?>"  name="image">
-                                                    <img src="../upload/page/<?php echo $PAGES->image_name; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
                                                 </div>
+                                                <img src="../upload/page/<?php echo $PAGES->image_name; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">

@@ -79,6 +79,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <input type="file" id="image" class="form-control" name="image"  required="true">
+                                                <span>(100px * 100px)</span>
                                             </div>
                                         </div>
                                     </div>

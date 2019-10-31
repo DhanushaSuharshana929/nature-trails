@@ -131,14 +131,22 @@ $total = (float) $inv['total_amount'] + (float) $inv['fees_or_taxes'];
                                                                 <td  colspan="2"><?php echo $inv["goods_or_services"]; ?></td>
                                                             </tr>
                                                             <tr>
-                                                                <td class="bdr-top right"><b>Invoice Amount:</b></td>
-                                                                <td class="bdr bdr-top right"><b><?php echo $inv["currency"] . ' ' . number_format($inv["total_amount"], 2); ?></b></td>
+                                                                <td class="bdr-top right"><b>Invoice Amount (<?php echo $inv["currency"]; ?>):</b></td>
+                                                                <td class="bdr bdr-top right"><b><?php echo number_format($inv["total_amount"], 2); ?></b></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="bdr-top right"><b>Fees or Taxes (<?php echo $inv["currency"]; ?>):</b></td>
+                                                                <td class="bdr bdr-top right"><b><?php echo number_format($inv["fees_or_taxes"], 2); ?></b></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="bdr-top right total-amount"><b>Total Amount (<?php echo $inv["currency"]; ?>):</b></td>
+                                                                <td class="bdr bdr-top right total-amount"><b><?php echo number_format($total, 2); ?></b></td>
                                                             </tr>
                                                         </table>
-                                                        <ul>
+<!--                                                        <ul>
                                                             <li><span class="bb">Fees or Taxes: </span><span><?php echo $inv["currency"] . ' ' . $inv["fees_or_taxes"]; ?></span></li>
                                                             <li><span class="bb">Total Amount: </span><span><?php echo $inv["currency"] . ' ' . number_format($total, 2); ?></span></li>
-                                                        </ul>
+                                                        </ul>-->
                                                         <div class="terms-of-the-condition">
                                                             <h6>The Terms of the Transaction</h6>
                                                             <p>Thank you for your business. Please send your payment before due date.</p>

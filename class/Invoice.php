@@ -15,6 +15,7 @@ class Invoice {
                 . "`date`,"
                 . "`full_name`,"
                 . "`email`,"
+                . "`email2`,"
                 . "`address`,"
                 . "`city`,"
                 . "`country`,"
@@ -34,6 +35,7 @@ class Invoice {
                 . "'" . mysql_real_escape_string($_POST['date']) . "', "
                 . "'" . mysql_real_escape_string($_POST['fullName']) . "', "
                 . "'" . mysql_real_escape_string($_POST['email']) . "', "
+                . "'" . mysql_real_escape_string($_POST['email2']) . "', "
                 . "'" . mysql_real_escape_string($_POST['address']) . "', "
                 . "'" . mysql_real_escape_string($_POST['city']) . "', "
                 . "'" . mysql_real_escape_string($_POST['country']) . "', "
@@ -104,6 +106,20 @@ class Invoice {
                 . "`status` = 2 "
                 . "WHERE `id` = " . $_POST['id'];
 
+        if ($db->readQuery($query)) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
+    public function extendDueDate($data) {
+
+        $db = new Database();
+
+        $query = "UPDATE `invoice` SET "
+                . "`due_date` = '" . mysql_real_escape_string($_POST['due_date']) . "' "
+                . "WHERE `id` = " . $_POST['id'];
+        
         if ($db->readQuery($query)) {
             return TRUE;
         } else {
@@ -239,6 +255,7 @@ class Invoice {
 
             $from = 'info@naturetrailsunawatuna.com';
             $email = $inv['email'];
+            $email2 = $inv['email2'];
             $amount = $inv['total_amount'];
             $repaly = 'info@naturetrailsunawatuna.com';
 
@@ -294,6 +311,9 @@ class Invoice {
                                     ul { font-size: 14px; }
                                     td { font-size: 12px; }
                                 }
+                                .total-amount {
+                                    font-weight: 600;
+                                }
                             </style>
                         </head>
                         <body>
@@ -323,14 +343,19 @@ class Invoice {
                                     <td colspan="2">' . $inv["goods_or_services"] . '</td> 
                                 </tr>
                                 <tr>
-                                    <td class="bdr-top"><b>Invoice Amount</b></td>
-                                    <td class="bdr bdr-top right"><b> ' . $inv["currency"] . ' ' . $inv["total_amount"] . '</b></td>
+                                    <td class="bdr-top right"><b>Invoice Amount (' . $inv["currency"] . '):</b></td>
+                                    <td class="bdr bdr-top right"><b>' . number_format($inv["total_amount"], 2) . '</b></td>
+                                </tr>
+                                <tr>
+                                    <td class="bdr-top right"><b>Fees or Taxes (' . $inv["currency"] . '):</b></td>
+                                    <td class="bdr bdr-top right"><b>' . number_format($inv["fees_or_taxes"], 2) . '</b></td>
+                                </tr>
+                                <tr>
+                                    <td class="bdr-top right total-amount"><b>Total Amount (' . $inv["currency"] . '):</b></td>
+                                    <td class="bdr bdr-top right total-amount"><b>' . number_format($total, 2) . '</b></td>
                                 </tr>
                             </table>
-                            <ul>
-                                <li><span class="bb">Fees or Taxes: </span><span>' . $inv["currency"] . ' ' . $inv["fees_or_taxes"] . '</span></li>
-                                <li><span class="bb">Total Amount: </span><span>' . $inv["currency"] . ' ' . number_format($total, 2) . '</span></li>
-                            </ul>
+                            
                             <div style="margin-top: 20px;">
                                 <h6>The Terms of the Transaction</h6>
                                 <p>Thank you for your business. Please send your payment within 7 days of receiving this invoice.</p>
@@ -340,10 +365,18 @@ class Invoice {
                             </div>
                         </body>
                     </html>';
-            if (mail($email, $subject, $html, $headers)) {
-                return TRUE;
+            if ($email2 != '') {
+                if (mail($email, $subject, $html, $headers) && mail($email2, $subject, $html, $headers)) {
+                    return TRUE;
+                } else {
+                    return FALSE;
+                }
             } else {
-                return FALSE;
+                if (mail($email, $subject, $html, $headers)) {
+                    return TRUE;
+                } else {
+                    return FALSE;
+                }
             }
         } else {
             return FALSE;
@@ -419,6 +452,9 @@ class Invoice {
                                     ul { font-size: 14px; }
                                     td { font-size: 12px; }
                                 }
+                                .total-amount {
+                                    font-weight: 600;
+                                }
                             </style>
                         </head>
                         <body>
@@ -448,14 +484,18 @@ class Invoice {
                                     <td colspan="2">' . $inv["goods_or_services"] . '</td> 
                                 </tr>
                                 <tr>
-                                    <td class="bdr-top"><b>Invoice Amount</b></td>
-                                    <td class="bdr bdr-top right"><b> ' . $inv["currency"] . ' ' . $inv["total_amount"] . '</b></td>
+                                    <td class="bdr-top right"><b>Invoice Amount (' . $inv["currency"] . '):</b></td>
+                                    <td class="bdr bdr-top right"><b>' . number_format($inv["total_amount"], 2) . '</b></td>
+                                </tr>
+                                <tr>
+                                    <td class="bdr-top right"><b>Fees or Taxes (' . $inv["currency"] . '):</b></td>
+                                    <td class="bdr bdr-top right"><b>' . number_format($inv["fees_or_taxes"], 2) . '</b></td>
+                                </tr>
+                                <tr>
+                                    <td class="bdr-top right total-amount"><b>Total Amount (' . $inv["currency"] . '):</b></td>
+                                    <td class="bdr bdr-top right total-amount"><b>' . number_format($total, 2) . '</b></td>
                                 </tr>
                             </table>
-                            <ul>
-                                <li><span class="bb">Fees or Taxes: </span><span>' . $inv["currency"] . ' ' . $inv["fees_or_taxes"] . '</span></li>
-                                <li><span class="bb">Total Amount: </span><span>' . $inv["currency"] . ' ' . number_format($total, 2) . '</span></li>
-                            </ul>
                             <div style="margin-top: 20px;">
                                 <h6>The Terms of the Transaction</h6>
                                 <p>Thank you for your business. Please send your payment within 7 days of receiving this invoice.</p>
@@ -491,6 +531,7 @@ class Invoice {
 
             $from = 'info@naturetrailsunawatuna.com';
             $email = $inv['email'];
+            $email2 = $inv['email2'];
             $amount = $inv['total_amount'];
 
             $repaly = 'info@naturetrailsunawatuna.com';
@@ -511,10 +552,12 @@ class Invoice {
                 $repay = '';
             }
             if ($status === 'success') {
+                $stat = 'Successful';
                 $msg = '<div style="font-size:16px; font-weight:600; margin-left:10%;">
                                 Thank you for making an online payment with Nature Trails Boutique Hotel.
                           </div>';
             } else {
+                $stat = $status;
                 $msg = '';
             }
 
@@ -577,7 +620,7 @@ class Invoice {
                             </div>
                             ' . $msg . '
                             <ul>
-                                <li><span class="bb">Status : </span>' . $status . '<span></span></li>
+                                <li><span class="bb">Status : </span>' . $stat . '<span></span></li>
                                 <li><span class="bb">Web Invoice ID : </span>#' . $id . '<span></span></li>
                                 <li><span class="bb">Customer : </span><span>' . $inv["full_name"] . '</span></li>
                                 <li><span class="bb">Payment Reference No : </span>' . $recieptno . '<span></span></li>
@@ -589,10 +632,18 @@ class Invoice {
                         </body>
                     </html>';
 
-            if (mail($email, $subject, $html, $headers)) {
-                return TRUE;
+            if ($email2 != '') {
+                if (mail($email, $subject, $html, $headers) && mail($email2, $subject, $html, $headers)) {
+                    return TRUE;
+                } else {
+                    return FALSE;
+                }
             } else {
-                return FALSE;
+                if (mail($email, $subject, $html, $headers)) {
+                    return TRUE;
+                } else {
+                    return FALSE;
+                }
             }
         } else {
             return FALSE;
@@ -608,7 +659,7 @@ class Invoice {
         if ($inv) {
             $total = 0;
             $total = (float) $inv['total_amount'] + (float) $inv['fees_or_taxes'];
-            
+
             $site = str_replace("www.", "", $_SERVER['HTTP_HOST']);
             $subject = 'Payment Status';
 
@@ -631,6 +682,9 @@ class Invoice {
                             </div>';
             } else {
                 $repay = '';
+            }
+            if ($status === 'success') {
+                $status = 'Successful';
             }
 
             $html = '<!DOCTYPE html>
@@ -696,7 +750,7 @@ class Invoice {
                                 <li><span class="bb">Customer : </span><span>' . $inv["full_name"] . '</span></li>
                                 <li><span class="bb">Payment Reference No : </span>' . $recieptno . '<span></span></li>
                                 <li><span class="bb">Date of Payment : </span>' . $inv["date"] . '<span></span></li>
-                                <li><span class="bb">Total Amount : </span>' . $inv["currency"] . ' ' . number_format($total,2) . '<span></span></li>
+                                <li><span class="bb">Total Amount : </span>' . $inv["currency"] . ' ' . number_format($total, 2) . '<span></span></li>
                             </ul>
                             ' . $repay . '
                             

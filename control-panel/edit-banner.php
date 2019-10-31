@@ -67,8 +67,9 @@ $BANNER = new Banner($id);
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <input type="file" id="image" class="form-control" value="<?php echo $SLIDER->image_name; ?>"  name="image">
-                                                <img src="../upload/banner/<?php echo $BANNER->image_name; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
+                                                <span>(1600px * 495px)</span>
                                             </div>
+                                            <img src="../upload/banner/<?php echo $BANNER->image_name; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
                                         </div>
                                     </div>
 
@@ -82,7 +83,7 @@ $BANNER = new Banner($id);
                                     </div>
                                     <div class="row clearfix">  </div>
                                 </form>
-                         
+
                             </div>
                         </div>
                     </div>

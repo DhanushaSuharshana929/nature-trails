@@ -76,6 +76,7 @@ $PAGES = new Page($id);
                                             <div class="form-group">
                                                 <div class="form-line">
                                                     <input type="file" id="image" class="form-control" name="image" >
+                                                    <span>(422px * 513px)</span>
                                                 </div>
                                             </div>
                                         </div>

@@ -124,7 +124,10 @@ if (isset($_GET["status"])) {
                                                             <?php
                                                         } elseif ($invoice['status'] == 0 && $invoice['due_date'] < date('Y-m-d')) {
                                                             ?>
-                                                            | <a href="#" class="delete-invoice btn btn-sm btn-danger" data-id="<?php echo $invoice['id']; ?>"  title="Delete Invoice">
+                                                            | <a href="#" class="extend-due-date btn btn-sm btn-warning" inv-id="<?php echo $invoice['id']; ?>"  title="Extend Due Date">
+                                                                <i class="waves-effect glyphicon glyphicon-calendar" data-type="cancel"></i>
+                                                            </a> | 
+                                                            <a href="#" class="delete-invoice btn btn-sm btn-danger" data-id="<?php echo $invoice['id']; ?>"  title="Delete Invoice">
                                                                 <i class="waves-effect glyphicon glyphicon-trash" data-type="cancel"></i>
                                                             </a>
                                                             <?php
@@ -171,6 +174,23 @@ if (isset($_GET["status"])) {
                         </div>
                     </div>
                 </div>
+                <div id="myModal-due" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content" style="padding: 20px 35px;">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title"><b>Extend Due Date</b></h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>Due Date:</p> <input type="text" id="ext_due_date" class="form-control to-clear" autocomplete="off" name="ext_due_date" required="true">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" id="do-extend" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- #END# Manage brand -->
 
             </div>
@@ -202,6 +222,9 @@ if (isset($_GET["status"])) {
         <script src="js/invoice.js" type="text/javascript"></script>
         <script>
             $("#ref-date").datepicker({
+                dateFormat: "yy-mm-dd"
+            });
+            $("#ext_due_date").datepicker({
                 dateFormat: "yy-mm-dd"
             });
         </script>

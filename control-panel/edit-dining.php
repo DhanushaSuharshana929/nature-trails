@@ -70,9 +70,10 @@ $DINING = new Dining($id);
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <input type="file"  class="form-control" value="<?php echo $DINING->image_name; ?>"  name="image">
+                                                <span>(900px * 600px)</span>
                                                 <input type="hidden" id="image" class="form-control" value="<?php echo $DINING->image_name; ?>"  name="image">
-                                                <img src="../upload/dining/<?php echo $DINING->image_name; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
                                             </div>
+                                            <img src="../upload/dining/<?php echo $DINING->image_name; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
                                         </div>
                                     </div>
 
@@ -85,7 +86,7 @@ $DINING = new Dining($id);
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="col-md-12">
                                         <input type="hidden" name="update"value="update"/>
                                         <input type="hidden" id="oldImageName" value="<?php echo $DINING->image_name; ?>" name="oldImageName"/>

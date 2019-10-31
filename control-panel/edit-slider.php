@@ -62,10 +62,11 @@ $SLIDER = new Slider($id);
                                     <div class="col-md-12">                                       
                                         <div class="form-group form-float">
                                             <div class="form-line">
-                                                <input type="file"   name="image" class="form-control" value="<?php echo $SLIDER->image_name; ?>"  >
-                                                <input type="hidden" id="image" class="form-control" value="<?php echo $SLIDER->image_name; ?>"  >
-                                                <img src="../upload/slider/<?php echo $SLIDER->image_name; ?>"  class="view-edit-img img img-responsive img-thumbnail"  alt="old image">
+                                                <input type="file"   name="image" class="form-control" value="<?php echo $SLIDER->image_name; ?>">
+                                                <span>(1920px * 1080px)</span>
+                                                <input type="hidden" id="image" class="form-control" value="<?php echo $SLIDER->image_name; ?>">
                                             </div>
+                                            <img src="../upload/slider/<?php echo $SLIDER->image_name; ?>"  class="view-edit-img img img-responsive img-thumbnail"  alt="old image">
                                         </div>
                                     </div>
 

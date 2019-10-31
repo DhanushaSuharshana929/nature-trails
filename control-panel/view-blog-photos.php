@@ -59,6 +59,7 @@ $BLOG = new Blog($id)
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <input type="file" id="image" class="form-control" name="image"  required="true">
+                                                <span>(900px * 500px)</span>
                                             </div>
                                         </div>
                                     </div>
@@ -71,7 +72,7 @@ $BLOG = new Blog($id)
                                         </div>
                                     </div>
                                     <div class="col-md-12"> 
-                                          <input type="hidden" id="id" value="<?php echo $BLOG->id; ?>" name="id"/>
+                                        <input type="hidden" id="id" value="<?php echo $BLOG->id; ?>" name="id"/>
                                         <input type="submit" name="create" class="btn btn-primary m-t-15 waves-effect" value="create"/>
                                     </div>
                                 </form>

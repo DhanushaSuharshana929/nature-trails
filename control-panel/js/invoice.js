@@ -19,9 +19,9 @@ $(document).ready(function () {
                 url: "ajax/invoice.php",
                 type: "POST",
                 data: {
-                    id: id, 
-                    status: status, 
-                    receipt_no: receipt_no, 
+                    id: id,
+                    status: status,
+                    receipt_no: receipt_no,
                     option: 'resend-payment-receipt'
                 },
                 dataType: "JSON",
@@ -59,7 +59,7 @@ $(document).ready(function () {
                 url: "ajax/invoice.php",
                 type: "POST",
                 data: {
-                    id: id, 
+                    id: id,
                     option: 'resend-invoice'
                 },
                 dataType: "JSON",
@@ -118,12 +118,60 @@ $(document).ready(function () {
                             'Successfully Marked Refund!',
                             'success'
                             );
-                    
+
                     $('#row_' + id).remove();
                 } else {
                     swal(
                             'Error...',
                             'Marking Refund Unsuccessfull!',
+                            'error'
+                            );
+                }
+
+            }
+
+        });
+
+    });
+    $('.extend-due-date').click(function () {
+
+        $('#do-extend').attr('inv-id', $(this).attr('inv-id'));
+        $("#myModal-due").modal('show');
+
+    });
+
+    $('#do-extend').click(function () {
+
+        var id = $(this).attr('inv-id');
+        var due_date = $('#ext_due_date').val();
+
+        $("#myModal-due").modal('hide');
+
+        $.ajax({
+
+            url: "ajax/extend-due-date.php",
+            type: 'POST',
+            data: {
+                id: id,
+                due_date: due_date
+            },
+            dataType: 'JSON',
+            success: function (returndata) {
+
+                if (returndata.status === 1) {
+                    $('#ext_due_date').val('');
+
+                    swal(
+                            'Success...',
+                            'Successfully extend due date and re send Web Invoice',
+                            'success'
+                            );
+
+                    $('#row_' + id).remove();
+                } else {
+                    swal(
+                            'Error...',
+                            'Extend due date unsuccessfull!',
                             'error'
                             );
                 }
