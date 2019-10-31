@@ -1,15 +1,11 @@
  
-<style>
-    #neo_bottom_widget_container{
-        background: #118b44!important;
-    }
-</style>
+
 <div class="call-to-action text-light xs-text-center">
     <div class="container">
         <div class="row">
             <div class="col-md-9 xs-mb-30">
                 <a href="<?php echo actual_link(); ?>contact-us/" class="btn-border-light pull-right" style="float: left;color: white">'HOSPITALITY IS OUR BUSINESS'</a>
-                 
+
             </div>
             <div class="col-md-3 ">
                 <a href="<?php echo actual_link(); ?>contact-us/" class="btn-border-light pull-right" style="color: white">Contact Us</a>
@@ -75,7 +71,7 @@
                     </div>
                 </div>
                 <div class="col-sm-4">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15871.30932094826!2d80.248005!3d6.018429!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf82e4e1180a2380d!2sNature+Trails+Boutique+Hotel!5e0!3m2!1sen!2s!4v1480572074037" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15871.30932094826!2d80.248005!3d6.018429!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf82e4e1180a2380d!2sNature+Trails+Boutique+Hotel!5e0!3m2!1sen!2s!4v1480572074037" height="300" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -123,17 +119,28 @@
 
 <!-- NeoHotelier The Greendale Holiday Bungalow Widget Start / NeoHotelier.com -->
 <span id="neobe_root"></span>
- <script type="text/javascript">
-    !function() {
+<script type="text/javascript">
+    !function () {
         var nbe = document.createElement("script");
         var nbe_url = "https://www.neohotelier.com/";
         var prop = 33090258
         nbe.type = "text/javascript",
-        nbe.async = true,
-        nbe.src = nbe_url+"get_widget/js/?prop="+prop;
+                nbe.async = true,
+                nbe.src = nbe_url + "get_widget/js/?prop=" + prop;
         var el = document.getElementsByTagName("script")[0];
         el.parentNode.insertBefore(nbe, el),
-        window.neobe_widget_url = nbe_url+"get_widget/html/?prop="+prop;
+                window.neobe_widget_url = nbe_url + "get_widget/html/?prop=" + prop;
     }();
-    </script>
-    <!-- NeoHotelier Nature Trails Boutique Hotel Widget End / NeoHotelier.com -->
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151206239-1"></script>
+<script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag() {
+         dataLayer.push(arguments);
+     }
+     gtag('js', new Date());
+
+     gtag('config', 'UA-151206239-1');
+</script>
+<!-- NeoHotelier Nature Trails Boutique Hotel Widget End / NeoHotelier.com -->

@@ -6,7 +6,7 @@ $BANNER = new Banner(4);
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title><?php echo $ATTRACTION->title; ?> | Excursion | Unawatuna Hotels | Hotels in Unawatuna | Nature Trails Boutique Hotel</title>
+        <title>Terms and Conditions | Unawatuna Hotels | Hotels in Unawatuna | Nature Trails Boutique Hotel</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Favicons -->
@@ -42,71 +42,32 @@ $BANNER = new Banner(4);
 
                     </div>
                 </div>
-
-                <div class="site-content container">
-                    <div class="room-single row">
-                        <main class="site-main col-sm-12 col-md-9 flex-first">
-                            <div class="room-wrapper"> 
-                                <div class="room_gallery clearfix">
-                                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                                        <div class="carousel-inner">
-                                            <?php
-                                            $ATTRACTION_PHOTO = new AttractionPhoto(NULL);
-                                            foreach ($ATTRACTION_PHOTO->getAttractionPhotosById($ATTRACTION->id) as $key => $attraction_photo) {
-
-                                                if ($key == 0) {
-                                                    ?>
-                                                    <div class="carousel-item active">
-                                                        <img class="d-block w-100" src="<?php echo actual_link(); ?>upload/attraction/gallery/<?php echo $attraction_photo['image_name'] ?>" alt="First slide">
-                                                    </div>
-                                                <?php } else { ?>
-                                                    <div class="carousel-item">
-                                                        <img class="d-block w-100" src="<?php echo actual_link(); ?>upload/attraction/gallery/<?php echo $attraction_photo['image_name'] ?>" alt="Second slide">
-                                                    </div>
+                <div id="home-main-content" class="home-main-content home-1">
+                    <section class="hg_section sec1">
+                        <!--<div class="container">-->
+                        <div class="container">
+                            <div class="booking-wrap">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="contact-form terms-section">
+                                            <div class="col-md-8">
+                                                <div class="padd-header">
+                                                    <h1 class="heading_primary text-center">Terms & Conditions</h1> 
+                                                </div>
+                                                <div>
                                                     <?php
-                                                }
-                                            }
-                                            ?>
-
+                                                    $PAGE = new Page(6);
+                                                    echo $PAGE->description;
+                                                    ?>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
                                     </div>
                                 </div>
-                                <div class="title-share clearfix">
-                                    <h2 class="title"><?php echo $ATTRACTION->title ?></h2> 
-                                </div>
-
-                                <div class="description text-justify">
-                                    <?php echo $ATTRACTION->description ?> 
-                                </div> 
                             </div>
-                        </main>
-                        <aside id="secondary" class="widget-area col-sm-12 col-md-3 sticky-sidebar">
-                            <div class="wd wd-check-room">
-                                <h3 class="title">Other Excursions</h3>
-                                <ul class="form-table">
-                                    <?php
-                                    $ATTRACTION = new Attraction(NULL);
-                                    foreach ($ATTRACTION->all() as $key => $attraction) {
-                                        ?>
-                                        <a href="<?php echo actual_link(); ?>things-to-do-in-unawatuna/<?php echo str_replace(" ", "-", strtolower($attraction['title'])) ?>/"> <li class="form-field">
-                                                <?php echo $attraction['title'] ?>
-                                            </li> 
-                                        </a>
-                                        <hr>
-                                    <?php } ?>
-                                </ul> 
-                            </div>
-                        </aside>
-                    </div>
-                </div>
+                        </div>
+                    </section>
+                </div> 
             </div>
             <!-- Footer -->
             <?php include './footer.php'; ?>

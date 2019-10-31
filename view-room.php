@@ -56,11 +56,11 @@ $BANNER = new Banner(2);
                                                 if ($key == 0) {
                                                     ?>
                                                     <div class="carousel-item active">
-                                                        <img class="d-block w-100" src="<?php echo actual_link(); ?>upload/room/gallery/<?php echo $room_photo['image_name'] ?>" alt="First slide">
+                                                        <img class="d-block w-100" src="<?php echo actual_link(); ?>upload/room/gallery/<?php echo $room_photo['image_name'] ?>" alt="<?php echo $room_photo['caption'] ?>">
                                                     </div>
                                                 <?php } else { ?>
                                                     <div class="carousel-item">
-                                                        <img class="d-block w-100" src="<?php echo actual_link(); ?>upload/room/gallery/<?php echo $room_photo['image_name'] ?>" alt="Second slide">
+                                                        <img class="d-block w-100" src="<?php echo actual_link(); ?>upload/room/gallery/<?php echo $room_photo['image_name'] ?>" alt="<?php echo $room_photo['caption'] ?>">
                                                     </div>
                                                     <?php
                                                 }
@@ -136,63 +136,62 @@ $BANNER = new Banner(2);
                                             </li>
                                         <?php } ?>
                                     </ul>
-                                </div
+                                </div>
                             </div>
+                        </main>
+
+
                     </div>
-                    </main>
-
-
                 </div>
+
             </div>
+            <!-- Footer -->
+            <?php include './footer.php'; ?>
+            <!--footer-->
+        </div><!-- wrapper-container -->
 
+        <div id="back-to-top">
+            <i class="ion-ios-arrow-up" aria-hidden="true"></i>
         </div>
-        <!-- Footer -->
-        <?php include './footer.php'; ?>
-        <!--footer-->
-    </div><!-- wrapper-container -->
-
-    <div id="back-to-top">
-        <i class="ion-ios-arrow-up" aria-hidden="true"></i>
-    </div>
 
 
-    <!-- Scripts -->
-    <script src="<?php echo actual_link(); ?>js/libs/jquery-1.12.4.min.js"></script><!-- jquery -->
-    <script src="<?php echo actual_link(); ?>js/libs/stellar.min.js"></script><!-- parallax -->
+        <!-- Scripts -->
+        <script src="<?php echo actual_link(); ?>js/libs/jquery-1.12.4.min.js"></script><!-- jquery -->
+        <script src="<?php echo actual_link(); ?>js/libs/stellar.min.js"></script><!-- parallax -->
 
 
-    <script src="<?php echo actual_link(); ?>js/libs/bootstrap.min.js"></script><!-- Bootstrap -->
-    <script src="<?php echo actual_link(); ?>js/libs/smoothscroll.min.js"></script><!-- smoothscroll -->
-    <script src="<?php echo actual_link(); ?>js/libs/owl.carousel.min.js"></script><!-- Owl Carousel -->
-    <script src="<?php echo actual_link(); ?>js/libs/jquery.magnific-popup.min.js"></script><!-- Magnific Popup -->
-    <script src="<?php echo actual_link(); ?>js/libs/theia-sticky-sidebar.min.js"></script><!-- Sticky sidebar -->
-    <script src="<?php echo actual_link(); ?>js/libs/counter-box.min.js"></script><!-- counter -->
-    <script src="<?php echo actual_link(); ?>js/libs/jquery.flexslider-min.js"></script><!-- flexslider -->
-    <script src="<?php echo actual_link(); ?>js/libs/jquery.thim-content-slider.min.js"></script><!-- Slider -->
-    <script src="<?php echo actual_link(); ?>js/libs/gallery.min.js"></script><!-- gallery -->
-    <script src="<?php echo actual_link(); ?>js/libs/moment.min.js"></script><!-- moment -->
-    <script src="<?php echo actual_link(); ?>js/libs/jquery-ui.min.js"></script><!-- ui -->
-    <script src="<?php echo actual_link(); ?>js/libs/daterangepicker.min.js"></script><!-- date -->
-    <script src="<?php echo actual_link(); ?>js/libs/daterangepicker.min-date.min.js"></script><!-- date2 -->
-    <script src="<?php echo actual_link(); ?>js/theme-customs.js"></script><!-- Theme Custom -->
-    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+        <script src="<?php echo actual_link(); ?>js/libs/bootstrap.min.js"></script><!-- Bootstrap -->
+        <script src="<?php echo actual_link(); ?>js/libs/smoothscroll.min.js"></script><!-- smoothscroll -->
+        <script src="<?php echo actual_link(); ?>js/libs/owl.carousel.min.js"></script><!-- Owl Carousel -->
+        <script src="<?php echo actual_link(); ?>js/libs/jquery.magnific-popup.min.js"></script><!-- Magnific Popup -->
+        <script src="<?php echo actual_link(); ?>js/libs/theia-sticky-sidebar.min.js"></script><!-- Sticky sidebar -->
+        <script src="<?php echo actual_link(); ?>js/libs/counter-box.min.js"></script><!-- counter -->
+        <script src="<?php echo actual_link(); ?>js/libs/jquery.flexslider-min.js"></script><!-- flexslider -->
+        <script src="<?php echo actual_link(); ?>js/libs/jquery.thim-content-slider.min.js"></script><!-- Slider -->
+        <script src="<?php echo actual_link(); ?>js/libs/gallery.min.js"></script><!-- gallery -->
+        <script src="<?php echo actual_link(); ?>js/libs/moment.min.js"></script><!-- moment -->
+        <script src="<?php echo actual_link(); ?>js/libs/jquery-ui.min.js"></script><!-- ui -->
+        <script src="<?php echo actual_link(); ?>js/libs/daterangepicker.min.js"></script><!-- date -->
+        <script src="<?php echo actual_link(); ?>js/libs/daterangepicker.min-date.min.js"></script><!-- date2 -->
+        <script src="<?php echo actual_link(); ?>js/theme-customs.js"></script><!-- Theme Custom -->
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
 
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
-        }
-
-        $('.translation-links a').click(function () {
-
-            var lang = $(this).data('lang');
-            var $frame = $('.goog-te-menu-frame:first');
-            if (!$frame.size()) {
-                alert("Error: Could not find Google translate frame.");
-                return false;
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
             }
-            $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
-            return false;
-        });
-    </script> 
-</body>
+
+            $('.translation-links a').click(function () {
+
+                var lang = $(this).data('lang');
+                var $frame = $('.goog-te-menu-frame:first');
+                if (!$frame.size()) {
+                    alert("Error: Could not find Google translate frame.");
+                    return false;
+                }
+                $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+                return false;
+            });
+        </script> 
+    </body>
 </html>

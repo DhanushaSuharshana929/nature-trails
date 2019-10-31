@@ -40,6 +40,7 @@ $total = (float) $inv['total_amount'] + (float) $inv['fees_or_taxes'];
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="css/invoice.css" rel="stylesheet" type="text/css"/>
+        <link href="css/libs/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
         <!-- Style -->
 
     </head>
@@ -91,6 +92,10 @@ $total = (float) $inv['total_amount'] + (float) $inv['fees_or_taxes'];
                                                             ?>
                                                             <div class="alert alert-warning col-md-9"><b>We have already received the payment for this invoice .</b></div>
                                                             <?php
+                                                        } elseif ($status == 'Expired') {
+                                                            ?>
+                                                            <div class="alert alert-danger col-md-9"><b>This payment invoice has been expired.</b></div>
+                                                            <?php
                                                         } elseif (isset($_GET['error'])) {
                                                             ?>
                                                             <div class="alert alert-danger col-md-9"><b>Your payment process has been canceled.</b></div>
@@ -117,7 +122,7 @@ $total = (float) $inv['total_amount'] + (float) $inv['fees_or_taxes'];
                                                             <li><span class="bb">Customer City: </span><span><?php echo $inv["city"]; ?></span></li>
                                                             <li><span class="bb">Customer Country: </span><span><?php echo $inv["country"]; ?></span></li>
                                                             <li><span class="bb">Customer Contact Number: </span><span><?php echo $inv["contact"]; ?></span></li>
-                                                            </ul>
+                                                        </ul>
                                                         <table width="80%" class="desc-table">
                                                             <tr>
                                                                 <th width="100%" colspan="2">Invoice Description</th> 
@@ -132,11 +137,11 @@ $total = (float) $inv['total_amount'] + (float) $inv['fees_or_taxes'];
                                                         </table>
                                                         <ul>
                                                             <li><span class="bb">Fees or Taxes: </span><span><?php echo $inv["currency"] . ' ' . $inv["fees_or_taxes"]; ?></span></li>
-                                                            <li><span class="bb">Total Amount: </span><span><?php echo $inv["currency"] . ' ' . number_format($total,2); ?></span></li>
+                                                            <li><span class="bb">Total Amount: </span><span><?php echo $inv["currency"] . ' ' . number_format($total, 2); ?></span></li>
                                                         </ul>
                                                         <div class="terms-of-the-condition">
                                                             <h6>The Terms of the Transaction</h6>
-                                                            <p>Thank you for your business. Please send your payment within 7 days of receiving this invoice.</p>
+                                                            <p>Thank you for your business. Please send your payment before due date.</p>
                                                         </div>
                                                         <div style="text-align: center; margin: 35px 0px;">
 
@@ -155,10 +160,18 @@ $total = (float) $inv['total_amount'] + (float) $inv['fees_or_taxes'];
                                                                 <input type="hidden" name="order.amount" value="<?php echo $total; ?>"/>
                                                                 <input type="hidden" name="order.currency" value="<?php echo $inv["currency"]; ?>"/>
                                                                 <?php
-                                                                if ($inv['status'] == 0) {
+                                                                if ($inv['status'] == 0 && $inv['due_date'] >= date('Y-m-d')) {
                                                                     ?>
+                                                                    <div class="row">
+                                                                        <div class="col-xs-12 formpading checkbox-section">  
+                                                                            <label class="checkbox-container"><p>Click here to indicate that you have read and agree to the company <a href="<?php echo actual_link(); ?>terms-and-conditions/" target="_blank" class="text-primary">terms and conditions</a>.</p>
+                                                                                <input type="checkbox" name="agree" id="agree">
+                                                                                <span class="checkmark"></span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
                                                                     <img src="images/payment-logo/payment-logos.jpg" alt=""/>
-                                                                    <button type="submit" id="btnPay" name="btnPay" act="<?php echo $act; ?>" class="btn pay-btn">PAY NOW</button>
+                                                                    <button type="submit" id="btnPay" name="btnPay" act="<?php echo $act; ?>" class="btn pay-btn invoice-btn-pay">PAY NOW</button>
                                                                     <?php
                                                                 }
                                                                 ?>
@@ -208,6 +221,8 @@ $total = (float) $inv['total_amount'] + (float) $inv['fees_or_taxes'];
         <script src="js/theme-customs.js"></script><!-- Theme Custom -->
         <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="js/libs/sweetalert.min.js" type="text/javascript"></script>
+        <script src="js/checked.js" type="text/javascript"></script>
 
         <script type="text/javascript">
 

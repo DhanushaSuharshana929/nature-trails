@@ -65,7 +65,7 @@ $PAGE = new Page(3);
 
                                 <div class="sc-hb-rooms-search style-01">
                                     <div class="hotel-booking-search style-01 layout-columns">
-                                        <img src="<?php echo actual_link(); ?>images/bg/about.JPG" alt="" class="img-responsive img-thumbnail" style="border-radius: 4px;margin-top: 70px;"/>
+                                        <img src="<?php echo actual_link(); ?>images/bg/about.JPG" alt="Nature Trails Hotel Unawatuna" class="img-responsive img-thumbnail" style="border-radius: 4px;margin-top: 70px;"/>
                                     </div>
                                 </div> 
                             </div>
@@ -81,7 +81,7 @@ $PAGE = new Page(3);
                                             <div class="item">
                                                 <div class="row">
                                                     <div class="col-md-3 img-padd-4" >
-                                                        <img src="<?php echo actual_link(); ?>images/enchanting.jpg" class="img-responsive img-thumbnail" alt=" "/>
+                                                        <img src="<?php echo actual_link(); ?>images/enchanting.jpg" class="img-responsive img-thumbnail" alt="Nature Trails Hotel Unawatuna"/>
                                                     </div>
                                                     <div class="col-md-9">
                                                         <div class="content">
@@ -96,7 +96,7 @@ $PAGE = new Page(3);
                                             <div class="item">
                                                 <div class="row">
                                                     <div class="col-md-3 img-padd-4">
-                                                        <img src="<?php echo actual_link(); ?>images/luxuring.jpg" class="img-responsive img-thumbnail" alt=" "/>
+                                                        <img src="<?php echo actual_link(); ?>images/luxuring.jpg" class="img-responsive img-thumbnail" alt="Nature Trails Hotel Unawatuna"/>
                                                     </div>
                                                     <div class="col-md-9">
                                                         <div class="content">
@@ -111,7 +111,7 @@ $PAGE = new Page(3);
                                             <div class="item">
                                                 <div class="row">
                                                     <div class="col-md-3 img-padd-4">
-                                                        <img src="<?php echo actual_link(); ?>images/staning.jpg" class="img-responsive img-thumbnail" alt=" "/>
+                                                        <img src="<?php echo actual_link(); ?>images/staning.jpg" class="img-responsive img-thumbnail" alt="Nature Trails Hotel Unawatuna"/>
                                                     </div>
                                                     <div class="col-md-9">
                                                         <div class="content">
@@ -128,7 +128,7 @@ $PAGE = new Page(3);
                                             <div class="item">
                                                 <div class="row">
                                                     <div class="col-md-3 img-padd-4">
-                                                        <img src="<?php echo actual_link(); ?>images/shedule.jpg" class="img-responsive img-thumbnail" alt=" "/>
+                                                        <img src="<?php echo actual_link(); ?>images/shedule.jpg" class="img-responsive img-thumbnail" alt="Nature Trails Hotel Unawatuna"/>
                                                     </div>
                                                     <div class="col-md-9">
                                                         <div class="content">
@@ -384,7 +384,7 @@ $PAGE = new Page(3);
                                                     </div>
 
                                                     <div class="author clearfix">
-                                                        <img src="<?php echo actual_link(); ?>upload/comments/<?php echo $comment['image_name'] ?>" alt="">
+                                                        <img src="<?php echo actual_link(); ?>upload/comments/<?php echo $comment['image_name'] ?>" alt="Nature Trails Hotel Unawatuna">
                                                         <div class="info">
                                                             <div class="name "><?php echo $comment['name'] ?></div>
                                                             <div class="regency"><?php echo $comment['country'] ?></div>

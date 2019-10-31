@@ -100,14 +100,14 @@ $BANNER = new Banner(3);
                                                             <div class="wrapper-gallery row" itemscope itemtype="http://schema.org/ItemList">
                                                                 <div class="  filter-room filter-restaurant filter-swimming">
                                                                     <a href="<?php echo actual_link(); ?>upload/dining/gallery/<?php echo $dining['image_name'] ?>" class="gallery-popup">
-                                                                        <img src="<?php echo actual_link(); ?>upload/dining/gallery/thumb/<?php echo $dining['image_name'] ?>" alt="" class="img-thumbnail" ></a>
+                                                                        <img src="<?php echo actual_link(); ?>upload/dining/gallery/thumb/<?php echo $dining['image_name'] ?>" alt="<?php echo $dining['title'] ?>" class="img-thumbnail" ></a>
                                                                 </div> 
                                                             </div> 
                                                         </div> 
 
-                                                        <div class="">
+<!--                                                        <div class="">
                                                             <a href="#"><img src="" alt=""></a>
-                                                        </div>
+                                                        </div>-->
                                                     </div>  
 
                                                 <?php } ?> 
