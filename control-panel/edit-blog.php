@@ -62,9 +62,10 @@ $BLOG = new Blog($id);
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <input type="file"  class="form-control" value="<?php echo $BLOG->image_name; ?>"  name="image">
+                                                <span>(370px * 246px)</span>
                                                 <input type="hidden" id="image" class="form-control" value="<?php echo $BLOG->image_name; ?>"  name="image">
-                                                <img src="../upload/blog/<?php echo $BLOG->image_name; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
                                             </div>
+                                            <img src="../upload/blog/<?php echo $BLOG->image_name; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
                                         </div>
                                     </div>
 

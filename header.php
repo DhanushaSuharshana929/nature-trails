@@ -81,10 +81,10 @@ $PAGES = new Page(5);
                                 </div>
                             </div>                            
                         </li> 
-                        <li class=" header-right "  >
+                        <li class=" header-right">
                             <div class="  uk-width-auto uk-position-relative" style="margin-top: -12px;">
                                 <div class="ribbon">
-                                    <i><span><?php echo substr(substr($PAGES->description, 3), 0, -4) ?>% <span class="">UP TO!</span><s></s></span></i>
+                                    <i><span><span class="upto">UP TO</span> <?php echo substr(substr($PAGES->description, 3), 0, -4) ?>% <s></s></span></i>
                                 </div>
                             </div>                        
                         </li> 

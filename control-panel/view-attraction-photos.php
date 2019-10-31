@@ -59,6 +59,7 @@ $ATTRACTION = new Attraction($id)
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <input type="file" id="image" class="form-control" name="image"  required="true">
+                                                <span>(900px * 500px)</span>
                                             </div>
                                         </div>
                                     </div>

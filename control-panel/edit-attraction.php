@@ -70,10 +70,10 @@ $ATTRACTION = new Attraction($id);
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <input type="file" name="image" class="form-control" value="<?php echo $ATTRACTION->image_name; ?>"   >
+                                                <span>(360px * 235px)</span>
                                                 <input type="hidden" id="image" class="form-control" value="<?php echo $ATTRACTION->image_name; ?>"  >
-
-                                                <img src="../upload/attraction/<?php echo $ATTRACTION->image_name; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
                                             </div>
+                                            <img src="../upload/attraction/<?php echo $ATTRACTION->image_name; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
                                         </div>
                                     </div>
 

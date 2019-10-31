@@ -155,3 +155,6 @@ table.desc-table {
 .invoice-btn-pay {
     margin-top: 20px;
 }
+.total-amount {
+    font-weight: 600;
+}

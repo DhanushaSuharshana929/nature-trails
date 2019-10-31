@@ -55,8 +55,9 @@ $BLOG_PHOTO = new BlogPhoto($id);
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <input type="file" id="image" class="form-control" value="<?php echo $BLOG_PHOTO->image_name; ?>"  name="image">
-                                                <img src="../upload/blog/gallery/thumb/<?php echo $BLOG_PHOTO->image_name; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
+                                                <span>(900px * 500px)</span>
                                             </div>
+                                            <img src="../upload/blog/gallery/thumb/<?php echo $BLOG_PHOTO->image_name; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
                                         </div>
                                     </div>
                                     <div class="col-md-12">

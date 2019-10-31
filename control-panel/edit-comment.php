@@ -85,9 +85,10 @@ $COMMENT = new Comments($id);
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <input type="file"  class="form-control" name="image">
+                                                <span>(100px * 100px)</span>
                                                 <input type="hidden" id="image" class="form-control" value="<?php echo $COMMENT->image_name; ?>"  name="image">
-                                                <img src="../upload/comments/<?php echo $COMMENT->image_name; ?>" id="image" class="view-edit-img-comments img img-responsive img-thumbnail" name="image" alt="old image">
                                             </div>
+                                            <img src="../upload/comments/<?php echo $COMMENT->image_name; ?>" id="image" class="view-edit-img-comments img img-responsive img-thumbnail" name="image" alt="old image">
                                         </div>
                                     </div>
 

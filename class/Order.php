@@ -16,6 +16,7 @@ class Order {
                 . "`booking_id`,"
                 . "`full_name`,"
                 . "`email`,"
+                . "`email2`,"
                 . "`address`,"
                 . "`city`,"
                 . "`country`,"
@@ -34,6 +35,7 @@ class Order {
                 . "'" . mysql_real_escape_string($_POST['bookingID']) . "', "
                 . "'" . mysql_real_escape_string($_POST['fullName']) . "', "
                 . "'" . mysql_real_escape_string($_POST['email']) . "', "
+                . "'" . mysql_real_escape_string($_POST['email2']) . "', "
                 . "'" . mysql_real_escape_string($_POST['address']) . "', "
                 . "'" . mysql_real_escape_string($_POST['city']) . "', "
                 . "'" . mysql_real_escape_string($_POST['country']) . "', "
@@ -463,6 +465,7 @@ class Order {
 
             $from = 'info@naturetrailsunawatuna.com';
             $email = $inv['email'];
+            $email2 = $inv['email2'];
             $amount = $inv['total_amount'];
 
             $repaly = 'info@naturetrailsunawatuna.com';
@@ -483,6 +486,7 @@ class Order {
                 $repay = '';
             }
             if ($status === 'success') {
+                $status = 'Successful';
                 $msg = '<div style="font-size:16px; font-weight:600; margin-left:10%;">
                                 Thank you for making an online payment with Nature Trails Boutique Hotel.
                           </div>';
@@ -542,7 +546,7 @@ class Order {
                         <body>
                             <div style="width: 100%; text-align: center; font-size: 20px; margin: 10px 0px 30px 0px;">
                                 <img src="http://' . $site . '/images/logo3.png" alt="Nature Trails" style="width:250px;"/><br/>
-                                <span style="font-size: 20px; font-weight:900;">Booking.com Invoice</span><br/>
+                                <span style="font-size: 20px; font-weight:900;">Pro Forma Invoice</span><br/>
                                 <span style="font-size: 15px;"><a href="" style="text-decoration:none;color: #000;">144B, Matara Road, Unawatuna</a></span><br/>
                                 <span style="font-size: 15px;">Email: info@naturetrailsunawatuna&#173;.com</span><br/>
                                 <span style="font-size: 15px;">Phone: (+94) 77 711 8616</span>
@@ -554,17 +558,25 @@ class Order {
                                 <li><span class="bb">Customer : </span><span>' . $inv["full_name"] . '</span></li>
                                 <li><span class="bb">Payment Reference No : </span>' . $recieptno . '<span></span></li>
                                 <li><span class="bb">Date of Payment : </span>' . $inv["date"] . '<span></span></li>
-                                <li><span class="bb">Total Amount : </span>' . $inv["currency"] . ' ' . number_format($total,2) . '<span></span></li>
+                                <li><span class="bb">Total Amount : </span>' . $inv["currency"] . ' ' . number_format($total, 2) . '<span></span></li>
                             </ul>
                             ' . $repay . '
                             
                         </body>
                     </html>';
 
-            if (mail($email, $subject, $html, $headers)) {
-                return TRUE;
+            if ($email2 != '') {
+                if (mail($email, $subject, $html, $headers) && mail($email2, $subject, $html, $headers)) {
+                    return TRUE;
+                } else {
+                    return FALSE;
+                }
             } else {
-                return FALSE;
+                if (mail($email, $subject, $html, $headers)) {
+                    return TRUE;
+                } else {
+                    return FALSE;
+                }
             }
         } else {
             return FALSE;
@@ -603,6 +615,9 @@ class Order {
                             </div>';
             } else {
                 $repay = '';
+            }
+            if ($status === 'success') {
+                $status = 'Successful';
             }
 
             $html = '<!DOCTYPE html>
@@ -657,7 +672,7 @@ class Order {
                         <body>
                             <div style="width: 100%; text-align: center; font-size: 20px; margin: 10px 0px 30px 0px;">
                                 <img src="http://' . $site . '/images/logo3.png" alt="Nature Trails" style="width:250px;"/><br/>
-                                <span style="font-size: 20px; font-weight:900;">Booking.com Invoice</span><br/>
+                                <span style="font-size: 20px; font-weight:900;">Pro Forma Invoice</span><br/>
                                 <span style="font-size: 15px;"><a href="" style="text-decoration:none;color: #000;">144B, Matara Road, Unawatuna</a></span><br/>
                                 <span style="font-size: 15px;">Email: info@naturetrailsunawatuna&#173;.com</span><br/>
                                 <span style="font-size: 15px;">Phone: (+94) 77 711 8616</span>
@@ -668,7 +683,7 @@ class Order {
                                 <li><span class="bb">Customer : </span><span>' . $inv["full_name"] . '</span></li>
                                 <li><span class="bb">Payment Reference No : </span>' . $recieptno . '<span></span></li>
                                 <li><span class="bb">Date of Payment : </span>' . $inv["date"] . '<span></span></li>
-                                <li><span class="bb">Total Amount : </span>' . $inv["currency"] . ' ' . number_format($total,2) . '<span></span></li>
+                                <li><span class="bb">Total Amount : </span>' . $inv["currency"] . ' ' . number_format($total, 2) . '<span></span></li>
                             </ul>
                             ' . $repay . '
                             

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 $BANNER = new Banner(4);
-$PAGE_E = new Page(4);
+$ATT = new Attraction(7);
 ?>
 <html lang="en">
     <head>
@@ -52,10 +52,37 @@ $PAGE_E = new Page(4);
                             <div class="col-md-1"> 
                             </div>
                             <div class="room col-md-10 clearfix">
-                                <div class="room-item">
-                                    <div class="room-media">
-                                        <a href="#"><img src="<?php echo actual_link(); ?>images/jungle_beach.jpg" alt="Nature Trails Hotel Unawatuna"></a>
-                                    </div> 
+                                <div class="room_gallery clearfix">
+                                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <?php
+                                            $ATTRACTION_PHOTO = new AttractionPhoto(NULL);
+                                            foreach ($ATTRACTION_PHOTO->getAttractionPhotosById($ATT->id) as $key => $attraction_photo) {
+
+                                                if ($key == 0) {
+                                                    ?>
+                                                    <div class="carousel-item active">
+                                                        <img class="d-block w-100" src="<?php echo actual_link(); ?>upload/attraction/gallery/<?php echo $attraction_photo['image_name'] ?>" alt="First slide">
+                                                    </div>
+                                                <?php } else { ?>
+                                                    <div class="carousel-item">
+                                                        <img class="d-block w-100" src="<?php echo actual_link(); ?>upload/attraction/gallery/<?php echo $attraction_photo['image_name'] ?>" alt="Second slide">
+                                                    </div>
+                                                    <?php
+                                                }
+                                            }
+                                            ?>
+
+                                        </div>
+                                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
                                 </div> 
                             </div>
 
@@ -66,10 +93,10 @@ $PAGE_E = new Page(4);
                             </div>
                             <div class="room-summary col-md-8" style="background-color: white;padding: 20px;">
                                 <h3 class="room-title">
-                                    <a href="#"> <?php echo $PAGE_E->title;?> </a>
+                                    <a href="#"> <?php echo $ATT->title; ?> </a>
                                 </h3>
                                 <div class="room-description text-justify">
-                                     <?php echo $PAGE_E->description;?>
+                                    <?php echo $ATT->description; ?>
                                 </div>
                             </div>
 

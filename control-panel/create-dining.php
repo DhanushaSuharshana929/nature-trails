@@ -77,6 +77,7 @@ $DILING_TYPE = new DiningType($id);
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <input type="file" id="image" class="form-control" name="image"  required="true">
+                                                <span>(900px * 600px)</span>
                                             </div>
                                         </div>
                                     </div>

@@ -93,9 +93,10 @@ $ROOM = new Room($id);
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <input type="file"   class="form-control" value="<?php echo $ROOM->image_name; ?>"  name="image">
+                                                <span>(434px * 257px)</span>
                                                 <input type="hidden" id="image" class="form-control" value="<?php echo $ROOM->image_name; ?>"  name="image">
-                                                <img src="../upload/room/<?php echo $ROOM->image_name; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
                                             </div>
+                                            <img src="../upload/room/<?php echo $ROOM->image_name; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
                                         </div>
                                     </div>
                                     <div class="col-sm-12">
@@ -177,7 +178,7 @@ $ROOM = new Room($id);
 
             });
 
-           
+
         </script>
         <script src="js/ajax/room.js" type="text/javascript"></script>
     </body>

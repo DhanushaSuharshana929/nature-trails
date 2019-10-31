@@ -51,7 +51,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                 <form class="form-horizontal"  method="post"  id="form-data">
                                     <div class="col-md-12">
                                         <div class="form-group form-float">
-                                            <div class="form-line">
+                                            <div class="invoice_date form-line">
                                                 <input type="text" id="invoice_date" class="form-control to-clear"  autocomplete="off" name="invoice_date" required="true">
                                                 <label class="form-label">Invoice Date</label>
                                             </div>
@@ -59,7 +59,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group form-float">
-                                            <div class="form-line">
+                                            <div class="due_date form-line">
                                                 <input type="text" id="due_date" class="form-control to-clear" autocomplete="off" name="due_date" required="true">
                                                 <label class="form-label">Due Date</label>
                                             </div>
@@ -77,7 +77,15 @@ include_once(dirname(__FILE__) . '/auth.php');
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <input type="text" id="email" class="form-control to-clear" autocomplete="off" name="email" required="true">
-                                                <label class="form-label">Customer Email</label>
+                                                <label class="form-label">Customer Email 1</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="text" id="email2" class="form-control to-clear" autocomplete="off" name="email2">
+                                                <label class="form-label">Customer Email 2</label>
                                             </div>
                                         </div>
                                     </div>
@@ -233,7 +241,12 @@ include_once(dirname(__FILE__) . '/auth.php');
                     dateFormat: "yy-mm-dd", minDate: 0
                 });
             });
-
+            $("#invoice_date").change(function() {
+                $(".invoice_date.form-line").addClass('focused');
+            });
+            $("#due_date").change(function() {
+                $(".due_date.form-line").addClass('focused');
+            });
         </script>
     </body>
 

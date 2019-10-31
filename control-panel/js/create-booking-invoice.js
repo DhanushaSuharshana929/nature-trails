@@ -1,11 +1,18 @@
 $(document).ready(function () {
 
     $('#create').click(function () {
+        var bookingID = '';
+        if ($('.type_booking').hasClass('hidden')) {
+            bookingID = $('.type_other #booking_id').val();
+        } else if ($('.type_other').hasClass('hidden')) {
+            bookingID = $('.type_booking #booking_id').val();
+        }
+
         tinyMCE.triggerSave();
         var date = $('#invoice_date').val();
-        var bookingID = $('#booking_id').val();
         var fullName = $('#full_name').val();
         var email = $('#email').val();
+        var email2 = $('#email2').val();
         var address = $('#address').val();
         var city = $('#city').val();
         var country = $('#country').val();
@@ -24,6 +31,7 @@ $(document).ready(function () {
                 bookingID: bookingID,
                 fullName: fullName,
                 email: email,
+                email2: email2,
                 address: address,
                 city: city,
                 country: country,

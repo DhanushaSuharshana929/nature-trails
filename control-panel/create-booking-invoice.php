@@ -19,6 +19,13 @@ include_once(dirname(__FILE__) . '/auth.php');
         <link href="plugins/sweetalert/sweetalert.css" rel="stylesheet" />
         <link href="css/style.css" rel="stylesheet">
         <link href="css/themes/all-themes.css" rel="stylesheet" />
+        <style>
+            [type="radio"]:not(:checked), [type="radio"]:checked {
+                position: relative;
+                left: 0;
+                opacity: 1;
+            }
+        </style>
     </head>
 
     <body class="theme-red">
@@ -51,7 +58,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                 <form class="form-horizontal"  method="post"  id="form-data">
                                     <div class="col-md-12">
                                         <div class="form-group form-float">
-                                            <div class="form-line">
+                                            <div class="invoice_date form-line">
                                                 <input type="text" id="invoice_date" class="form-control to-clear"  autocomplete="off" name="invoice_date" required="true">
                                                 <label class="form-label">Invoice Date</label>
                                             </div>
@@ -59,8 +66,23 @@ include_once(dirname(__FILE__) . '/auth.php');
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group form-float">
+                                            <div class="">
+                                                <input type="radio" class="booking_type" class="to-clear" name="booking_type" value="booking">Booking
+                                                <input type="radio" class="booking_type" class="to-clear" name="booking_type" value="other">Other
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group form-float type_booking hidden">
                                             <div class="form-line">
                                                 <input type="text" id="booking_id" class="form-control to-clear"  autocomplete="off" name="booking_id" required="true">
+                                                <label class="form-label">Booking ID</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group form-float type_other hidden">
+                                            <div class="form-line">
+                                                <input type="text" id="booking_id" class="form-control to-clear"  autocomplete="off" name="booking_id" required="true" readonly="">
                                                 <label class="form-label">Booking ID</label>
                                             </div>
                                         </div>
@@ -78,7 +100,15 @@ include_once(dirname(__FILE__) . '/auth.php');
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <input type="text" id="email" class="form-control to-clear" autocomplete="off" name="email" required="true">
-                                                <label class="form-label">Customer Email</label>
+                                                <label class="form-label">Customer Email 1</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="text" id="email2" class="form-control to-clear" autocomplete="off" name="email2">
+                                                <label class="form-label">Customer Email 2</label>
                                             </div>
                                         </div>
                                     </div>
@@ -198,6 +228,7 @@ include_once(dirname(__FILE__) . '/auth.php');
         <script src="plugins/sweetalert/sweetalert.min.js"></script>
         <script src="tinymce/js/tinymce/tinymce.min.js"></script>
         <script src="js/create-booking-invoice.js" type="text/javascript"></script>
+        <script src="js/ajax/booking_type.js" type="text/javascript"></script>
         <script>
             tinymce.init({
                 selector: "#description",
@@ -229,6 +260,9 @@ include_once(dirname(__FILE__) . '/auth.php');
                 $("#invoice_date").datepicker({
                     dateFormat: "yy-mm-dd"
                 });
+            });
+            $("#invoice_date").change(function () {
+                $(".invoice_date.form-line").addClass('focused');
             });
 
         </script>
