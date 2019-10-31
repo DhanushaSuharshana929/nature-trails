@@ -13,6 +13,7 @@ $(document).ready(function () {
         var feesOrTaxes = $('#fees_or_taxes').val();
         var currency = $('#currency').val();
         var totalAmount = $('#total_amount').val();
+        var terms_and_conditions = $('#terms_and_conditions').val();
         var dueDate = $('#due_date').val();
         $.ajax({
 
@@ -30,6 +31,7 @@ $(document).ready(function () {
                 feesOrTaxes: feesOrTaxes,
                 currency: currency,
                 totalAmount: totalAmount,
+                terms_and_conditions: terms_and_conditions,
                 dueDate: dueDate
             },
             dataType: 'JSON',

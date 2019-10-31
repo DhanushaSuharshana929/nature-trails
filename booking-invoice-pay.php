@@ -153,7 +153,7 @@ $total = (float) $inv['total_amount'] + (float) $inv['fees_or_taxes'];
                                                                     ?>
                                                                     <div class="row">
                                                                         <div class="col-xs-12 formpading checkbox-section">  
-                                                                            <label class="checkbox-container"><p>Click here to indicate that you have read and agree to the company <a href="<?php echo actual_link(); ?>terms-and-conditions/" target="_blank" class="text-primary">terms and conditions</a>.</p>
+                                                                            <label class="checkbox-container"><p>Click here to indicate that you have read and agree to the company <a href="<?php echo actual_link(); ?>terms-and-conditions/<?php echo $inv["terms_and_conditions"]; ?>/" target="_blank" class="text-primary">terms and conditions</a>.</p>
                                                                                 <input type="checkbox" name="agree" id="agree">
                                                                                 <span class="checkmark"></span>
                                                                             </label>
