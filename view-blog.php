@@ -86,10 +86,7 @@ $BANNER = new Banner(5);
                                             <h2 class="post-title"><?php echo $BLOG->title ?></h2>
 
                                             <div class="post-description text-justify">
-                                                <p>
-                                                    <?php echo $BLOG->description ?>        
-                                                </p>
-
+                                                    <?php echo $BLOG->description ?>     
                                             </div>
                                         </div>
                                     </div>

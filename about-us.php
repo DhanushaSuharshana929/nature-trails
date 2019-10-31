@@ -1,4 +1,3 @@
-
 <?php
 $PAGE = new Page(1);
 $BANNER = new Banner(1);
@@ -40,7 +39,7 @@ $BANNER = new Banner(1);
 
             <div id="main-content" class="main-content">
                 <div class="page-title">
-                    <div class="page-title-wrapper" data-stellar-background-ratio="0.5" style="background-image: url(<?php echo actual_link(); ?>upload/banner/<?php echo $BANNER->image_name?>) ">
+                    <div class="page-title-wrapper" data-stellar-background-ratio="0.5" style="background-image: url(<?php echo actual_link(); ?>upload/banner/<?php echo $BANNER->image_name ?>) ">
 
                     </div>
                 </div> 
@@ -102,6 +101,7 @@ $BANNER = new Banner(1);
                                                     We actively promote the preservation of the environment and the diffusion of a culture that uplifts quality of life in order to contribute our might towards sustainable development.
                                                 </p> 
                                             </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>

@@ -54,7 +54,7 @@ $PAGE_E = new Page(4);
                             <div class="room col-md-10 clearfix">
                                 <div class="room-item">
                                     <div class="room-media">
-                                        <a href="#"><img src="<?php echo actual_link(); ?>images/jungle_beach.jpg" alt=""></a>
+                                        <a href="#"><img src="<?php echo actual_link(); ?>images/jungle_beach.jpg" alt="Nature Trails Hotel Unawatuna"></a>
                                     </div> 
                                 </div> 
                             </div>
@@ -68,9 +68,9 @@ $PAGE_E = new Page(4);
                                 <h3 class="room-title">
                                     <a href="#"> <?php echo $PAGE_E->title;?> </a>
                                 </h3>
-                                <p class="room-description text-justify">
+                                <div class="room-description text-justify">
                                      <?php echo $PAGE_E->description;?>
-                                </p>
+                                </div>
                             </div>
 
                             <div class="col-md-2"> 
