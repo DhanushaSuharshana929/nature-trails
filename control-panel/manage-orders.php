@@ -67,7 +67,7 @@ if (isset($_GET["status"])) {
                                                 <th>Email</th>                               
                                                 <th>Total Amount</th>                             
                                                 <th>Status</th>
-                                                <th>Option</th>
+                                                <th width="160px">Option</th>
                                             </tr>
                                         </thead>
                                         <tfoot>
@@ -113,6 +113,9 @@ if (isset($_GET["status"])) {
                                                             ?>
                                                             | <a href="#" class="resend-payment-receipt btn btn-sm btn-warning" data-id="<?php echo $order['id']; ?>" status="<?php echo $order['status']; ?>" receipt_no="<?php echo $order['reference']; ?>"title="Resend Payment Receipt">
                                                                 <i class="waves-effect glyphicon glyphicon-send" data-type="cancel"></i>
+                                                            </a> | 
+                                                            <a href="payment-receipt-booking.php?id=<?php echo $order['id']; ?>" class="btn btn-sm btn-info" target="_blank" title="Print Receipt">
+                                                                <i class="waves-effect glyphicon glyphicon-print" data-type="cancel"></i>
                                                             </a> |   
                                                             <a href="#" class="mark-as-refund btn btn-sm btn-danger" inv-id="<?php echo $order['id']; ?>" inv-currency="<?php echo $order['currency']; ?>" title="Mark as Refund">
                                                                 <i class="waves-effect glyphicon glyphicon-forward" data-type="cancel"></i>
