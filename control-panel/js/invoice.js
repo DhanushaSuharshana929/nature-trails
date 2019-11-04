@@ -136,10 +136,10 @@ $(document).ready(function () {
     $('.extend-due-date').click(function () {
 
         $('#do-extend').attr('inv-id', $(this).attr('inv-id'));
+        $('#ext_due_date').val($(this).attr('due-date'));
         $("#myModal-due").modal('show');
 
     });
-
     $('#do-extend').click(function () {
 
         var id = $(this).attr('inv-id');
@@ -180,5 +180,5 @@ $(document).ready(function () {
 
         });
 
-    });
+    });   
 });

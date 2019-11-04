@@ -2,7 +2,6 @@
 <?php
 include './class/include.php';
 $BANNER = new Banner(1);
-
 if ($_GET['id']) {
     $ref = '';
     if (isset($_GET['ref'])) {
@@ -24,58 +23,6 @@ if ($_GET['id']) {
 }
 $total = 0;
 $total = (float) $inv['total_amount'] + (float) $inv['fees_or_taxes'];
-
-/* Payment Code */
-$data = DefaultData::getDetailsByCurrency();
-foreach ($data as $details) {
-    foreach ($details as $currency) {
-        if ($currency['currency'] === $inv["currency"]) {
-            $apiPassword = $currency['API_password'];
-            $apiUsername = $currency['API_username'];
-            $merchant = $currency['merchant_ID'];
-        }
-    }
-}
-if (!isset($_SESSION)) {
-    session_start();
-}
-$_SESSION['order_id'] = $inv["id"];
-
-$curlData = array(
-    'apiOperation' => 'CREATE_CHECKOUT_SESSION',
-    'apiPassword' => $apiPassword,
-    'interaction.operation' => 'PURCHASE',
-    'interaction.returnUrl' => 'https://www.naturetrailsunawatuna.com/invoice_response.php',
-    'interaction.cancelUrl' => 'https://www.naturetrailsunawatuna.com/invoice-pay.php?id=' . $inv["id"] . '&error',
-    'apiUsername' => $apiUsername,
-    'merchant' => $merchant,
-    'order.id' => 'NTWI' . $inv["id"],
-    'order.amount' => $total,
-    'order.currency' => $inv["currency"]
-);
-
-$curlDataSt = http_build_query($curlData); //echo $curlDataSt; exit;
-
-$options = array(
-    CURLOPT_URL => "https://cbcmpgs.gateway.mastercard.com/api/nvp/version/52",
-    CURLOPT_POST => true,
-    CURLOPT_POSTFIELDS => $curlDataSt,
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_SSL_VERIFYPEER => false,
-    CURLOPT_SSL_VERIFYHOST => false
-);
-
-$curl = curl_init();
-curl_setopt_array($curl, $options);
-$response = curl_exec($curl);
-curl_close($curl);
-$items = explode("&", $response);
-foreach ($items as $key => $item) {
-    if ($key == '2') {
-        $a = explode("=", $item);
-        $id1 = $a[1];
-    }
-}
 ?>
 <html lang="en">
     <head>
@@ -86,6 +33,7 @@ foreach ($items as $key => $item) {
         <meta name="keywords" content="unawatuna hotels, best hotel in unawatuna, unawatuna resorts, hotels in unawatuna">
         <!-- Favicons -->
         <link rel="shortcut icon" href="images/icons/favicon.png">
+
         <!-- REVOLUTION STYLE SHEETS -->
         <link rel="stylesheet" type="text/css" href="css/libs/revolution/settings.css">
         <link rel="stylesheet" href="css/style.css">
@@ -94,47 +42,10 @@ foreach ($items as $key => $item) {
         <link href="css/invoice.css" rel="stylesheet" type="text/css"/>
         <link href="css/libs/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
         <!-- Style -->
+
     </head>
     <body class="demo-3 home">
-        <input type="hidden" value="<?php echo $id1; ?>" id="session_id" />
-        <input type="hidden" value="<?php echo $inv["id"]; ?>" id="order_id" />
-        <script src=" https://cbcmpgs.gateway.mastercard.com/checkout/version/52/checkout.js"
-                data-error="errorCallback"
-                data-cancel="cancelCallback">
-        </script>
-        <script src="js/libs/jquery-1.12.4.min.js"></script><!-- jQuery -->
-        <script src="js/libs/bootstrap.min.js" type="text/javascript"></script>
-        <script type="text/javascript">
 
-                    function errorCallback(error) {
-                        console.log(JSON.stringify(error));
-                    }
-                    function cancelCallback() {
-                        console.log('Payment cancelled');
-                    }
-                    var session_id = $('#session_id').val();
-                    var order_id = $('#order_id').val();
-                    Checkout.configure({
-
-                        session: {
-                            id: session_id
-                        },
-                        order: {
-                            description: 'Web Invoice - #' + order_id
-                        },
-                        interaction: {
-                            merchant: {
-                                name: 'Nature Trails Boutique Hotel',
-                                address: {
-                                    line1: '144B',
-                                    line2: 'Matara Road',
-                                    line3: 'Unawatuna'
-                                }
-                            }
-                        }
-
-                    });
-        </script>
         <!-- Wrapper content -->
         <div id="wrapper-container" class="content-pusher">
             <div class="overlay-close-menu"></div>
@@ -232,6 +143,10 @@ foreach ($items as $key => $item) {
                                                                 <td class="bdr bdr-top right total-amount"><b><?php echo number_format($total, 2); ?></b></td>
                                                             </tr>
                                                         </table>
+<!--                                                        <ul>
+                                                            <li><span class="bb">Fees or Taxes: </span><span><?php echo $inv["currency"] . ' ' . $inv["fees_or_taxes"]; ?></span></li>
+                                                            <li><span class="bb">Total Amount: </span><span><?php echo $inv["currency"] . ' ' . number_format($total, 2); ?></span></li>
+                                                        </ul>-->
                                                         <div class="terms-of-the-condition">
                                                             <h6>The Terms of the Transaction</h6>
                                                             <p>Thank you for your business. Please send your payment before due date.</p>
@@ -248,22 +163,27 @@ foreach ($items as $key => $item) {
                                                                 $act = 0;
                                                             }
                                                             ?>
-                                                            <?php
-                                                            if ($inv['status'] == 0 && $inv['due_date'] >= date('Y-m-d')) {
-                                                                ?>
-                                                                <div class="row">
-                                                                    <div class="col-xs-12 formpading checkbox-section">  
-                                                                        <label class="checkbox-container"><p>Click here to indicate that you have read and agree to the company <a href="<?php echo actual_link(); ?>terms-and-conditions/<?php echo $inv["terms_and_conditions"]; ?>/" target="_blank" class="text-primary">terms and conditions</a>.</p>
-                                                                            <input type="checkbox" name="agree" id="agree">
-                                                                            <span class="checkmark"></span>
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                                <img src="images/payment-logo/payment-logos.jpg" alt=""/>
-                                                                <button type="submit" id="btnPay" name="btnPay" act="<?php echo $act; ?>" class="btn pay-btn invoice-btn-pay"  onclick="Checkout.showPaymentPage();">PAY NOW</button>
+                                                            <form id="invoice-pay" action="payment.php" method="post" accept-charset="UTF-8">
+                                                                <input type="hidden" name="order.id" value="<?php echo $inv["id"]; ?>"/>
+                                                                <input type="hidden" name="order.amount" value="<?php echo $total; ?>"/>
+                                                                <input type="hidden" name="order.currency" value="<?php echo $inv["currency"]; ?>"/>
                                                                 <?php
-                                                            }
-                                                            ?>
+                                                                if ($inv['status'] == 0 && $inv['due_date'] >= date('Y-m-d')) {
+                                                                    ?>
+                                                                    <div class="row">
+                                                                        <div class="col-xs-12 formpading checkbox-section">  
+                                                                            <label class="checkbox-container"><p>Click here to indicate that you have read and agree to the company <a href="<?php echo actual_link(); ?>terms-and-conditions/<?php echo $inv["terms_and_conditions"]; ?>/" target="_blank" class="text-primary">terms and conditions</a>.</p>
+                                                                                <input type="checkbox" name="agree" id="agree">
+                                                                                <span class="checkmark"></span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <img src="images/payment-logo/payment-logos.jpg" alt=""/>
+                                                                    <button type="submit" id="btnPay" name="btnPay" act="<?php echo $act; ?>" class="btn pay-btn invoice-btn-pay">PAY NOW</button>
+                                                                    <?php
+                                                                }
+                                                                ?>
+                                                            </form>
                                                             <!-- Payment Gateway Form End-->                                                            
                                                         </div>
                                                     </div>
@@ -293,6 +213,8 @@ foreach ($items as $key => $item) {
 
 
         <!-- Scripts -->
+        <script src="js/libs/jquery-1.12.4.min.js"></script><!-- jQuery -->
+        <script src="js/libs/bootstrap.min.js"></script><!-- Bootstrap -->
         <script src="js/libs/smoothscroll.min.js"></script><!-- smoothscroll -->
         <script src="js/libs/owl.carousel.min.js"></script><!-- Owl Carousel -->
         <script src="js/libs/jquery.magnific-popup.min.js"></script><!-- Magnific Popup -->
@@ -312,21 +234,21 @@ foreach ($items as $key => $item) {
 
         <script type="text/javascript">
 
-                                                                    function googleTranslateElementInit() {
-                                                                        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
-                                                                    }
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+            }
 
-                                                                    $('.translation-links a').click(function () {
+            $('.translation-links a').click(function () {
 
-                                                                        var lang = $(this).data('lang');
-                                                                        var $frame = $('.goog-te-menu-frame:first');
-                                                                        if (!$frame.size()) {
-                                                                            alert("Error: Could not find Google translate frame.");
-                                                                            return false;
-                                                                        }
-                                                                        $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
-                                                                        return false;
-                                                                    });
+                var lang = $(this).data('lang');
+                var $frame = $('.goog-te-menu-frame:first');
+                if (!$frame.size()) {
+                    alert("Error: Could not find Google translate frame.");
+                    return false;
+                }
+                $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+                return false;
+            });
         </script>
 
     </body>

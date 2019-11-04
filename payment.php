@@ -132,7 +132,7 @@ $BANNER = new Banner(1);
                         <!--<div class="container">-->
                         <div class="container text-center">
                             <input type="button" value="Pay with Lightbox" class="btn btn-sm pay-btn" onclick="Checkout.showLightbox();" />
-                            <input type="button" value="Pay with Payment Page"  class="btn btn-sm pay-btn" onclick="Checkout.showPaymentPage();" />
+                            <input type="button" value="Pay with Payment Page" id="payment-page-btn" class="btn btn-sm pay-btn" onclick="Checkout.showPaymentPage();" />
                         </div>
                     </section>
                 </div> 
@@ -181,6 +181,11 @@ $BANNER = new Banner(1);
                                     $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
                                     return false;
                                 });
+        </script>
+        <script>
+            jQuery(function () {
+                Checkout.showPaymentPage();
+            });
         </script>
 
     </body>

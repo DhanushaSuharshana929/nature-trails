@@ -358,7 +358,7 @@ class Invoice {
                             
                             <div style="margin-top: 20px;">
                                 <h6>The Terms of the Transaction</h6>
-                                <p>Thank you for your business. Please send your payment within 7 days of receiving this invoice.</p>
+                                <p>Thank you for your business. Please send your payment before due date.</p>
                             </div>
                             <div style="text-align: center; margin: 35px 0px;">
                                 <a href="http://' . $site . '/invoice-pay.php?id=' . $inv["id"] . '" style="padding: 15px; font-weight: bold; text-decoration: none; background-color: #ff4200; color: #dfdfdf; border-radius: 3px;">Complete Payment</a>
@@ -498,7 +498,7 @@ class Invoice {
                             </table>
                             <div style="margin-top: 20px;">
                                 <h6>The Terms of the Transaction</h6>
-                                <p>Thank you for your business. Please send your payment within 7 days of receiving this invoice.</p>
+                                <p>Thank you for your business. Please send your payment before due date.</p>
                             </div>
                             <div style="text-align: center; margin: 35px 0px;">
                                 <a href="http://' . $site . '/invoice-pay.php?id=' . $inv["id"] . '" style="padding: 15px; font-weight: bold; text-decoration: none; background-color: #ff4200; color: #dfdfdf; border-radius: 3px;">Complete Payment</a>

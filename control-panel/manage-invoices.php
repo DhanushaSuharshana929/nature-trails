@@ -69,7 +69,7 @@ if (isset($_GET["status"])) {
                                                 <th>Email</th>                               
                                                 <th>Total Amount</th>                         
                                                 <th>Status</th>
-                                                <th>Option</th>
+                                                <th width="160px">Option</th>
                                             </tr>
                                         </thead>
                                         <tfoot>
@@ -117,6 +117,9 @@ if (isset($_GET["status"])) {
                                                             ?>
                                                             | <a href="#" class="resend-payment-receipt btn btn-sm btn-warning" data-id="<?php echo $invoice['id']; ?>" status="<?php echo $invoice['status']; ?>" receipt_no="<?php echo $invoice['reference']; ?>"title="Resend Payment Receipt">
                                                                 <i class="waves-effect glyphicon glyphicon-send" data-type="cancel"></i>
+                                                            </a> | 
+                                                            <a href="payment-receipt.php?id=<?php echo $invoice['id']; ?>" class="btn btn-sm btn-info" target="_blank" title="Print Receipt">
+                                                                <i class="waves-effect glyphicon glyphicon-print" data-type="cancel"></i>
                                                             </a> |   
                                                             <a href="#" class="mark-as-refund btn btn-sm btn-danger" inv-id="<?php echo $invoice['id']; ?>" inv-currency="<?php echo $invoice['currency']; ?>" title="Mark as Refund">
                                                                 <i class="waves-effect glyphicon glyphicon-forward" data-type="cancel"></i>
@@ -124,7 +127,7 @@ if (isset($_GET["status"])) {
                                                             <?php
                                                         } elseif ($invoice['status'] == 0 && $invoice['due_date'] < date('Y-m-d')) {
                                                             ?>
-                                                            | <a href="#" class="extend-due-date btn btn-sm btn-warning" inv-id="<?php echo $invoice['id']; ?>"  title="Extend Due Date">
+                                                            | <a href="#" class="extend-due-date btn btn-sm btn-warning" inv-id="<?php echo $invoice['id']; ?>" due-date="<?php echo $invoice['due_date']; ?>"  title="Extend Due Date">
                                                                 <i class="waves-effect glyphicon glyphicon-calendar" data-type="cancel"></i>
                                                             </a> | 
                                                             <a href="#" class="delete-invoice btn btn-sm btn-danger" data-id="<?php echo $invoice['id']; ?>"  title="Delete Invoice">
@@ -225,7 +228,8 @@ if (isset($_GET["status"])) {
                 dateFormat: "yy-mm-dd"
             });
             $("#ext_due_date").datepicker({
-                dateFormat: "yy-mm-dd"
+                dateFormat: "yy-mm-dd",
+                minDate: 0
             });
         </script>
     </body>
