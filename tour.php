@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<?php
-include_once(dirname(__FILE__) . './class/include.php');
-?>
 <html lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -53,37 +50,91 @@ include_once(dirname(__FILE__) . './class/include.php');
                 <div class="site-content container">
                     <div class="events-content">
                         <div class="sc-events grid-style">
+
                             <div class="tab-content" id="nav-tabContent">
                                 <div class="tab-pane fade show active" id="happening" role="tabpanel">
                                     <div class="row clearfix">
-                                        <?php
-                                        $TOUR_PACKAGE = new TourPackage(NULL);
-                                        foreach ($TOUR_PACKAGE->all() as $tour_package) {
-                                            ?>
-                                            <div class="event col-sm-4">
-                                                <div class="inner">
-                                                    <div class="thumbnail">
-                                                        <a href=""><img src="upload/tour-package/<?php echo $tour_package['image_name'] ?>" alt="<?php echo $tour_package['title'] ?>"></a>
+                                        <div class="event col-sm-4">
+                                            <div class="inner">
+                                                <div class="thumbnail">
+                                                    <a href=""><img src="upload/tour-package/-22048420_191181092486_1568969506_n.jpg" alt=""></a>
+                                                </div>
+                                                <div class="content">
+                                                    <div class="  clearfix">
+
+                                                        <h3  style="padding: 15px"><a href="event-single.html">Tour Package Name</a></h3>
                                                     </div>
-                                                    <div class="content">
-                                                        <div class="  clearfix">
-                                                            <h3  style="padding: 15px 0px 0px 0px;" ><a href=""><?php echo $tour_package['title'] ?></a></h3>
-                                                        </div>
-                                                        <div class="event-desc ">
-                                                            <p lang="zxx" class="text-justify">
-                                                                <?php echo substr($tour_package['short_description'], 0, 120) ?>...
-                                                            </p>
-                                                        </div>
-                                                        <div class="read-more">
-                                                            <a href="" class="btn-read_more"><i class="ion-arrow-right-c"></i>Read more</a>
-                                                        </div>
+                                                    <div class="event-desc">
+                                                        <p lang="zxx">Lorem ipsum dolor sit amet,     , tincidunt eu lorem at, molestie ullamcorper ipsum. Vivamus sollicitudin, mauris nec consectetur adipiscing elit molestie ullamcorper ipsum.</p>
+                                                    </div>
+                                                    <div class="read-more">
+                                                        <a href=" " class="btn-read_more"><i class="ion-arrow-right-c"></i>Read more</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                        <?php } ?>
+                                        </div>
+                                        <div class="event col-sm-4">
+                                            <div class="inner">
+                                                <div class="thumbnail">
+                                                    <a href="event-single.html"><img src="upload/tour-package/-227987030_190975153876_1568969611_n.jpg" alt=""></a>
+                                                </div>
+                                                <div class="content">
+                                                    <div class="  clearfix">
+
+                                                        <h3  style="padding: 15px"><a href=" ">Tour Package Name</a></h3>
+                                                    </div>
+                                                    <div class="event-desc">
+                                                        <p lang="zxx">Lorem ipsum dolor sit amet,     , tincidunt eu lorem at, molestie ullamcorper ipsum. Vivamus sollicitudin, mauris nec consectetur adipiscing elit molestie ullamcorper ipsum.</p>
+                                                    </div>
+                                                    <div class="read-more">
+                                                        <a href=" " class="btn-read_more"><i class="ion-arrow-right-c"></i>Read more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="event col-sm-4">
+                                            <div class="inner">
+                                                <div class="thumbnail">
+                                                    <a href="event-single.html"><img src="upload/tour-package/-482984345_190720156561_1568969648_n.jpg" alt=""></a>
+                                                </div>
+                                                <div class="content">
+                                                    <div class="  clearfix">
+
+                                                        <h3  style="padding: 15px"><a href="event-single.html">Tour Package Name</a></h3>
+                                                    </div>
+                                                    <div class="event-desc">
+                                                        <p lang="zxx">Lorem ipsum dolor sit amet,     , tincidunt eu lorem at, molestie ullamcorper ipsum. Vivamus sollicitudin, mauris nec consectetur adipiscing elit molestie ullamcorper ipsum.</p>
+                                                    </div>
+                                                    <div class="read-more">
+                                                        <a href=" " class="btn-read_more"><i class="ion-arrow-right-c"></i>Read more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="event col-sm-4">
+                                            <div class="inner">
+                                                <div class="thumbnail">
+                                                    <a href="event-single.html"><img src="upload/tour-package/-533789968_190669350938_1568716156_n.jpg" alt=""></a>
+                                                </div>
+                                                <div class="content">
+                                                    <div class="  clearfix">
+
+                                                        <h3  style="padding: 15px"><a href="event-single.html">Tour Package Name</a></h3>
+                                                    </div>
+                                                    <div class="event-desc">
+                                                        <p lang="zxx">Lorem ipsum dolor sit amet,     , tincidunt eu lorem at, molestie ullamcorper ipsum. Vivamus sollicitudin, mauris nec consectetur adipiscing elit molestie ullamcorper ipsum.</p>
+                                                    </div>
+                                                    <div class="read-more">
+                                                        <a href=" " class="btn-read_more"><i class="ion-arrow-right-c"></i>Read more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> 
+
                                     </div>
                                 </div> 
                             </div>
+
                         </div>
                     </div>
                 </div>

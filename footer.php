@@ -43,12 +43,12 @@
                     <div class="widget-menu">
                         <h3 class="widget-title"> Links</h3>
                         <ul class="menu">
-                            <li><a href="<?php echo actual_link(); ?>home/">Home</a></li>
-                            <li><a href="<?php echo actual_link(); ?>about-us/">About Us</a></li>
+                            <li><a href="<?php echo actual_link(); ?>home/">Home</a></li> 
                             <li><a href="<?php echo actual_link(); ?>accommodation-in-unawatuna/">Accommodation</a></li>
-                            <li><a href="<?php echo actual_link(); ?>things-to-do-in-unawatuna/">Excursions</a></li>
-                            <li><a href="<?php echo actual_link(); ?>photo-gallery/">Gallery</a></li>
+                            <li><a href="<?php echo actual_link(); ?>things-to-do-in-unawatuna/">Excursions</a></li> 
                             <li><a href="<?php echo actual_link(); ?>contact-us/">Contact Us</a></li>
+                            <li><a href="<?php echo actual_link(); ?>site-map/">Site map</a></li>
+
                         </ul>
                     </div>
                 </div>
@@ -67,11 +67,13 @@
                                 }
                             }
                             ?> 
+
                         </ul> 
                     </div>
                 </div>
                 <div class="col-sm-4">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15871.30932094826!2d80.248005!3d6.018429!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf82e4e1180a2380d!2sNature+Trails+Boutique+Hotel!5e0!3m2!1sen!2s!4v1480572074037" height="300" style="border:0" allowfullscreen></iframe>
+
+                    <a href="https://goo.gl/maps/7djhdhy3CtYPdA9Y6" target="_blank">    <img src="<?php echo actual_link(); ?>images/map.jpg" class="img-responsive"/></a>
                 </div>
             </div>
         </div>
@@ -135,12 +137,12 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151206239-1"></script>
 <script>
-     window.dataLayer = window.dataLayer || [];
-     function gtag() {
-         dataLayer.push(arguments);
-     }
-     gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-     gtag('config', 'UA-151206239-1');
+    gtag('config', 'UA-151206239-1');
 </script>
 <!-- NeoHotelier Nature Trails Boutique Hotel Widget End / NeoHotelier.com -->
