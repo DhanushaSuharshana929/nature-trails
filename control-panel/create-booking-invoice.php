@@ -156,7 +156,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                             <div class="form-line">
                                                 <label class="form-label">Currency</label>
                                                 <select class="form-control to-clear" id="currency" name="currency">
-                                                    <option>--Please Select--</option>
+                                                    <option value="0">--Please Select--</option>
                                                     <?php
                                                     $data = DefaultData::getDetailsByCurrency();
                                                     foreach ($data as $details) {
@@ -192,7 +192,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                             <div class="form-line">
                                                 <label class="form-label">Terms & Conditions</label>
                                                 <select class="form-control to-clear" id="terms_and_conditions" name="terms_and_conditions">
-                                                    <option>--Please Select--</option>
+                                                    <option value="0">--Please Select--</option>
                                                     <option value="6">Accommodations</option>
                                                     <option value="7">Foods</option>
                                                     <option value="8">Functions</option>

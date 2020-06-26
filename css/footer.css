@@ -599,3 +599,6 @@ footer.footer_v4 a {
     outline: 0;
     background-color: #118b44;
 }
+.widget-input-label{
+    font-size : 12px !important;
+}

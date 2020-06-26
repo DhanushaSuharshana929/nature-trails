@@ -8,7 +8,7 @@ $PAGE = new Page(3);
         <title>Unawatuna Hotels | Hotels in Unawatuna | Nature Trails Boutique Hotel</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Welcome to Nature Trails Boutique Hotel. We are located on the other side of the Rumassala mountain by which the bay-like Unawatuna Beach is surrounded. ">
-        <meta name="keywords" content="nature trails boutique hotel, nature trails hotel, hotel nature trails, unawatuna hotels, hotels in unawatuna, best hotels in unawatuna, unawatuna resorts, resorts in unawatuna">
+        <meta name="keywords" content="hotels in unawatuna , boutique hotels in unawatuna , luxury hotels in unawatuna , accommodation in unawatuna , boutique villas in unawatuna , luxury villas in unawatuna , guest houses in unawatuna , hotels in galle , hotels in southern sri lanka , seafood restaurants in unawatuna , restaurants in unawatuna , fine dining restaurants in unawatuna , best hotel in unawatuna">
         <!-- Favicons -->
         <link rel="shortcut icon" href="<?php echo actual_link(); ?>images/icons/favicon.png">
 
