@@ -2371,6 +2371,38 @@ div.sc-rooms.style-04 .item-large .content .title:after {
     border-left: dashed 0.0625em #9b0d0d;
     overflow: hidden;
 }
+.ribbon2{
+    background-color: #d62f2f;
+    width: 90px;
+    height: 90px;
+    position: relative;
+    border-top-right-radius: 0em;
+    border-top-left-radius: 0em;
+    margin: auto;
+    margin-bottom: auto;
+    right: 0px;
+}
+.ribbon2::before{
+
+    content: "";
+    position: absolute;
+    bottom: -2em;
+    left: 0;
+    width: 0;
+    height: 0;
+    
+}
+.ribbon2 i {
+    width: 85%;
+    height: 96%;
+    display: block;
+    margin: auto;
+    z-index: 100;
+    position: relative;
+    border-right: dashed 0.0625em #9b0d0d;
+    border-left: dashed 0.0625em #9b0d0d;
+    overflow: hidden;
+}
 i span {
     color: #FFF;
     display: block;
@@ -2402,6 +2434,15 @@ i span span.upto {
     height: 0;
     border-top: 2em solid #d62f2f;
     border-left: 3.5em solid transparent;
+}
+.ribbon2::after {
+    content: "";
+    position: absolute;
+    bottom: -2em;
+    right: 0;
+    width: 0;
+    height: 0;
+     
 }
 .menu-hidden .ribbon{
     display: none;

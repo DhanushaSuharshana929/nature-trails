@@ -193,13 +193,68 @@ $PAGE = new Page(3);
                                     </div>
                                 </div>
                                 <div class="view-all text-center">
-                                    <a href="<?php echo actual_link(); ?>accommodation-in-unawatuna/" class="btn-radius">View All Rooms</a>
+                                    <a href="<?php echo actual_link(); ?>accommodation-in-unawatuna/" class="btn-radius">Accommodation</a>
                                 </div>
                             </div>
                             <div class="empty-space"></div>
                         </div>
                     </div>
-                    <section id="section-facilities-2" class="section-facilities-2">
+
+                    <div class="sc-content-overlay">
+                        <div class="container"> 
+                            <div class="sc-heading style-01 text-center" style="margin-top: 40px;">
+                                <h3 class="title" style="color: black">Special Offer</h3>
+                            </div>
+                            <div class="sc-posts style-01 auto-height">
+                                <div class="item row">
+                                    <?php
+                                    $ROOM = new Room(NULL);
+                                    foreach ($ROOM->all() as $room) {
+                                        ?>
+
+                                        <div class="post col-sm-6 col-md-6">
+                                            <div class="inner">
+
+                                                <a href="<?php echo actual_link(); ?>accommodation-in-unawatuna/<?php echo str_replace(" ", "-", strtolower($room['title'])) ?>/">
+                                                    <div class="thumbnail"> 
+                                                        <div class="ribbon2" style="border-top-left-radius: 4px;height: 75px;
+                                                             border-bottom-left-radius: 4px;position: absolute;z-index: 999;width: 160px;">
+                                                            <i ><span style="font-size: 20px;"><span class="upto">Full Board</span> Rs <?php echo number_format($room['price'], 0) ?>  /=</span></i>
+                                                        </div>
+                                                        <img src="<?php echo actual_link(); ?>upload/room/<?php echo $room['image_name'] ?>" alt="<?php echo $room['title'] ?>"> 
+
+                                                    </div>
+                                                </a>
+
+                                                <div class="content">
+                                                    <h3 class="title" style="margin-top: -150px;"> 
+
+                                                        <a href="<?php echo actual_link(); ?>accommodation-in-unawatuna/<?php echo str_replace(" ", "-", strtolower($room['title'])) ?>/"><?php echo $room['title'] ?></a></h3>
+                                                    <div class="short-text"> </div>
+                                                    <div class="summary  "> 
+                                                        <a href="<?php echo actual_link(); ?>accommodation-in-unawatuna/<?php echo str_replace(" ", "-", strtolower($room['title'])) ?>/" style="color: white"> 
+                                                            <?php echo substr($room['short_description'], 0, 150) ?>... 
+                                                        </a>
+                                                        <a href="<?php echo actual_link(); ?>accommodation-in-unawatuna/<?php echo str_replace(" ", "-", strtolower($room['title'])) ?>/" class="read-more" style="margin-top: -8px">More Info</a>
+                                                    </div>
+                                                </div>
+
+                                            </div> 
+
+                                        </div>
+                                        <?php
+                                    }
+                                    ?>   
+
+                                </div>
+                                <div class="view-all text-center">
+                                    <a href="<?php echo actual_link(); ?>accommodation-in-unawatuna/" class="btn-radius">Accommodation</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <section id="section-facilities-2" class="section-facilities-2" style="padding-top: 0px;">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">

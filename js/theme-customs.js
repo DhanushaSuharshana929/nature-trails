@@ -87,6 +87,8 @@
 
         },
 
+     
+
         search_box :function () {
             $('.search-box').on('click', '.toggle-form', function (e) {
                 e.preventDefault();

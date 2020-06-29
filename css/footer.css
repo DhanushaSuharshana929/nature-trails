@@ -158,6 +158,7 @@ ul.list-social li a.google {
     background-color: var(--primary-color-1);
     color: #fff;
 }
+ 
 #back-to-top:hover {
     background: var(--primary-hover-color-1);
 }

@@ -14,16 +14,16 @@
 class Database {
 
 
-    private $host = 'localhost';
-    private $name = 'nature_trails';
-    private $user = 'nature_trails';
-    private $password = 'Ue.t;FNgC?BG,Paf8V';
+//    private $host = 'localhost';
+//    private $name = 'nature_trails';
+//    private $user = 'nature_trails';
+//    private $password = 'Ue.t;FNgC?BG,Paf8V';
 
 
-    // private $host = 'localhost';
-    // private $name = 'nature-trails';
-    // private $user = 'root';
-    // private $password = '';
+     private $host = 'localhost';
+     private $name = 'nature-trails';
+     private $user = 'root';
+     private $password = '';
 
     public function __construct() {
 
