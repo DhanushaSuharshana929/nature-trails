@@ -346,6 +346,13 @@
                     </ul>
                 </li>
                 <li class="qqq">
+                    <a href="manage-booking.php" class="">
+                        <i class="material-icons">chevron_right</i>
+                        <span>Web Site Booking</span>
+                    </a>
+
+                </li>
+                <li class="qqq">
                     <a href="create-slider.php" class="">
                         <i class="material-icons">chevron_right</i>
                         <span>Slider</span>

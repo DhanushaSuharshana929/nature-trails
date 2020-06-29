@@ -79,9 +79,19 @@ $BANNER = new Banner(2);
                                     </div>
 
                                 </div>
-                                <div class="title-share clearfix">
-                                    <h2 class="title"><?php echo $ROOM->title ?></h2>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="title-share clearfix">
+                                            <h2 class="title"><?php echo $ROOM->title ?></h2>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="view-all text-center">
+                                            <a href="<?php echo actual_link(); ?>accommodation-booking/<?php echo str_replace(" ", "-", strtolower($ROOM->title)) ?>/" class="btn-radius">Book Now</a>
+                                        </div>
+                                    </div>
                                 </div>
+
 
                                 <?php echo $ROOM->features ?>
                                 <div class="description text-justify">

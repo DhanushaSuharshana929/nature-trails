@@ -1,4 +1,3 @@
- 
 
 <div class="call-to-action text-light xs-text-center">
     <div class="container">
@@ -78,6 +77,27 @@
             </div>
         </div>
     </div>
+
+    <div style=" 
+         position: fixed;
+         bottom:  80px;
+         right: 20px;
+         z-index: 99;
+         -webkit-transform: translate3d(0, 0, 0);
+         transform: translate3d(0, 0, 0); 
+         background-color: #d62f2f;
+         padding: 8px;
+         border-radius: 4px;
+         
+         ">
+        <a href="<?php echo actual_link(); ?>accommodation-booking/" style="color: white;" >
+        <div class="meta-img">
+            <div class="price">
+                <i class="fa fa-home"></i>   Book Now
+            </div>
+        </div>
+        </a>
+    </div>
     <div class="copyright">
         <div class="container">
             <div class="row">
@@ -94,9 +114,10 @@
             </div>
         </div>
     </div>
+
 </footer>
 
-<div class=" ">
+<!--<div class=" ">
     <div class="sc-travel-search">
         <div class="travel-search  ">
             <div class="row">
@@ -117,9 +138,9 @@
             </div> 
         </div>
     </div>
-</div>
-
-<!-- NeoHotelier The Greendale Holiday Bungalow Widget Start / NeoHotelier.com -->
+</div>-->
+<!--
+ NeoHotelier The Greendale Holiday Bungalow Widget Start / NeoHotelier.com 
 <span id="neobe_root"></span>
 <script type="text/javascript">
     !function () {
@@ -134,7 +155,7 @@
                 window.neobe_widget_url = nbe_url + "get_widget/html/?prop=" + prop;
     }();
 </script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
+ Global site tag (gtag.js) - Google Analytics 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151206239-1"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -145,4 +166,4 @@
 
     gtag('config', 'UA-151206239-1');
 </script>
-<!-- NeoHotelier Nature Trails Boutique Hotel Widget End / NeoHotelier.com -->
+ NeoHotelier Nature Trails Boutique Hotel Widget End / NeoHotelier.com -->
